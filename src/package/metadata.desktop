@@ -1,0 +1,18 @@
+[Desktop Entry]
+Name=System Splash
+Comment=Plymouth splash screen
+Icon=preferences-desktop-display
+Encoding=UTF-8
+Keywords=
+Type=Service
+X-KDE-ParentApp=
+X-KDE-PluginInfo-Author=Marco Martin
+X-KDE-PluginInfo-Email=mart@kde.org
+X-KDE-PluginInfo-License=GPL
+X-KDE-PluginInfo-Name=kcm_plymouth
+X-KDE-PluginInfo-Version=
+X-KDE-PluginInfo-Website=
+X-KDE-ServiceTypes=KPackage/GenericQML
+
+X-Plasma-MainScript=ui/main.qml
+X-Plasma-RemoteLocation=

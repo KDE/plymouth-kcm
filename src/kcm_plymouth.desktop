@@ -1,0 +1,17 @@
+[Desktop Entry]
+Icon=preferences-desktop-display
+Exec=kcmshell5 kcm_plymouth
+
+Type=Service
+X-KDE-ServiceTypes=KCModule
+
+X-KDE-Library=kcm_plymouth
+X-KDE-ParentApp=kcontrol
+
+X-KDE-System-Settings-Parent-Category=workspacetheme
+X-KDE-Weight=1
+
+Name=System Splash
+Comment=Plymouth splash screen
+X-KDE-Keywords=plymouth,splash,splash screen
+Categories=Qt;KDE;X-KDE-settings-plymouth;

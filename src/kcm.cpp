@@ -1,0 +1,144 @@
+/* This file is part of the KDE Project
+   Copyright (c) 2016 Marco Martin <mart@kde.org>
+   Copyright (c) 2014 Vishesh Handa <me@vhanda.in>
+
+   This library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Library General Public
+   License version 2 as published by the Free Software Foundation.
+
+   This library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Library General Public License for more details.
+
+   You should have received a copy of the GNU Library General Public License
+   along with this library; see the file COPYING.LIB.  If not, write to
+   the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+   Boston, MA 02110-1301, USA.
+*/
+
+#include "kcm.h"
+#include "config-kcm.h"
+
+#include <KPluginFactory>
+#include <KPluginLoader>
+#include <KAboutData>
+#include <QDebug>
+#include <QStandardPaths>
+#include <QProcess>
+#include <QQuickView>
+
+#include <QtQml>
+#include <QQmlEngine>
+#include <QQmlContext>
+#include <QStandardItemModel>
+
+#include <KLocalizedString>
+
+
+K_PLUGIN_FACTORY_WITH_JSON(KCMPlymouthFactory, "kcm_plymouth.json", registerPlugin<KCMPlymouth>();)
+
+KCMPlymouth::KCMPlymouth(QObject* parent, const QVariantList& args)
+    : KQuickAddons::ConfigModule(parent, args)
+{
+    //This flag seems to be needed in order for QQuickWidget to work
+    //see https://bugreports.qt-project.org/browse/QTBUG-40765
+    //also, it seems to work only if set in the kcm, not in the systemsettings' main
+    qApp->setAttribute(Qt::AA_DontCreateNativeWidgetSiblings);
+    qmlRegisterType<QStandardItemModel>();
+    qmlRegisterType<KCMPlymouth>();
+    KAboutData* about = new KAboutData(QStringLiteral("kcm_plymouth"), i18n("Configure Plymouth splash screen"),
+                                       QStringLiteral("0.1"), QString(), KAboutLicense::LGPL);
+    about->addAuthor(i18n("Marco Martin"), QString(), QStringLiteral("mart@kde.org"));
+    setAboutData(about);
+    setButtons(Apply | Default);
+
+    m_model = new QStandardItemModel(this);
+    QHash<int, QByteArray> roles = m_model->roleNames();
+    roles[PluginNameRole] = "pluginName";
+    roles[ScreenhotRole] = "screenshot";
+    m_model->setItemRoleNames(roles);
+}
+
+KCMPlymouth::~KCMPlymouth()
+{
+}
+
+void KCMPlymouth::getNewStuff()
+{
+    if (!m_newStuffDialog) {
+        m_newStuffDialog = new KNS3::DownloadDialog( QLatin1String("plymouth.knsrc") );
+        m_newStuffDialog.data()->setWindowTitle(i18n("Download New Splash Screens"));
+        connect(m_newStuffDialog.data(), &KNS3::DownloadDialog::accepted, this,  &KCMPlymouth::load);
+    }
+    m_newStuffDialog.data()->show();
+}
+
+QStandardItemModel *KCMPlymouth::themesModel()
+{
+    return m_model;
+}
+
+QString KCMPlymouth::selectedPlugin() const
+{
+    return m_selectedPlugin;
+}
+
+void KCMPlymouth::setSelectedPlugin(const QString &plugin)
+{
+    if (m_selectedPlugin == plugin) {
+        return;
+    }
+
+    const bool firstTime = m_selectedPlugin.isNull();
+    m_selectedPlugin = plugin;
+    emit selectedPluginChanged();
+
+    if (!firstTime) {
+        setNeedsSave(true);
+    }
+}
+
+int KCMPlymouth::selectedPluginIndex() const
+{
+    for (int i = 0; i < m_model->rowCount(); ++i) {
+        if (m_model->data(m_model->index(i, 0), PluginNameRole).toString() == m_selectedPlugin) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+void KCMPlymouth::load()
+{
+
+    m_model->clear();
+/*
+    for () {
+        if (!pkg.metadata().isValid()) {
+            continue;
+        }
+        QStandardItem* row = new QStandardItem(pkg.metadata().name());
+        row->setData(, PluginNameRole);
+        row->setData(, ScreenhotRole);
+
+        m_model->appendRow(row);
+    }*/
+}
+
+
+void KCMPlymouth::save()
+{
+    
+}
+
+void KCMPlymouth::defaults()
+{/*TODO
+    if (!) {
+        return;
+    }
+*/
+
+}
+
+#include "kcm.moc"
