@@ -37,7 +37,10 @@ kpackage_install_package(package kcm_plymouth kcms)
 
 #polkit stuff
 add_executable(plymouthhelper helper.cpp ${helper_mocs})
-target_link_libraries(plymouthhelper KF5::Auth)
+target_link_libraries(plymouthhelper
+    KF5::Auth
+    KF5::ConfigCore
+    KF5::ConfigWidgets)
 install(TARGETS plymouthhelper DESTINATION ${KAUTH_HELPER_INSTALL_DIR})
 kauth_install_helper_files(plymouthhelper org.kde.kcontrol.kcmplymouth root)
 kauth_install_actions(org.kde.kcontrol.kcmplymouth kcmplymouth_actions.actions)

@@ -26,19 +26,40 @@
 */
 
 #include "helper.h"
+#include "config-kcm.h"
 
 #include <QFile>
 #include <QDebug>
 #include <QProcess>
 
+#include <KConfigGroup>
+#include <KSharedConfig>
+
 
 ActionReply PlymouthHelper::save(const QVariantMap &args)
 {
-    QString theme = args.value(QStringLiteral("theme")).toString();
+    const QString theme = args.value(QStringLiteral("theme")).toString();
+
+    if (theme.isEmpty()) {
+        return ActionReply::BackendError;
+    }
+    qWarning()<<"KAUTH HELPER CALLED WITH" << theme;
+
+    KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral(PLYMOUTH_CONFIG_PATH)), "Daemon");
+    cg.writeEntry("Theme", theme);
+
 
     int ret = 0;
-    
-    qWarning()<<"KAUTH HELPER CALLED WITH" << theme;
+
+    QProcess process;
+    process.start("update-initramfs", QStringList() << "-u");
+    if (!process.waitForStarted()) {
+        return ActionReply::BackendError;
+    }
+    if (!process.waitForFinished()) {
+        return ActionReply::BackendError;
+    }
+    ret = process.exitCode();
 
     if (ret == 0) {
         return ActionReply::SuccessReply();
