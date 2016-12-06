@@ -157,7 +157,8 @@ void KCMPlymouth::save()
     helperargs[QStringLiteral("theme")] = m_selectedPlugin;
 
     //KAuth::Action action(authActionName());
-    KAuth::Action action("org.kde.kcontrol.kcmplymouth.save");
+    KAuth::Action action(QStringLiteral("org.kde.kcontrol.kcmplymouth.save"));
+    action.setHelperId("org.kde.kcontrol.kcmplymouth");
     action.setArguments(helperargs);
     qWarning()<<"Action: "<<action.helperId()<<action.details();
     KAuth::ExecuteJob *job = action.execute();
