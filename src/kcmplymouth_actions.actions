@@ -1,0 +1,8 @@
+[Domain]
+Name=Plymouth Control Module
+Icon=preferences-desktop-display
+
+[org.kde.kcontrol.kcmplymouth.save]
+Name=Save the Plymouth Theme
+Description=System policies prevent you from applying the Plymouth theme.
+Policy=auth_admin

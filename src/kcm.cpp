@@ -36,7 +36,10 @@
 #include <QStandardItemModel>
 
 #include <KLocalizedString>
+#include <KMessageBox>
 
+#include <kauthaction.h>
+#include <kauthexecutejob.h>
 
 K_PLUGIN_FACTORY_WITH_JSON(KCMPlymouthFactory, "kcm_plymouth.json", registerPlugin<KCMPlymouth>();)
 
@@ -60,6 +63,9 @@ KCMPlymouth::KCMPlymouth(QObject* parent, const QVariantList& args)
     roles[PluginNameRole] = "pluginName";
     roles[ScreenhotRole] = "screenshot";
     m_model->setItemRoleNames(roles);
+
+    //setAuthActionName("org.kde.kcontrol.kcmplymouth.save");
+    //setNeedsAuthorization(true);
 }
 
 KCMPlymouth::~KCMPlymouth()
@@ -147,7 +153,18 @@ void KCMPlymouth::load()
 
 void KCMPlymouth::save()
 {
-    
+    QVariantMap helperargs;
+    helperargs[QStringLiteral("theme")] = m_selectedPlugin;
+
+    //KAuth::Action action(authActionName());
+    KAuth::Action action("org.kde.kcontrol.kcmplymouth.save");
+    action.setArguments(helperargs);
+    qWarning()<<"Action: "<<action.helperId()<<action.details();
+    KAuth::ExecuteJob *job = action.execute();
+    bool rc = job->exec();
+    if (!rc) {
+        KMessageBox::error(0, i18n("Unable to authenticate/execute the action: %1, %2", job->error(), job->errorString()));
+    }
 }
 
 void KCMPlymouth::defaults()

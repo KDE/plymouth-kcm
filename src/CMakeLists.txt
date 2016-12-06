@@ -14,6 +14,7 @@ add_library(kcm_plymouth MODULE ${kcm_plymouth_SRCS})
 target_link_libraries(kcm_plymouth
   KF5::CoreAddons
   KF5::KCMUtils
+  KF5::Auth
   KF5::I18n
   KF5::Declarative
   KF5::QuickAddons
@@ -33,3 +34,10 @@ install(TARGETS kcm_plymouth DESTINATION ${PLUGIN_INSTALL_DIR}/kcms)
 install(FILES plymouth.knsrc DESTINATION ${KDE_INSTALL_CONFDIR})
 
 kpackage_install_package(package kcm_plymouth kcms)
+
+#polkit stuff
+add_executable(plymouthhelper helper.cpp ${helper_mocs})
+target_link_libraries(plymouthhelper KF5::Auth)
+install(TARGETS plymouthhelper DESTINATION ${KAUTH_HELPER_INSTALL_DIR})
+kauth_install_helper_files(plymouthhelper org.kde.kcontrol.kcmplymouth root)
+kauth_install_actions(org.kde.kcontrol.kcmplymouth kcmplymouth_actions.actions)
