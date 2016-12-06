@@ -171,14 +171,6 @@ Item {
                 }
             }
         }
-        Connections {
-            target: kcm
-            onNeedsSaveChanged: {
-                if (!needsSave) {
-                    resetCheckbox.checked = false;
-                }
-            }
-        }
         RowLayout {
             Item {
                 Layout.fillWidth: true
