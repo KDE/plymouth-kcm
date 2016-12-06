@@ -50,6 +50,7 @@ public:
 
     Q_INVOKABLE int selectedPluginIndex() const;
     Q_INVOKABLE void getNewStuff();
+    Q_INVOKABLE void uninstall(const QString &plugin);
 
 public Q_SLOTS:
     void load();

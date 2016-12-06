@@ -160,7 +160,24 @@ void KCMPlymouth::save()
     KAuth::Action action(QStringLiteral("org.kde.kcontrol.kcmplymouth.save"));
     action.setHelperId("org.kde.kcontrol.kcmplymouth");
     action.setArguments(helperargs);
-    qWarning()<<"Action: "<<action.helperId()<<action.details();
+
+    KAuth::ExecuteJob *job = action.execute();
+    bool rc = job->exec();
+    if (!rc) {
+        KMessageBox::error(0, i18n("Unable to authenticate/execute the action: %1, %2", job->error(), job->errorString()));
+    }
+}
+
+void KCMPlymouth::uninstall(const QString &plugin)
+{
+    QVariantMap helperargs;
+    helperargs[QStringLiteral("theme")] = plugin;
+
+    //KAuth::Action action(authActionName());
+    KAuth::Action action(QStringLiteral("org.kde.kcontrol.kcmplymouth.uninstall"));
+    action.setHelperId("org.kde.kcontrol.kcmplymouth");
+    action.setArguments(helperargs);
+
     KAuth::ExecuteJob *job = action.execute();
     bool rc = job->exec();
     if (!rc) {

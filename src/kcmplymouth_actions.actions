@@ -6,3 +6,13 @@ Icon=preferences-desktop-display
 Name=Save the Plymouth Theme
 Description=System policies prevent you from applying the Plymouth theme.
 Policy=auth_admin
+
+[org.kde.kcontrol.kcmplymouth.install]
+Name=Install a new Plymouth Theme
+Description=System policies prevent you from installing a Plymouth theme.
+Policy=auth_admin
+
+[org.kde.kcontrol.kcmplymouth.uninstall]
+Name=Uninstall a new Plymouth Theme
+Description=System policies prevent you from uninstalling a Plymouth theme.
+Policy=auth_admin

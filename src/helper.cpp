@@ -28,6 +28,7 @@
 #include "helper.h"
 #include "config-kcm.h"
 
+#include <QDir>
 #include <QFile>
 #include <QDebug>
 #include <QProcess>
@@ -43,7 +44,7 @@ ActionReply PlymouthHelper::save(const QVariantMap &args)
     if (theme.isEmpty()) {
         return ActionReply::BackendError;
     }
-    qWarning()<<"KAUTH HELPER CALLED WITH" << theme;
+    qWarning()<<"KAUTH HELPER CALLED SAVE WITH" << theme;
 
     KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral(PLYMOUTH_CONFIG_PATH)), "Daemon");
     cg.writeEntry("Theme", theme);
@@ -67,6 +68,58 @@ ActionReply PlymouthHelper::save(const QVariantMap &args)
         ActionReply reply(ActionReply::HelperErrorReply());
         reply.setErrorCode(static_cast<ActionReply::Error>(ret));
         return reply;
+    }
+}
+
+ActionReply PlymouthHelper::install(const QVariantMap &args)
+{
+    const QString theme = args.value(QStringLiteral("theme")).toString();
+    const QString tmpPath = args.value(QStringLiteral("tmpdir")).toString();
+
+    if (theme.isEmpty()) {
+        return ActionReply::BackendError;
+    }
+    qWarning()<<"KAUTH HELPER CALLED INSTALL WITH" << theme;
+
+    QDir dir(PLYMOUTH_THEMES_DIR);
+    if (!dir.exists()) {
+        return ActionReply::BackendError;
+    }
+
+    QDir tmpdir(tmpPath);
+    if (!tmpdir.exists()) {
+        return ActionReply::BackendError;
+    }
+
+    if (tmpdir.rename(tmpdir.path(), dir.path() + QChar('/') + theme)) {
+        return ActionReply::SuccessReply();
+    } else {
+        return ActionReply::BackendError;
+    }
+}
+
+ActionReply PlymouthHelper::uninstall(const QVariantMap &args)
+{
+    const QString theme = args.value(QStringLiteral("theme")).toString();
+
+    if (theme.isEmpty()) {
+        return ActionReply::BackendError;
+    }
+    qWarning()<<"KAUTH HELPER CALLED INSTALL WITH" << theme;
+
+    QDir dir(PLYMOUTH_THEMES_DIR);
+    if (!dir.exists()) {
+        return ActionReply::BackendError;
+    }
+
+    dir.cd(theme);
+    if (!dir.exists()) {
+        return ActionReply::BackendError;
+    }
+    if (dir.removeRecursively()) {
+        return ActionReply::SuccessReply();
+    } else {
+        return ActionReply::BackendError;
     }
 }
 

@@ -33,6 +33,8 @@ public:
 
 public Q_SLOTS:
     ActionReply save(const QVariantMap &map);
+    ActionReply install(const QVariantMap &args);
+    ActionReply uninstall(const QVariantMap &args);
 
 private:
     
