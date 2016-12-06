@@ -23,6 +23,8 @@
 #include <KPluginFactory>
 #include <KPluginLoader>
 #include <KAboutData>
+#include <KConfigGroup>
+#include <KSharedConfig>
 #include <QDebug>
 #include <QStandardPaths>
 #include <QProcess>
@@ -111,19 +113,35 @@ int KCMPlymouth::selectedPluginIndex() const
 
 void KCMPlymouth::load()
 {
-
     m_model->clear();
-/*
-    for () {
-        if (!pkg.metadata().isValid()) {
-            continue;
+    QDir dir(PLYMOUTH_THEMES_DIR);
+    if (!dir.exists()) {
+        return;
+    }
+
+    KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral(PLYMOUTH_CONFIG_PATH)), "Daemon");
+    m_selectedPlugin = cg.readEntry("Theme");
+
+    dir.setFilter(QDir::NoDotAndDotDot|QDir::Dirs);
+    QFileInfoList list = dir.entryInfoList();
+    for (int i = 0; i < list.size(); ++i) {
+        QFileInfo fileInfo = list.at(i);
+        QStandardItem* row = new QStandardItem(fileInfo.fileName());
+        row->setData(fileInfo.fileName(), PluginNameRole);
+        QDir themeDir(fileInfo.filePath());
+        //heuristically search for a logo or a background as there are no previews
+        themeDir.setNameFilters(QStringList()<<QStringLiteral("*logo*.png"));
+        if (!themeDir.entryInfoList().isEmpty()) {
+            row->setData(themeDir.entryInfoList().first().filePath(), ScreenhotRole);
+        } else {
+            themeDir.setNameFilters(QStringList()<<QStringLiteral("*background*.png"));
+            if (!themeDir.entryInfoList().isEmpty()) {
+                row->setData(themeDir.entryInfoList().first().filePath(), ScreenhotRole);
+            }
         }
-        QStandardItem* row = new QStandardItem(pkg.metadata().name());
-        row->setData(, PluginNameRole);
-        row->setData(, ScreenhotRole);
 
         m_model->appendRow(row);
-    }*/
+    }
 }
 
 

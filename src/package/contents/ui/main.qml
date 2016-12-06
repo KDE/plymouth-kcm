@@ -38,7 +38,7 @@ Item {
     ColumnLayout {
         anchors.fill: parent
         QtControls.Label {
-            text: i18nd("kcm_lookandfeel", "Select an overall theme for your workspace (including plasma theme, color scheme, mouse cursor, window and desktop switcher, splash screen, lock screen etc.)")
+            text: i18nd("kcm_plymouth", "Select a global splash screen for the system")
             wrapMode: Text.WordWrap
             Layout.fillWidth: true
         }
@@ -47,14 +47,13 @@ Item {
             Layout.fillHeight: true
             GridView {
                 id: grid
-                model: kcm.lookAndFeelModel
+                model: kcm.themesModel
                 cellWidth: Math.floor(grid.width / Math.max(Math.floor(grid.width / (units.gridUnit*12)), 3))
                 cellHeight: cellWidth / 1.6
 
                 onCountChanged: {
-                    print("SSS"+count)
-                    grid.currentIndex = 7;
-                    grid.positionViewAtIndex(7, GridView.Visible)
+                    grid.currentIndex = kcm.selectedPluginIndex();
+                    grid.positionViewAtIndex(grid.currentIndex, GridView.Visible)
                 }
                 delegate: Item {
                     width: grid.cellWidth
@@ -79,8 +78,10 @@ Item {
                             width: units.iconSizes.large
                             height: width
                             icon: "view-preview"
+                            visible: image.status != Image.Ready 
                         }
                         Image {
+                            id: image
                             anchors {
                                 fill: parent
                                 margins: units.smallSpacing * 2
@@ -170,12 +171,6 @@ Item {
                 }
             }
         }
-        QtControls.Label {
-            text: i18nd("kcm_lookandfeel", "Warning: your Plasma Desktop layout will be lost and reset to the default layout provided by the selected theme.")
-            visible: resetCheckbox.checked
-            wrapMode: Text.WordWrap
-            Layout.fillWidth: true
-        }
         Connections {
             target: kcm
             onNeedsSaveChanged: {
@@ -185,49 +180,14 @@ Item {
             }
         }
         RowLayout {
-            QtControls.CheckBox {
-                id: resetCheckbox
-                checked: kcm.resetDefaultLayout
-                text: i18n("Use Desktop Layout from theme")
-                onCheckedChanged: kcm.resetDefaultLayout = checked;
-            }
             Item {
                 Layout.fillWidth: true
             }
             QtControls.Button {
                 anchors.right: parent.right
-                text: i18n("Get New Looks...")
+                text: i18n("Get New Splash Screens...")
                 iconName: "get-hot-new-stuff"
                 onClicked: kcm.getNewStuff();
-            }
-        }
-    }
-
-    Window {
-        id: previewWindow
-        property alias url: previewImage.source
-        color: Qt.rgba(0, 0, 0, 0.7)
-        MouseArea {
-            anchors.fill: parent
-            Image {
-                id: previewImage
-                anchors.centerIn: parent
-                fillMode: Image.PreserveAspectFit
-                width: Math.min(parent.width, sourceSize.width)
-                height: Math.min(parent.height, sourceSize.height)
-            }
-            onClicked: previewWindow.visible = false;
-            QtControls.ToolButton {
-                anchors {
-                    top: parent.top
-                    right: parent.right
-                }
-                iconName: "window-close"
-                onClicked: previewWindow.visible = false;
-            }
-            QtControls.Action {
-                onTriggered: previewWindow.visible = false;
-                shortcut: "Esc"
             }
         }
     }

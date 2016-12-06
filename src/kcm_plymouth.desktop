@@ -9,7 +9,7 @@ X-KDE-Library=kcm_plymouth
 X-KDE-ParentApp=kcontrol
 
 X-KDE-System-Settings-Parent-Category=workspacetheme
-X-KDE-Weight=1
+X-KDE-Weight=10
 
 Name=System Splash
 Comment=Plymouth splash screen

@@ -1,8 +1,9 @@
 # KI18N Translation Domain for this library
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm_plymouth\")
 
+set(PLYMOUTH_THEMES_DIR /usr/share/plymouth/themes/)
+set(PLYMOUTH_CONFIG_PATH /etc/plymouth/plymouthd.conf)
 configure_file (config-kcm.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kcm.h )
-
 
 set(kcm_plymouth_SRCS
   kcm.cpp
@@ -17,6 +18,8 @@ target_link_libraries(kcm_plymouth
   KF5::Declarative
   KF5::QuickAddons
   KF5::NewStuff
+  KF5::ConfigCore
+  KF5::ConfigWidgets
 
   Qt5::Widgets
   ${X11_LIBRARIES}
