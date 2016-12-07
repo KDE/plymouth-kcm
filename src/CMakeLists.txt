@@ -35,6 +35,14 @@ install(FILES plymouth.knsrc DESTINATION ${KDE_INSTALL_CONFDIR})
 
 kpackage_install_package(package kcm_plymouth kcms)
 
+#installer tool for knewstuff
+add_executable(kplymouththemeinstaller
+    kplymouththemeinstaller.cpp
+)
+
+target_link_libraries(kplymouththemeinstaller KF5::I18n KF5::Auth KF5::CoreAddons)
+install(TARGETS kplymouththemeinstaller ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
+
 #polkit stuff
 add_executable(plymouthhelper helper.cpp ${helper_mocs})
 target_link_libraries(plymouthhelper
