@@ -70,6 +70,7 @@ KCMPlymouth::KCMPlymouth(QObject* parent, const QVariantList& args)
 
 KCMPlymouth::~KCMPlymouth()
 {
+    delete m_newStuffDialog.data();
 }
 
 void KCMPlymouth::getNewStuff()
@@ -78,6 +79,7 @@ void KCMPlymouth::getNewStuff()
         m_newStuffDialog = new KNS3::DownloadDialog( QLatin1String("plymouth.knsrc") );
         m_newStuffDialog.data()->setWindowTitle(i18n("Download New Splash Screens"));
         connect(m_newStuffDialog.data(), &KNS3::DownloadDialog::accepted, this,  &KCMPlymouth::load);
+        connect(m_newStuffDialog.data(), &KNS3::DownloadDialog::finished, m_newStuffDialog.data(),  &KNS3::DownloadDialog::deleteLater);
     }
     m_newStuffDialog.data()->show();
 }
