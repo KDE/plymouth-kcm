@@ -131,6 +131,7 @@ ActionReply PlymouthHelper::uninstall(const QVariantMap &args)
     const QString theme = args.value(QStringLiteral("theme")).toString();
 
     if (theme.isEmpty()) {
+        qWarning()<<"No theme specified.";
         return ActionReply::BackendError;
     }
     qWarning()<<"KAUTH HELPER CALLED UNINSTALL WITH" << theme;

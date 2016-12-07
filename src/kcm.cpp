@@ -182,6 +182,8 @@ void KCMPlymouth::uninstall(const QString &plugin)
     bool rc = job->exec();
     if (!rc) {
         KMessageBox::error(0, i18n("Unable to authenticate/execute the action: %1, %2", job->error(), job->errorString()));
+    } else {
+        load();
     }
 }
 

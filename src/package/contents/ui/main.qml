@@ -151,12 +151,11 @@ Item {
                                     margins: units.smallSpacing
                                 }
                                 visible: model.fullScreenPreview != ""
-                                iconSource: "media-playback-start"
-                                tooltip: i18n("Test Splashscreen")
+                                iconSource: "list-remove"
+                                tooltip: i18n("Uninstall")
                                 flat: false
                                 onClicked: {
-                                    previewWindow.url = model.fullScreenPreview;
-                                    previewWindow.showFullScreen();
+                                    kcm.uninstall(model.pluginName);
                                 }
                                 opacity: parent.containsMouse ? 1 : 0
                                 Behavior on opacity {
