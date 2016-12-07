@@ -25,7 +25,11 @@
 #include <QFile>
 #include <QDebug>
 #include <QProcess>
+#include <QMimeDatabase>
 
+#include "kzip.h"
+#include "ktar.h"
+#include <KArchive>
 #include <KConfigGroup>
 #include <KSharedConfig>
 
@@ -66,29 +70,60 @@ ActionReply PlymouthHelper::save(const QVariantMap &args)
 
 ActionReply PlymouthHelper::install(const QVariantMap &args)
 {
-    const QString theme = args.value(QStringLiteral("theme")).toString();
-    const QString tmpPath = args.value(QStringLiteral("tmpdir")).toString();
+    const QString themearchive = args.value(QStringLiteral("themearchive")).toString();
 
-    if (theme.isEmpty()) {
+    if (themearchive.isEmpty()) {
         return ActionReply::BackendError;
     }
-    qWarning()<<"KAUTH HELPER CALLED INSTALL WITH" << theme;
+    qWarning()<<"KAUTH HELPER CALLED INSTALL WITH" << themearchive;
 
-    QDir dir(PLYMOUTH_THEMES_DIR);
-    if (!dir.exists()) {
-        return ActionReply::BackendError;
-    }
-
-    QDir tmpdir(tmpPath);
-    if (!tmpdir.exists()) {
+    QDir basedir(PLYMOUTH_THEMES_DIR);
+    if (!basedir.exists()) {
         return ActionReply::BackendError;
     }
 
-    if (tmpdir.rename(tmpdir.path(), dir.path() + QChar('/') + theme)) {
-        return ActionReply::SuccessReply();
+    // this is weird but a decompression is not a single name, so take the path instead
+    QString installpath = PLYMOUTH_THEMES_DIR;
+    QMimeDatabase db;
+    QMimeType mimeType = db.mimeTypeForFile(themearchive);
+    qWarning() << "Postinstallation: uncompress the file";
+
+    // FIXME: check for overwriting, malicious archive entries (../foo) etc.
+    // FIXME: KArchive should provide "safe mode" for this!
+    QScopedPointer<KArchive> archive;
+
+    if (mimeType.inherits(QStringLiteral("application/zip"))) {
+        archive.reset(new KZip(themearchive));
+    } else if (mimeType.inherits(QStringLiteral("application/tar"))
+                || mimeType.inherits(QStringLiteral("application/x-gzip"))
+                || mimeType.inherits(QStringLiteral("application/x-bzip"))
+                || mimeType.inherits(QStringLiteral("application/x-lzma"))
+                || mimeType.inherits(QStringLiteral("application/x-xz"))
+                || mimeType.inherits(QStringLiteral("application/x-bzip-compressed-tar"))
+                || mimeType.inherits(QStringLiteral("application/x-compressed-tar"))) {
+        archive.reset(new KTar(themearchive));
     } else {
+        qCritical() << "Could not determine type of archive file '" << themearchive << "'";
         return ActionReply::BackendError;
     }
+
+    bool success = archive->open(QIODevice::ReadOnly);
+    if (!success) {
+        qCritical() << "Cannot open archive file '" << themearchive << "'";
+        return ActionReply::BackendError;
+    }
+
+    const KArchiveDirectory *dir = archive->directory();
+    //if there is more than an item in the file,
+    //put contents in a subdirectory with the same name as the file
+    if (dir->entries().count() > 1) {
+        installpath += QLatin1Char('/') + QFileInfo(archive->fileName()).baseName();
+    }
+    dir->copyTo(installpath);
+
+    archive->close();
+    //QFile::remove(themearchive);
+    return ActionReply::SuccessReply();
 }
 
 ActionReply PlymouthHelper::uninstall(const QVariantMap &args)
@@ -98,15 +133,16 @@ ActionReply PlymouthHelper::uninstall(const QVariantMap &args)
     if (theme.isEmpty()) {
         return ActionReply::BackendError;
     }
-    qWarning()<<"KAUTH HELPER CALLED INSTALL WITH" << theme;
+    qWarning()<<"KAUTH HELPER CALLED UNINSTALL WITH" << theme;
 
     QDir dir(PLYMOUTH_THEMES_DIR);
     if (!dir.exists()) {
+        qWarning()<<"Themes folder doesn't exists."<<PLYMOUTH_THEMES_DIR;
         return ActionReply::BackendError;
     }
 
-    dir.cd(theme);
-    if (!dir.exists()) {
+    if (!dir.cd(theme)) {
+        qWarning()<<"Theme" << theme << "doesn't exists.";
         return ActionReply::BackendError;
     }
     if (dir.removeRecursively()) {

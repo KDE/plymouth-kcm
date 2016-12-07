@@ -2,5 +2,5 @@
 ProvidersUrl=https://autoconfig.kde.org/ocs/providers.xml
 Categories=Plymouth Themes
 StandardResource=tmp
-InstallationCommand=kpackagetool5 -t Plasma/LookAndFeel -i %f
-UninstallCommand=kpackagetool5 -t Plasma/LookAndFeel -r %f
+InstallationCommand=kplymouththemeinstaller -i %f
+UninstallCommand=kplymouththemeinstaller -u %f
