@@ -1,6 +1,5 @@
 /*
- *  tzone.cpp
- *
+ *  Copyright (C) 2016 Marco Martin <mart@kde.org>
  *  Copyright (C) 1998 Luca Montecchiani <m.luca@usa.net>
  *
  *  This program is free software; you can redistribute it and/or modify
@@ -18,12 +17,6 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  *
  */
-
-/*
-
- A helper that's run using KAuth and does the system modifications.
-
-*/
 
 #include "helper.h"
 #include "config-kcm.h"
