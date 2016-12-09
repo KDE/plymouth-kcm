@@ -43,8 +43,12 @@ ActionReply PlymouthHelper::save(const QVariantMap &args)
     }
     qWarning()<<"KAUTH HELPER CALLED SAVE WITH" << theme;
 
-    KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral(PLYMOUTH_CONFIG_PATH)), "Daemon");
-    cg.writeEntry("Theme", theme);
+    {
+        KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral(PLYMOUTH_CONFIG_PATH)), "Daemon");
+        cg.writeEntry("Theme", theme);
+    }
+    QFile configFile(PLYMOUTH_CONFIG_PATH);
+    configFile.setPermissions(QFileDevice::ReadOwner|QFileDevice::WriteOwner|QFileDevice::ReadGroup|QFileDevice::ReadOther);
 
 
     int ret = 0;
