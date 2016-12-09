@@ -1,8 +1,8 @@
 # KI18N Translation Domain for this library
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm_plymouth\")
 
-set(PLYMOUTH_THEMES_DIR /usr/share/plymouth/themes/)
-set(PLYMOUTH_CONFIG_PATH /etc/plymouth/plymouthd.conf)
+SET(PLYMOUTH_THEMES_DIR "/usr/share/plymouth/themes/" CACHE STRING "Where Plymouth themes are installed")
+SET(PLYMOUTH_CONFIG_PATH "/etc/plymouth/plymouthd.conf" CACHE STRING "where the main plymouth config file is")
 configure_file (config-kcm.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kcm.h )
 
 set(kcm_plymouth_SRCS
