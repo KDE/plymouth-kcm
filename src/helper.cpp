@@ -50,11 +50,13 @@ ActionReply PlymouthHelper::save(const QVariantMap &args)
     int ret = 0;
 
     QProcess process;
-    process.start("update-initramfs", QStringList() << "-u");
+    process.start("/usr/sbin/update-initramfs", QStringList() << "-u");
     if (!process.waitForStarted()) {
+        qWarning() << "can't start initramfs";
         return ActionReply::BackendError;
     }
     if (!process.waitForFinished()) {
+        qWarning() << "Initramfs faild to run";
         return ActionReply::BackendError;
     }
     ret = process.exitCode();
