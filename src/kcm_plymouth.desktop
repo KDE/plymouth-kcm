@@ -8,8 +8,8 @@ X-KDE-ServiceTypes=KCModule
 X-KDE-Library=kcm_plymouth
 X-KDE-ParentApp=kcontrol
 
-X-KDE-System-Settings-Parent-Category=workspacetheme
-X-KDE-Weight=10
+X-KDE-System-Settings-Parent-Category=session
+X-KDE-Weight=80
 
 Name=System Splash
 Comment=Plymouth splash screen
