@@ -119,17 +119,30 @@ ActionReply PlymouthHelper::install(const QVariantMap &args)
         return ActionReply::BackendError;
     }
 
+    QString themeName;
+    QString themePath;
     const KArchiveDirectory *dir = archive->directory();
     //if there is more than an item in the file,
     //put contents in a subdirectory with the same name as the file
     if (dir->entries().count() > 1) {
         installpath += QLatin1Char('/') + QFileInfo(archive->fileName()).baseName();
+        themeName = QFileInfo(archive->fileName()).baseName();
+        themePath = installpath;
+    } else {
+        themeName = dir->entries().first();
+        themePath = installpath + dir->entries().first();
     }
     dir->copyTo(installpath);
 
     archive->close();
     //QFile::remove(themearchive);
-    return ActionReply::SuccessReply();
+    QVariantMap map;
+    map["plugin"] = themeName;
+    map["path"] = themePath;
+    HelperSupport::progressStep(map);
+    ActionReply reply = ActionReply::SuccessReply();
+    reply.setData(map);
+    return reply;
 }
 
 ActionReply PlymouthHelper::uninstall(const QVariantMap &args)

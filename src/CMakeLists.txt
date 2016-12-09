@@ -40,7 +40,12 @@ add_executable(kplymouththemeinstaller
     kplymouththemeinstaller.cpp
 )
 
-target_link_libraries(kplymouththemeinstaller KF5::I18n KF5::Auth KF5::CoreAddons)
+target_link_libraries(kplymouththemeinstaller
+    KF5::I18n
+    KF5::Auth
+    KF5::CoreAddons
+    KF5::ConfigCore
+    KF5::ConfigWidgets)
 install(TARGETS kplymouththemeinstaller ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
 
 #polkit stuff

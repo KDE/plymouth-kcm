@@ -38,7 +38,8 @@ class KCMPlymouth : public KQuickAddons::ConfigModule
 public:
     enum Roles {
         PluginNameRole = Qt::UserRole +1,
-        ScreenhotRole
+        ScreenhotRole,
+        UninstallableRole
     };
     KCMPlymouth(QObject* parent, const QVariantList& args);
     ~KCMPlymouth();

@@ -150,7 +150,7 @@ Item {
                                     right: parent.right
                                     margins: units.smallSpacing
                                 }
-                                visible: model.fullScreenPreview != ""
+                                visible: model.uninstallable
                                 iconSource: "list-remove"
                                 tooltip: i18n("Uninstall")
                                 flat: false

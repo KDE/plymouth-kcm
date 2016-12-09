@@ -62,6 +62,7 @@ KCMPlymouth::KCMPlymouth(QObject* parent, const QVariantList& args)
     QHash<int, QByteArray> roles = m_model->roleNames();
     roles[PluginNameRole] = "pluginName";
     roles[ScreenhotRole] = "screenshot";
+    roles[UninstallableRole] = "uninstallable";
     m_model->setItemRoleNames(roles);
 
     //setAuthActionName("org.kde.kcontrol.kcmplymouth.save");
@@ -129,6 +130,7 @@ void KCMPlymouth::load()
 
     KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral(PLYMOUTH_CONFIG_PATH)), "Daemon");
     m_selectedPlugin = cg.readEntry("Theme");
+    KConfigGroup installedCg(KSharedConfig::openConfig(QStringLiteral("kplymouththemeinstallerrc")), "DownloadedThemes");
 
     dir.setFilter(QDir::NoDotAndDotDot|QDir::Dirs);
     QFileInfoList list = dir.entryInfoList();
@@ -136,6 +138,7 @@ void KCMPlymouth::load()
         QFileInfo fileInfo = list.at(i);
         QStandardItem* row = new QStandardItem(fileInfo.fileName());
         row->setData(fileInfo.fileName(), PluginNameRole);
+        row->setData(installedCg.entryMap().contains(fileInfo.fileName()), UninstallableRole);
         QDir themeDir(fileInfo.filePath());
         //heuristically search for a logo or a background as there are no previews
         themeDir.setNameFilters(QStringList()<<QStringLiteral("*logo*.png"));
@@ -185,6 +188,8 @@ void KCMPlymouth::uninstall(const QString &plugin)
     if (!rc) {
         KMessageBox::error(0, i18n("Unable to authenticate/execute the action: %1, %2", job->error(), job->errorString()));
     } else {
+        KConfigGroup installedCg(KSharedConfig::openConfig(QStringLiteral("kplymouththemeinstallerrc")), "DownloadedThemes");
+        installedCg.deleteEntry(plugin);
         load();
     }
 }

@@ -27,6 +27,8 @@
 #include <qcommandlineparser.h>
 #include <qcommandlineoption.h>
 
+#include <KConfigGroup>
+#include <KSharedConfig>
 #include <klocalizedstring.h>
 #include <kauthaction.h>
 #include <kauthexecutejob.h>
@@ -80,6 +82,7 @@ int main(int argc, char **argv)
         return -1;
     }
 
-    qWarning()<< themefile;
+    KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("kplymouththemeinstallerrc")), "DownloadedThemes");
+    cg.writeEntry(job->data().value(QStringLiteral("plugin")).toString(), job->data().value(QStringLiteral("path")).toString());
     return app.exec();
 }
