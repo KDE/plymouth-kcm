@@ -54,6 +54,38 @@ ActionReply PlymouthHelper::save(const QVariantMap &args)
     QFile configFile(PLYMOUTH_CONFIG_PATH);
     configFile.setPermissions(QFileDevice::ReadOwner|QFileDevice::WriteOwner|QFileDevice::ReadGroup|QFileDevice::ReadOther);
 
+    //Special case: Ubuntu derivatives, which work different from everybody else
+    if (QFile::exists("/usr/sbin/update-alternatives")) {
+        //find the .plymouth file in the theme
+        QDir dir(QStringLiteral(PLYMOUTH_THEMES_DIR) + theme);
+        QStringList themeFile = dir.entryList(QStringList() << "*.plymouth");
+        if (themeFile.count() != 1) {
+            reply = ActionReply::BackendError;
+            reply.setErrorDescription(i18n("Theme corrupted: .plymouth  file not found inside theme."));
+            return reply;
+        }
+        int ret = 0;
+        QProcess process;
+        process.start("update-alternatives", QStringList() << "--set" << "default.plymouth" << dir.path() + QChar('/') + themeFile.first());
+        if (!process.waitForStarted()) {
+            reply = ActionReply::BackendError;
+            reply.setErrorDescription(i18n("Can't start update-alternatives."));
+            return reply;
+        }
+        if (!process.waitForFinished()) {
+            reply = ActionReply::BackendError;
+            reply.setErrorDescription(i18n("update-alternatives failed to run."));
+            return reply;
+        }
+        ret = process.exitCode();
+
+        if (ret != 0) {
+            reply = ActionReply(ActionReply::HelperErrorReply());
+            reply.setErrorCode(static_cast<ActionReply::Error>(ret));
+            reply.setErrorDescription(i18n("update-alternatives returned with error condition %1.", ret));
+            return reply;
+        }
+    }
 
     int ret = 0;
 
