@@ -32,14 +32,17 @@
 #include <KArchive>
 #include <KConfigGroup>
 #include <KSharedConfig>
-
+#include <KLocalizedString>
 
 ActionReply PlymouthHelper::save(const QVariantMap &args)
 {
     const QString theme = args.value(QStringLiteral("theme")).toString();
+    ActionReply reply;
 
     if (theme.isEmpty()) {
-        return ActionReply::BackendError;
+        reply = ActionReply::BackendError;
+        reply.setErrorDescription(i18n("No theme specified in helper parameters."));
+        return reply;
     }
     qWarning()<<"KAUTH HELPER CALLED SAVE WITH" << theme;
 
@@ -56,20 +59,24 @@ ActionReply PlymouthHelper::save(const QVariantMap &args)
     QProcess process;
     process.start("/usr/sbin/update-initramfs", QStringList() << "-u");
     if (!process.waitForStarted()) {
-        qWarning() << "can't start initramfs";
-        return ActionReply::BackendError;
+        reply = ActionReply::BackendError;
+        reply.setErrorDescription(i18n("Can't start initramfs."));
+        return reply;
     }
-    if (!process.waitForFinished()) {
-        qWarning() << "Initramfs faild to run";
-        return ActionReply::BackendError;
+    if (!process.waitForFinished(60000)) {
+        reply = ActionReply::BackendError;
+        reply.setErrorDescription(i18n("Initramfs faild to run."));
+        return reply;
     }
     ret = process.exitCode();
 
     if (ret == 0) {
         return ActionReply::SuccessReply();
     } else {
-        ActionReply reply(ActionReply::HelperErrorReply());
+        reply = ActionReply(ActionReply::HelperErrorReply());
         reply.setErrorCode(static_cast<ActionReply::Error>(ret));
+        reply.setErrorDescription(i18n("Initramfs returned with error condition %1.", ret));
+        return reply;
         return reply;
     }
 }

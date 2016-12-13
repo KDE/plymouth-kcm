@@ -54,7 +54,8 @@ target_link_libraries(plymouthhelper
     KF5::Archive
     KF5::Auth
     KF5::ConfigCore
-    KF5::ConfigWidgets)
+    KF5::ConfigWidgets
+    KF5::I18n)
 install(TARGETS plymouthhelper DESTINATION ${KAUTH_HELPER_INSTALL_DIR})
 kauth_install_helper_files(plymouthhelper org.kde.kcontrol.kcmplymouth root)
 kauth_install_actions(org.kde.kcontrol.kcmplymouth kcmplymouth_actions.actions)
