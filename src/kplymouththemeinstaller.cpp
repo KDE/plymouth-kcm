@@ -24,9 +24,13 @@
 #include <QFile>
 #include <QDebug>
 #include <QProcess>
+#include <QMimeDatabase>
 #include <qcommandlineparser.h>
 #include <qcommandlineoption.h>
 
+#include "kzip.h"
+#include "ktar.h"
+#include <KArchive>
 #include <KConfigGroup>
 #include <KSharedConfig>
 #include <klocalizedstring.h>
@@ -71,6 +75,37 @@ int main(int argc, char **argv)
 
     QVariantMap helperargs;
     helperargs[QStringLiteral("themearchive")] = themefile;
+
+    //support uninstalling from an archive
+    QMimeDatabase db;
+    QMimeType mimeType = db.mimeTypeForFile(themefile);
+    bool isArchive = false;
+    if (parser.isSet(QStringLiteral("uninstall"))) {
+        QScopedPointer<KArchive> archive;
+        if (mimeType.inherits(QStringLiteral("application/zip"))) {
+            archive.reset(new KZip(themefile));
+        } else if (mimeType.inherits(QStringLiteral("application/tar"))
+            || mimeType.inherits(QStringLiteral("application/x-gzip"))
+            || mimeType.inherits(QStringLiteral("application/x-bzip"))
+            || mimeType.inherits(QStringLiteral("application/x-lzma"))
+            || mimeType.inherits(QStringLiteral("application/x-xz"))
+            || mimeType.inherits(QStringLiteral("application/x-bzip-compressed-tar"))
+            || mimeType.inherits(QStringLiteral("application/x-compressed-tar"))) {
+            archive.reset(new KTar(themefile));
+        }
+        if (archive) {
+            isArchive = true;
+            const KArchiveDirectory *dir = archive->directory();
+            //if there is more than an item in the file,
+            //plugin is a subdirectory with the same name as the file
+            if (dir->entries().count() > 1) {
+                helperargs[QStringLiteral("themearchive")] = QFileInfo(archive->fileName()).baseName();
+            } else {
+                helperargs[QStringLiteral("themearchive")] = dir->entries().first();
+            }
+        }
+    }
+
     KAuth::Action action(parser.isSet(QStringLiteral("install")) ? QStringLiteral("org.kde.kcontrol.kcmplymouth.install") : QStringLiteral("org.kde.kcontrol.kcmplymouth.uninstall"));
     action.setHelperId("org.kde.kcontrol.kcmplymouth");
     action.setArguments(helperargs);
@@ -83,6 +118,14 @@ int main(int argc, char **argv)
     }
 
     KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("kplymouththemeinstallerrc")), "DownloadedThemes");
-    cg.writeEntry(job->data().value(QStringLiteral("plugin")).toString(), job->data().value(QStringLiteral("path")).toString());
+    if (parser.isSet(QStringLiteral("install"))) {
+        cg.writeEntry(job->data().value(QStringLiteral("plugin")).toString(), themefile);
+    } else {
+        cg.deleteEntry(job->data().value(QStringLiteral("plugin")).toString());
+        if (isArchive) {
+            QFile(themefile).remove();
+        }
+    }
+
     return app.exec();
 }

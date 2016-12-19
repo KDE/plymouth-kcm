@@ -41,6 +41,12 @@
 #include <kauthaction.h>
 #include <kauthexecutejob.h>
 
+#include <KNewStuff3/KNSCore/Engine>
+#include <KNewStuff3/KNSCore/EntryInternal>
+
+#include <kio/job.h>
+#include <KIO/CopyJob>
+
 K_PLUGIN_FACTORY_WITH_JSON(KCMPlymouthFactory, "kcm_plymouth.json", registerPlugin<KCMPlymouth>();)
 
 KCMPlymouth::KCMPlymouth(QObject* parent, const QVariantList& args)
@@ -81,6 +87,14 @@ void KCMPlymouth::getNewStuff()
         m_newStuffDialog.data()->setWindowTitle(i18n("Download New Splash Screens"));
         connect(m_newStuffDialog.data(), &KNS3::DownloadDialog::accepted, this,  &KCMPlymouth::load);
         connect(m_newStuffDialog.data(), &KNS3::DownloadDialog::finished, m_newStuffDialog.data(),  &KNS3::DownloadDialog::deleteLater);
+
+        connect(m_newStuffDialog->engine(), &KNSCore::Engine::signalEntryChanged, this, [=](const KNSCore::EntryInternal &entry){
+            if (!entry.isValid() || entry.installedFiles().isEmpty()) {
+                return;
+            }
+
+            KIO::file_copy(entry.previewUrl(KNSCore::EntryInternal::PreviewBig1), QUrl::fromLocalFile(entry.installedFiles().first() + ".png"), -1,  KIO::Overwrite | KIO::HideProgressInfo);
+        });
     }
     m_newStuffDialog.data()->show();
 }
@@ -140,16 +154,7 @@ void KCMPlymouth::load()
         row->setData(fileInfo.fileName(), PluginNameRole);
         row->setData(installedCg.entryMap().contains(fileInfo.fileName()), UninstallableRole);
         QDir themeDir(fileInfo.filePath());
-        //heuristically search for a logo or a background as there are no previews
-        themeDir.setNameFilters(QStringList()<<QStringLiteral("*logo*.png"));
-        if (!themeDir.entryInfoList().isEmpty()) {
-            row->setData(themeDir.entryInfoList().first().filePath(), ScreenhotRole);
-        } else {
-            themeDir.setNameFilters(QStringList()<<QStringLiteral("*background*.png"));
-            if (!themeDir.entryInfoList().isEmpty()) {
-                row->setData(themeDir.entryInfoList().first().filePath(), ScreenhotRole);
-            }
-        }
+        row->setData(QString(themeDir.path() + QStringLiteral("/preview.png")), ScreenhotRole);
 
         m_model->appendRow(row);
     }

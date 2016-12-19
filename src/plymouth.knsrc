@@ -1,6 +1,7 @@
 [KNewStuff3]
 ProvidersUrl=https://autoconfig.kde.org/ocs/providers.xml
 Categories=Plymouth Themes
-StandardResource=tmp
+#StandardResource=tmp
+InstallPath=.local/share/kplymouththemeinstaller
 InstallationCommand=kplymouththemeinstaller -i %f
 UninstallCommand=kplymouththemeinstaller -u %f

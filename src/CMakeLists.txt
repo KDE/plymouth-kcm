@@ -19,8 +19,10 @@ target_link_libraries(kcm_plymouth
   KF5::Declarative
   KF5::QuickAddons
   KF5::NewStuff
+  KF5::NewStuffCore
   KF5::ConfigCore
   KF5::ConfigWidgets
+  KF5::KIOCore
 
   Qt5::Widgets
   ${X11_LIBRARIES}
@@ -44,6 +46,7 @@ target_link_libraries(kplymouththemeinstaller
     KF5::I18n
     KF5::Auth
     KF5::CoreAddons
+    KF5::Archive
     KF5::ConfigCore
     KF5::ConfigWidgets)
 install(TARGETS kplymouththemeinstaller ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
