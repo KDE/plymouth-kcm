@@ -129,13 +129,19 @@ int main(int argc, char **argv)
     if (parser.isSet(QStringLiteral("install"))) {
         cg.writeEntry(job->data().value(QStringLiteral("plugin")).toString(), themefile);
     } else {
-        cg.deleteEntry(job->data().value(QStringLiteral("plugin")).toString());
-        if (isArchive) {
+        if (!isArchive) {
+            //try to take the file name from the config file
+            themefile = cg.readEntry(job->data().value(QStringLiteral("plugin")).toString(), QString());
+        }
+
+        if (themefile.isEmpty()) {
             //remove archive
             QFile(themefile).remove();
             //remove screenshot
             QFile::remove(QString(themefile + QStringLiteral(".png")));
         }
+
+        cg.deleteEntry(job->data().value(QStringLiteral("plugin")).toString());
     }
 
     return app.exec();
