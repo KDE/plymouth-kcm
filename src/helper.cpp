@@ -178,12 +178,6 @@ ActionReply PlymouthHelper::install(const QVariantMap &args)
 
     archive->close();
 
-    //QFile::remove(themearchive);
-    QFile thumbnail(themearchive + QStringLiteral(".png"));
-    if (thumbnail.exists() && !QFile::exists(themePath + QStringLiteral("/preview.png"))) {
-        thumbnail.rename(themePath + QStringLiteral("/preview.png"));
-    }
-
     //Special case: Ubuntu derivatives, which work different from everybody else
     if (QFile::exists("/usr/sbin/update-alternatives")) {
         //find the .plymouth file in the theme

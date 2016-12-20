@@ -89,7 +89,7 @@ void KCMPlymouth::getNewStuff()
         connect(m_newStuffDialog.data(), &KNS3::DownloadDialog::finished, m_newStuffDialog.data(),  &KNS3::DownloadDialog::deleteLater);
 
         connect(m_newStuffDialog->engine(), &KNSCore::Engine::signalEntryChanged, this, [=](const KNSCore::EntryInternal &entry){
-            if (!entry.isValid() || entry.installedFiles().isEmpty()) {
+            if (!entry.isValid() || entry.status() != KNS3::Entry::Installed) {
                 return;
             }
 
@@ -154,7 +154,13 @@ void KCMPlymouth::load()
         row->setData(fileInfo.fileName(), PluginNameRole);
         row->setData(installedCg.entryMap().contains(fileInfo.fileName()), UninstallableRole);
         QDir themeDir(fileInfo.filePath());
-        row->setData(QString(themeDir.path() + QStringLiteral("/preview.png")), ScreenhotRole);
+        //the theme has a preview
+        if (QFile::exists(themeDir.path() + QStringLiteral("/preview.png"))) {
+            row->setData(QString(themeDir.path() + QStringLiteral("/preview.png")), ScreenhotRole);
+        //fetch it downloaded from kns
+        } else {
+            row->setData(QString(installedCg.readEntry(fileInfo.fileName(), QString())+ QStringLiteral(".png")), ScreenhotRole);
+        }
 
         m_model->appendRow(row);
     }

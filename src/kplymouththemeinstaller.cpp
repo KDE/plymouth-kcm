@@ -67,7 +67,8 @@ int main(int argc, char **argv)
         return 0;
     }
 
-    const QString themefile = args.first();
+    QString themefile = args.first();
+    themefile.replace(QStringLiteral("//"), QChar('/'));
     if (parser.isSet(QStringLiteral("install")) && !QFile::exists(themefile)) {
         qWarning() << "Specified theme file does not exists";
         return 0;
@@ -95,14 +96,21 @@ int main(int argc, char **argv)
         }
         if (archive) {
             isArchive = true;
+            bool success = archive->open(QIODevice::ReadOnly);
+            if (!success) {
+                qCritical() << "Cannot open archive file '" << themefile << "'";
+                exit(-1);
+            }
             const KArchiveDirectory *dir = archive->directory();
             //if there is more than an item in the file,
             //plugin is a subdirectory with the same name as the file
             if (dir->entries().count() > 1) {
-                helperargs[QStringLiteral("themearchive")] = QFileInfo(archive->fileName()).baseName();
+                helperargs[QStringLiteral("theme")] = QFileInfo(archive->fileName()).baseName();
             } else {
-                helperargs[QStringLiteral("themearchive")] = dir->entries().first();
+                helperargs[QStringLiteral("theme")] = dir->entries().first();
             }
+        } else {
+            helperargs[QStringLiteral("theme")] = themefile;
         }
     }
 
@@ -123,7 +131,10 @@ int main(int argc, char **argv)
     } else {
         cg.deleteEntry(job->data().value(QStringLiteral("plugin")).toString());
         if (isArchive) {
+            //remove archive
             QFile(themefile).remove();
+            //remove screenshot
+            QFile::remove(QString(themefile + QStringLiteral(".png")));
         }
     }
 
