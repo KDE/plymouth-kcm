@@ -98,7 +98,7 @@ ActionReply PlymouthHelper::save(const QVariantMap &args)
     }
     if (!process.waitForFinished(60000)) {
         reply = ActionReply::BackendError;
-        reply.setErrorDescription(i18n("Initramfs faild to run."));
+        reply.setErrorDescription(i18n("Initramfs failed to run."));
         return reply;
     }
     ret = process.exitCode();
