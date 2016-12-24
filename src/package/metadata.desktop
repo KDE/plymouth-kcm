@@ -1,6 +1,14 @@
 [Desktop Entry]
 Name=System Splash
+Name[ca]=Pantalla de presentació del sistema
+Name[nl]=Opstartscherm van systeem
+Name[uk]=Вітання системи
+Name[x-test]=xxSystem Splashxx
 Comment=Plymouth splash screen
+Comment[ca]=Pantalla de presentació del Plymouth
+Comment[nl]=Plymouth opstartscherm
+Comment[uk]=Вітальна сторінка Plymouth
+Comment[x-test]=xxPlymouth splash screenxx
 Icon=preferences-desktop-display
 Encoding=UTF-8
 Keywords=
