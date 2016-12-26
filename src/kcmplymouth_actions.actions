@@ -2,45 +2,59 @@
 Name=Plymouth Control Module
 Name[ca]=Mòdul de control del Plymouth
 Name[nl]=Plymouth besturingsmodule
+Name[pl]=Moduł sterowania Plymouth
 Name[uk]=Модуль керування Plymouth
 Name[x-test]=xxPlymouth Control Modulexx
+Name[zh_TW]=Plymouth 控制模組
 Icon=preferences-desktop-display
 
 [org.kde.kcontrol.kcmplymouth.save]
 Name=Save the Plymouth Theme
 Name[ca]=Desa el tema del Plymouth
 Name[nl]=Het Plymouth thema opslaan
+Name[pl]=Zapisz wygląd Plymouth
 Name[uk]=Збереження теми Plymouth
 Name[x-test]=xxSave the Plymouth Themexx
+Name[zh_TW]=儲存 Plymouth 主題
 Description=System policies prevent you from applying the Plymouth theme.
 Description[ca]=Les polítiques del sistema impedeixen que apliqueu el tema del Plymouth.
 Description[nl]=Systeembeleid voorkwam dat u het Plymouth thema kon toepassen.
+Description[pl]=Zasady systemu uniemożliwiają ci zmianę wyglądu Plymouth.
 Description[uk]=Правила роботи системи забороняють вам застосовувати тему Plymouth.
 Description[x-test]=xxSystem policies prevent you from applying the Plymouth theme.xx
+Description[zh_TW]=系統政策不允許您套用 Plymouth 主題。
 Policy=auth_admin
 
 [org.kde.kcontrol.kcmplymouth.install]
 Name=Install a new Plymouth Theme
 Name[ca]=Instal·la un tema nou del Plymouth
 Name[nl]=Installeer een nieuw Plymouth thema
+Name[pl]=Wgraj nowy wygląd Plymouth
 Name[uk]=Встановлення нової теми Plymouth
 Name[x-test]=xxInstall a new Plymouth Themexx
+Name[zh_TW]=安裝新 Plymouth 主題
 Description=System policies prevent you from installing a Plymouth theme.
 Description[ca]=Les polítiques del sistema impedeixen que instal·leu un tema del Plymouth.
 Description[nl]=Systeembeleid voorkwam dat u een Plymouth thema kon installeren.
+Description[pl]=Zasady systemu uniemożliwiają ci wgranie wyglądu Plymouth.
 Description[uk]=Правила роботи системи забороняють вам встановлювати теми Plymouth.
 Description[x-test]=xxSystem policies prevent you from installing a Plymouth theme.xx
+Description[zh_TW]=系統政策不允許您安裝 Plymouth 主題。
 Policy=auth_admin
 
 [org.kde.kcontrol.kcmplymouth.uninstall]
 Name=Uninstall a new Plymouth Theme
 Name[ca]=Desinstal·la un tema nou del Plymouth
 Name[nl]=Een nieuw Plymouth thema deïnstalleren
+Name[pl]=Usuń nowy wygląd Plymouth
 Name[uk]=Вилучення теми Plymouth
 Name[x-test]=xxUninstall a new Plymouth Themexx
+Name[zh_TW]=解除安裝新 Plymouth 主題
 Description=System policies prevent you from uninstalling a Plymouth theme.
 Description[ca]=Les polítiques del sistema impedeixen que desinstal·leu un tema del Plymouth.
 Description[nl]=Systeembeleid voorkwam dat u een Plymouth thema kon deïnstalleren.
+Description[pl]=Zasady systemu uniemożliwiają ci usuwanie wyglądu Plymouth.
 Description[uk]=Правила роботи системи забороняють вам вилучати теми Plymouth.
 Description[x-test]=xxSystem policies prevent you from uninstalling a Plymouth theme.xx
+Description[zh_TW]=系統政策不允許您解除安裝 Plymouth 主題。
 Policy=auth_admin
