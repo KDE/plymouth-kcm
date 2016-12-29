@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=System Splash
 Name[ca]=Pantalla de presentació del sistema
+Name[ca@valencia]=Pantalla de presentació del sistema
 Name[en_GB]=System Splash
 Name[nl]=Opstartscherm van systeem
 Name[pl]=Ekran powitalny systemu
@@ -12,6 +13,7 @@ Name[x-test]=xxSystem Splashxx
 Name[zh_TW]=系統啟動畫面
 Comment=Plymouth splash screen
 Comment[ca]=Pantalla de presentació del Plymouth
+Comment[ca@valencia]=Pantalla de presentació del Plymouth
 Comment[en_GB]=Plymouth splash screen
 Comment[nl]=Plymouth opstartscherm
 Comment[pl]=Ekran powitalny Plymouth
