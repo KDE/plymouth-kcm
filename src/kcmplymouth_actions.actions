@@ -1,18 +1,53 @@
 [Domain]
 Name=Plymouth Control Module
+Name[nl]=Besturingsmodule voor Plymouth
+Name[pt]=Módulo de Controlo do Plymouth
+Name[sv]=Plymouth inställningsmodul
+Name[uk]=Модуль керування Plymouth
+Name[x-test]=xxPlymouth Control Modulexx
 Icon=preferences-desktop-display
 
 [org.kde.kcontrol.kcmplymouth.save]
 Name=Save the Plymouth Theme
+Name[nl]=Het Plymouth-thema opslaan
+Name[pt]=Gravar o Tema do Plymouth
+Name[sv]=Spara Plymouth-temat
+Name[uk]=Збереження теми Plymouth
+Name[x-test]=xxSave the Plymouth Themexx
 Description=System policies prevent you from applying the Plymouth theme.
+Description[nl]=Systeembeleid voorkwam dat u het Plymouth thema kon toepassen.
+Description[pt]=As políticas do sistema impedem-no de aplicar o tema do Plymouth.
+Description[sv]=Systemprinciper förhindrar att du aktiverar Plymouth-temat.
+Description[uk]=Правила роботи системи забороняють вам застосовувати тему Plymouth.
+Description[x-test]=xxSystem policies prevent you from applying the Plymouth theme.xx
 Policy=auth_admin
 
 [org.kde.kcontrol.kcmplymouth.install]
 Name=Install a new Plymouth Theme
+Name[nl]=Een nieuw Plymouth thema installeren
+Name[pt]=Instalar um Novo Tema do Plymouth
+Name[sv]=Installera ett nytt Plymouth-tema
+Name[uk]=Встановлення нової теми Plymouth
+Name[x-test]=xxInstall a new Plymouth Themexx
 Description=System policies prevent you from installing a Plymouth theme.
+Description[nl]=Systeembeleid voorkwam dat u het Plymouth thema kon installeren.
+Description[pt]=As políticas do sistema impedem-no de instalar um tema do Plymouth.
+Description[sv]=Systemprinciper förhindrar att du installerar ett Plymouth-tema.
+Description[uk]=Правила роботи системи забороняють вам встановлювати теми Plymouth.
+Description[x-test]=xxSystem policies prevent you from installing a Plymouth theme.xx
 Policy=auth_admin
 
 [org.kde.kcontrol.kcmplymouth.uninstall]
 Name=Uninstall a new Plymouth Theme
+Name[nl]=Een nieuw Plymouth thema deïnstalleren
+Name[pt]=Desinstalar um Tema do Plymouth
+Name[sv]=Avinstallera ett nytt Plymouth-tema
+Name[uk]=Вилучення теми Plymouth
+Name[x-test]=xxUninstall a new Plymouth Themexx
 Description=System policies prevent you from uninstalling a Plymouth theme.
+Description[nl]=Systeembeleid voorkwam dat u het Plymouth thema kon deïnstalleren.
+Description[pt]=As políticas do sistema impedem-no de desinstalar um tema do Plymouth.
+Description[sv]=Systemprinciper förhindrar att du avinstallerar ett Plymouth-tema.
+Description[uk]=Правила роботи системи забороняють вам вилучати теми Plymouth.
+Description[x-test]=xxSystem policies prevent you from uninstalling a Plymouth theme.xx
 Policy=auth_admin
