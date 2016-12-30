@@ -1,7 +1,7 @@
 project(plymouthkcm)
 
 cmake_minimum_required(VERSION 2.8.12)
-set(KF5_MIN_VERSION "5.18.0")
+set(KF5_MIN_VERSION "5.29.0")
 set(QT_MIN_VERSION "5.5.0")
 
 ################# Disallow in-source build #################
@@ -28,8 +28,6 @@ include(ECMGenerateHeaders)
 include(KDEInstallDirs)
 include(KDECMakeSettings)
 include(KDECompilerSettings NO_POLICY_SCOPE)
-
-set(KF5_VERSION "5.22.0")
 
 find_package(Qt5 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick Test Gui )
 
