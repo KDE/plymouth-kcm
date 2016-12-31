@@ -31,7 +31,7 @@ Item {
     implicitWidth: units.gridUnit * 20
     implicitHeight: units.gridUnit * 20
 
-    ConfigModule.quickHelp: i18n("This module lets you configure the look of the whole workspace with some ready to go presets.")
+    ConfigModule.quickHelp: i18nd("kcm_plymouth", "This module lets you configure the look of the whole workspace with some ready to go presets.")
 
     SystemPalette {id: syspal}
 
@@ -152,7 +152,7 @@ Item {
                                 }
                                 visible: model.uninstallable
                                 iconSource: "list-remove"
-                                tooltip: i18n("Uninstall")
+                                tooltip: i18nd("kcm_plymouth", "Uninstall")
                                 flat: false
                                 onClicked: {
                                     kcm.uninstall(model.pluginName);
@@ -176,7 +176,7 @@ Item {
             }
             QtControls.Button {
                 anchors.right: parent.right
-                text: i18n("Get New Splash Screens...")
+                text: i18nd("kcm_plymouth", "Get New Splash Screens...")
                 iconName: "get-hot-new-stuff"
                 onClicked: kcm.getNewStuff();
             }

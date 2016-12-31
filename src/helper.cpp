@@ -61,7 +61,7 @@ ActionReply PlymouthHelper::save(const QVariantMap &args)
         QStringList themeFile = dir.entryList(QStringList() << "*.plymouth");
         if (themeFile.count() != 1) {
             reply = ActionReply::BackendError;
-            reply.setErrorDescription(i18n("Theme corrupted: .plymouth  file not found inside theme."));
+            reply.setErrorDescription(i18n("Theme corrupted: .plymouth file not found inside theme."));
             return reply;
         }
         int ret = 0;
@@ -69,7 +69,7 @@ ActionReply PlymouthHelper::save(const QVariantMap &args)
         process.start("update-alternatives", QStringList() << "--set" << "default.plymouth" << dir.path() + QChar('/') + themeFile.first());
         if (!process.waitForStarted()) {
             reply = ActionReply::BackendError;
-            reply.setErrorDescription(i18n("Can't start update-alternatives."));
+            reply.setErrorDescription(i18n("Cannot start update-alternatives."));
             return reply;
         }
         if (!process.waitForFinished()) {
@@ -93,7 +93,7 @@ ActionReply PlymouthHelper::save(const QVariantMap &args)
     process.start("/usr/sbin/update-initramfs", QStringList() << "-u");
     if (!process.waitForStarted()) {
         reply = ActionReply::BackendError;
-        reply.setErrorDescription(i18n("Can't start initramfs."));
+        reply.setErrorDescription(i18n("Cannot start initramfs."));
         return reply;
     }
     if (!process.waitForFinished(60000)) {
@@ -185,7 +185,7 @@ ActionReply PlymouthHelper::install(const QVariantMap &args)
         QStringList themeFile = dir.entryList(QStringList() << "*.plymouth");
         if (themeFile.count() != 1) {
             reply = ActionReply::BackendError;
-            reply.setErrorDescription(i18n("Theme corrupted: .plymouth  file not found inside theme."));
+            reply.setErrorDescription(i18n("Theme corrupted: .plymouth file not found inside theme."));
             return reply;
         }
         int ret = 0;
@@ -193,7 +193,7 @@ ActionReply PlymouthHelper::install(const QVariantMap &args)
         process.start("update-alternatives", QStringList() << "--install" << "/usr/share/plymouth/themes/default.plymouth" << "default.plymouth" << themePath + QChar('/') + themeFile.first() << "100");
         if (!process.waitForStarted()) {
             reply = ActionReply::BackendError;
-            reply.setErrorDescription(i18n("Can't start update-alternatives."));
+            reply.setErrorDescription(i18n("Cannot start update-alternatives."));
             return reply;
         }
         if (!process.waitForFinished()) {
@@ -233,13 +233,13 @@ ActionReply PlymouthHelper::uninstall(const QVariantMap &args)
     QDir dir(PLYMOUTH_THEMES_DIR);
     if (!dir.exists()) {
         reply = ActionReply::BackendError;
-        reply.setErrorDescription(i18n("Theme folder %1 doesn't exists.", QStringLiteral(PLYMOUTH_THEMES_DIR)));
+        reply.setErrorDescription(i18n("Theme folder %1 does not exist.", QStringLiteral(PLYMOUTH_THEMES_DIR)));
         return reply;
     }
 
     if (!dir.cd(theme)) {
         reply = ActionReply::BackendError;
-        reply.setErrorDescription(i18n("Theme %1 doesn't exists.", theme));
+        reply.setErrorDescription(i18n("Theme %1 does not exist.", theme));
         return reply;
     }
 
@@ -249,7 +249,7 @@ ActionReply PlymouthHelper::uninstall(const QVariantMap &args)
         QStringList themeFile = dir.entryList(QStringList() << "*.plymouth");
         if (themeFile.count() != 1) {
             reply = ActionReply::BackendError;
-            reply.setErrorDescription(i18n("Theme corrupted: .plymouth  file not found inside theme."));
+            reply.setErrorDescription(i18n("Theme corrupted: .plymouth file not found inside theme."));
             return reply;
         }
         int ret = 0;
@@ -258,7 +258,7 @@ ActionReply PlymouthHelper::uninstall(const QVariantMap &args)
         process.start("update-alternatives", QStringList() << "--remove" << "default.plymouth" << dir.path() + QChar('/') + themeFile.first());
         if (!process.waitForStarted()) {
             reply = ActionReply::BackendError;
-            reply.setErrorDescription(i18n("Can't start update-alternatives."));
+            reply.setErrorDescription(i18n("Cannot start update-alternatives."));
             return reply;
         }
         if (!process.waitForFinished()) {
