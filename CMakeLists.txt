@@ -21,7 +21,7 @@ include(FeatureSummary)
 find_package(ECM 0.0.8 REQUIRED NO_MODULE)
 
 # where to look first for cmake modules, before ${CMAKE_ROOT}/Modules/ is checked
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
+set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake ${CMAKE_MODULE_PATH} ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
 
 include(ECMSetupVersion)
 include(ECMGenerateHeaders)
@@ -44,8 +44,14 @@ endif()
 
 set (QT_MIN_VERSION "5.5.0")
 
-find_package(PkgConfig)
+find_package(Plymouth REQUIRED)
 #########################################################################
+
+
+pkg_check_modules (PLYMOUTH REQUIRED Plymouth)
+if (NOT PLYMOUTH_found)
+    message("puttanoevo")
+endif (NOT PLYMOUTH_found)
 
 add_subdirectory(src)
 
