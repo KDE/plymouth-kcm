@@ -159,7 +159,12 @@ void KCMPlymouth::load()
             row->setData(QString(themeDir.path() + QStringLiteral("/preview.png")), ScreenhotRole);
         //fetch it downloaded from kns
         } else {
-            row->setData(QString(installedCg.readEntry(fileInfo.fileName(), QString())+ QStringLiteral(".png")), ScreenhotRole);
+            const QString fileName = installedCg.readEntry(fileInfo.fileName(), QString());
+            if (fileName.isEmpty()) {
+                row->setData(QString(), ScreenhotRole);
+            } else {
+                row->setData(fileName + QStringLiteral(".png"), ScreenhotRole);
+            }
         }
 
         m_model->appendRow(row);
