@@ -47,12 +47,6 @@ set (QT_MIN_VERSION "5.5.0")
 find_package(Plymouth REQUIRED)
 #########################################################################
 
-
-pkg_check_modules (PLYMOUTH REQUIRED Plymouth)
-if (NOT PLYMOUTH_found)
-    message("puttanoevo")
-endif (NOT PLYMOUTH_found)
-
 add_subdirectory(src)
 
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
