@@ -3,6 +3,7 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kcm_plymouth\")
 
 SET(PLYMOUTH_THEMES_DIR "/usr/share/plymouth/themes/" CACHE STRING "Where Plymouth themes are installed")
 SET(PLYMOUTH_CONFIG_PATH "/etc/plymouth/plymouthd.conf" CACHE STRING "where the main plymouth config file is")
+set(PLYMOUNT_KCM_VERSION ${PROJECT_VERSION})
 configure_file (config-kcm.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kcm.h )
 
 set(kcm_plymouth_SRCS

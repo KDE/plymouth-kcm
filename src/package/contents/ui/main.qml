@@ -135,7 +135,6 @@ Item {
                             onClicked: {
                                 grid.currentIndex = index
                                 kcm.selectedPlugin = model.pluginName
-                                resetCheckbox.checked = false;
                             }
                             Timer {
                                 interval: 1000 // FIXME TODO: Use platform value for tooltip activation delay.

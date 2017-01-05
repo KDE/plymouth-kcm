@@ -43,7 +43,7 @@ int main(int argc, char **argv)
     QCoreApplication app(argc, argv);
 
     const QString description = i18n("Plymouth theme installer");
-    const char version[] = "1.0";
+    const char version[] = PLYMOUTH_KCM_VERSION;
 
     app.setApplicationVersion(version);
     parser.addVersionOption();

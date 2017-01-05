@@ -60,7 +60,7 @@ KCMPlymouth::KCMPlymouth(QObject* parent, const QVariantList& args)
     qmlRegisterType<QStandardItemModel>();
     qmlRegisterType<KCMPlymouth>();
     KAboutData* about = new KAboutData(QStringLiteral("kcm_plymouth"), i18n("Configure Plymouth splash screen"),
-                                       QStringLiteral("0.1"), QString(), KAboutLicense::LGPL);
+                                       QStringLiteral(PLYMOUTH_KCM_VERSION), QString(), KAboutLicense::LGPL);
     about->addAuthor(i18n("Marco Martin"), QString(), QStringLiteral("mart@kde.org"));
     setAboutData(about);
     setButtons(Apply | Default);
