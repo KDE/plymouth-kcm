@@ -59,7 +59,7 @@ KCMPlymouth::KCMPlymouth(QObject* parent, const QVariantList& args)
     qApp->setAttribute(Qt::AA_DontCreateNativeWidgetSiblings);
     qmlRegisterType<QStandardItemModel>();
     qmlRegisterType<KCMPlymouth>();
-    KAboutData* about = new KAboutData(QStringLiteral("kcm_plymouth"), i18n("Configure Plymouth splash screen"),
+    KAboutData* about = new KAboutData(QStringLiteral("kcm_plymouth"), i18n("Configure Plymouth Splash Screen"),
                                        QStringLiteral(PLYMOUTH_KCM_VERSION), QString(), KAboutLicense::LGPL);
     about->addAuthor(i18n("Marco Martin"), QString(), QStringLiteral("mart@kde.org"));
     setAboutData(about);
@@ -170,6 +170,7 @@ void KCMPlymouth::load()
 
         m_model->appendRow(row);
     }
+    setNeedsSave(false);
 }
 
 

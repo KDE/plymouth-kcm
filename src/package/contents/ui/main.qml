@@ -177,7 +177,7 @@ Item {
             }
             QtControls.Button {
                 anchors.right: parent.right
-                text: i18nd("kcm_plymouth", "Get New Splash Screens...")
+                text: i18nd("kcm_plymouth", "Get New Boot Splash Screens...")
                 iconName: "get-hot-new-stuff"
                 onClicked: kcm.getNewStuff();
             }
