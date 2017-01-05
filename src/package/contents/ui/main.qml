@@ -29,6 +29,7 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.kcm 1.0
 
 Item {
+    id: root
     implicitWidth: units.gridUnit * 20
     implicitHeight: units.gridUnit * 20
 
@@ -49,7 +50,7 @@ Item {
             GridView {
                 id: grid
                 model: kcm.themesModel
-                cellWidth: Math.floor(grid.width / Math.max(Math.floor(grid.width / (units.gridUnit*12)), 3))
+                cellWidth: Math.floor(root.width / Math.max(Math.floor(root.width / (units.gridUnit*12)), 3)) - units.gridUnit
                 cellHeight: cellWidth / 1.6
 
                 onCountChanged: {
