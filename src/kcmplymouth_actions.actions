@@ -2,6 +2,7 @@
 Name=Plymouth Control Module
 Name[ca]=Mòdul de control del Plymouth
 Name[ca@valencia]=Mòdul de control del Plymouth
+Name[cs]=Modul pro ovládání Plymouth
 Name[en_GB]=Plymouth Control Module
 Name[es]=Módulo de control de Plymouth
 Name[nl]=Besturingsmodule voor Plymouth
@@ -19,6 +20,7 @@ Icon=preferences-desktop-display
 Name=Save the Plymouth Theme
 Name[ca]=Desa el tema del Plymouth
 Name[ca@valencia]=Guarda el tema del Plymouth
+Name[cs]=Uložit motiv Plymouth
 Name[en_GB]=Save the Plymouth Theme
 Name[es]=Guardar el tema de Plymouth
 Name[nl]=Het Plymouth-thema opslaan

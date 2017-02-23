@@ -2,6 +2,7 @@
 Name=System Splash
 Name[ca]=Pantalla de presentació del sistema
 Name[ca@valencia]=Pantalla de presentació del sistema
+Name[cs]=Úvodní obrazovka
 Name[en_GB]=System Splash
 Name[es]=Pantalla de arranque del sistema
 Name[nl]=Systeem-opstartscherm
@@ -15,6 +16,7 @@ Name[zh_TW]=系統啟動畫面
 Comment=Plymouth splash screen
 Comment[ca]=Pantalla de presentació del Plymouth
 Comment[ca@valencia]=Pantalla de presentació del Plymouth
+Comment[cs]=Úvodní obrazovka Plymouth
 Comment[en_GB]=Plymouth splash screen
 Comment[es]=Pantalla de arranque de Plymouth
 Comment[nl]=Opstartscherm van Plymouth
