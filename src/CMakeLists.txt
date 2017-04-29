@@ -14,7 +14,6 @@ add_library(kcm_plymouth MODULE ${kcm_plymouth_SRCS})
 
 target_link_libraries(kcm_plymouth
   KF5::CoreAddons
-  KF5::KCMUtils
   KF5::Auth
   KF5::I18n
   KF5::Declarative
@@ -22,7 +21,6 @@ target_link_libraries(kcm_plymouth
   KF5::NewStuff
   KF5::NewStuffCore
   KF5::ConfigCore
-  KF5::ConfigWidgets
   KF5::KIOCore
 
   Qt5::Widgets
@@ -48,8 +46,7 @@ target_link_libraries(kplymouththemeinstaller
     KF5::Auth
     KF5::CoreAddons
     KF5::Archive
-    KF5::ConfigCore
-    KF5::ConfigWidgets)
+    KF5::ConfigCore)
 install(TARGETS kplymouththemeinstaller ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
 
 #polkit stuff
@@ -58,7 +55,6 @@ target_link_libraries(plymouthhelper
     KF5::Archive
     KF5::Auth
     KF5::ConfigCore
-    KF5::ConfigWidgets
     KF5::I18n)
 install(TARGETS plymouthhelper DESTINATION ${KAUTH_HELPER_INSTALL_DIR})
 kauth_install_helper_files(plymouthhelper org.kde.kcontrol.kcmplymouth root)

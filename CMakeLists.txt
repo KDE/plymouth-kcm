@@ -35,7 +35,7 @@ include(KDECompilerSettings NO_POLICY_SCOPE)
 find_package(Qt5 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick Test Gui )
 
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
-                    Archive NewStuff NewStuffCore KIO KCMUtils Declarative Crash I18n Config ConfigWidgets)
+                    Archive NewStuff NewStuffCore KIO Declarative I18n Config ConfigWidgets)
 
 ################# Enable C++11 features for clang and gcc #################
 
