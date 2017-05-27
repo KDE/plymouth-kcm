@@ -183,6 +183,7 @@ void KCMPlymouth::save()
     KAuth::Action action(QStringLiteral("org.kde.kcontrol.kcmplymouth.save"));
     action.setHelperId("org.kde.kcontrol.kcmplymouth");
     action.setArguments(helperargs);
+    action.setTimeout(60000);
 
     KAuth::ExecuteJob *job = action.execute();
     bool rc = job->exec();
