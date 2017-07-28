@@ -94,7 +94,8 @@ void KCMPlymouth::getNewStuff()
                 return;
             }
 
-            KIO::file_copy(entry.previewUrl(KNSCore::EntryInternal::PreviewBig1), QUrl::fromLocalFile(entry.installedFiles().first() + ".png"), -1,  KIO::Overwrite | KIO::HideProgressInfo);
+            const QUrl previewUrl(entry.previewUrl(KNSCore::EntryInternal::PreviewBig1));
+            KIO::file_copy(previewUrl, QUrl::fromLocalFile(entry.installedFiles().first() + ".png"), -1, KIO::Overwrite | KIO::HideProgressInfo);
         });
     }
     m_newStuffDialog.data()->show();
