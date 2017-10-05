@@ -18,7 +18,7 @@ include(FeatureSummary)
 
 ################# set KDE specific information #################
 
-set(PROJECT_VERSION "5.10.95")
+set(PROJECT_VERSION "5.11.0")
 set(PROJECT_VERSION_MAJOR 5)
 
 find_package(ECM 0.0.8 REQUIRED NO_MODULE)
