@@ -188,7 +188,7 @@ void KCMPlymouth::save()
     KAuth::ExecuteJob *job = action.execute();
     bool rc = job->exec();
     if (!rc) {
-        KMessageBox::error(0, i18n("Unable to authenticate/execute the action: %1, %2", job->error(), job->errorString()));
+        KMessageBox::error(nullptr, i18n("Unable to authenticate/execute the action: %1, %2", job->error(), job->errorString()));
     }
 }
 
@@ -205,7 +205,7 @@ void KCMPlymouth::uninstall(const QString &plugin)
     KAuth::ExecuteJob *job = action.execute();
     bool rc = job->exec();
     if (!rc) {
-        KMessageBox::error(0, i18n("Unable to authenticate/execute the action: %1, %2", job->error(), job->errorString()));
+        KMessageBox::error(nullptr, i18n("Unable to authenticate/execute the action: %1, %2", job->error(), job->errorString()));
     } else {
         KConfigGroup installedCg(KSharedConfig::openConfig(QStringLiteral("kplymouththemeinstallerrc")), "DownloadedThemes");
         installedCg.deleteEntry(plugin);

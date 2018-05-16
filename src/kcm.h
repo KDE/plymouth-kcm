@@ -42,8 +42,8 @@ public:
         ScreenhotRole,
         UninstallableRole
     };
-    KCMPlymouth(QObject* parent, const QVariantList& args);
-    ~KCMPlymouth();
+    explicit KCMPlymouth(QObject* parent, const QVariantList& args);
+    ~KCMPlymouth() Q_DECL_OVERRIDE;
 
     QStandardItemModel *themesModel();
 
