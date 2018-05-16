@@ -94,7 +94,7 @@ void KCMPlymouth::getNewStuff()
                 return;
             }
 
-            KIO::file_copy(entry.previewUrl(KNSCore::EntryInternal::PreviewBig1), QUrl::fromLocalFile(entry.installedFiles().first() + ".png"), -1,  KIO::Overwrite | KIO::HideProgressInfo);
+            KIO::file_copy(QUrl(entry.previewUrl(KNSCore::EntryInternal::PreviewBig1)), QUrl::fromLocalFile(QString(entry.installedFiles().first() + QStringLiteral(".png"))), -1,  KIO::Overwrite | KIO::HideProgressInfo);
         });
     }
     m_newStuffDialog.data()->show();
@@ -138,7 +138,7 @@ int KCMPlymouth::selectedPluginIndex() const
 void KCMPlymouth::load()
 {
     m_model->clear();
-    QDir dir(PLYMOUTH_THEMES_DIR);
+    QDir dir(QStringLiteral(PLYMOUTH_THEMES_DIR));
     if (!dir.exists()) {
         return;
     }
@@ -181,7 +181,7 @@ void KCMPlymouth::save()
 
     //KAuth::Action action(authActionName());
     KAuth::Action action(QStringLiteral("org.kde.kcontrol.kcmplymouth.save"));
-    action.setHelperId("org.kde.kcontrol.kcmplymouth");
+    action.setHelperId(QStringLiteral("org.kde.kcontrol.kcmplymouth"));
     action.setArguments(helperargs);
     action.setTimeout(60000);
 
@@ -199,7 +199,7 @@ void KCMPlymouth::uninstall(const QString &plugin)
 
     //KAuth::Action action(authActionName());
     KAuth::Action action(QStringLiteral("org.kde.kcontrol.kcmplymouth.uninstall"));
-    action.setHelperId("org.kde.kcontrol.kcmplymouth");
+    action.setHelperId(QStringLiteral("org.kde.kcontrol.kcmplymouth"));
     action.setArguments(helperargs);
 
     KAuth::ExecuteJob *job = action.execute();

@@ -43,16 +43,15 @@ int main(int argc, char **argv)
     QCoreApplication app(argc, argv);
 
     const QString description = i18n("Plymouth theme installer");
-    const char version[] = PLYMOUTH_KCM_VERSION;
 
-    app.setApplicationVersion(version);
+    app.setApplicationVersion(QStringLiteral(PLYMOUTH_KCM_VERSION));
     parser.addVersionOption();
     parser.addHelpOption();
     parser.setApplicationDescription(description);
     parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("i") << QStringLiteral("install"), i18n("Install a theme.")));
     parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("u") << QStringLiteral("uninstall"), i18n("Uninstall a theme.")));
 
-    parser.addPositionalArgument("themefile", i18n("The theme to install, must be an existing archive file."));
+    parser.addPositionalArgument(QStringLiteral("themefile"), i18n("The theme to install, must be an existing archive file."));
 
     parser.process(app);
 
@@ -68,7 +67,7 @@ int main(int argc, char **argv)
     }
 
     QString themefile = args.first();
-    themefile.replace(QStringLiteral("//"), QChar('/'));
+    themefile.replace(QStringLiteral("//"), QStringLiteral("/"));
     if (parser.isSet(QStringLiteral("install")) && !QFile::exists(themefile)) {
         qWarning() << "Specified theme file does not exists";
         return 0;
@@ -115,7 +114,7 @@ int main(int argc, char **argv)
     }
 
     KAuth::Action action(parser.isSet(QStringLiteral("install")) ? QStringLiteral("org.kde.kcontrol.kcmplymouth.install") : QStringLiteral("org.kde.kcontrol.kcmplymouth.uninstall"));
-    action.setHelperId("org.kde.kcontrol.kcmplymouth");
+    action.setHelperId(QStringLiteral("org.kde.kcontrol.kcmplymouth"));
     action.setArguments(helperargs);
 
     KAuth::ExecuteJob *job = action.execute();
