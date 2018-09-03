@@ -2,7 +2,7 @@ project(plymouthkcm)
 
 cmake_minimum_required(VERSION 2.8.12)
 set(KF5_MIN_VERSION "5.29.0")
-set(QT_MIN_VERSION "5.5.0")
+set(QT_MIN_VERSION "5.11.0")
 
 ################# Disallow in-source build #################
 
@@ -49,10 +49,7 @@ endif()
 
 ################# now find all used packages #################
 
-set (QT_MIN_VERSION "5.5.0")
-
 find_package(Plymouth REQUIRED)
-#########################################################################
 
 add_subdirectory(src)
 
