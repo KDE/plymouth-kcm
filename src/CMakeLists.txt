@@ -14,7 +14,7 @@ add_library(kcm_plymouth MODULE ${kcm_plymouth_SRCS})
 
 target_link_libraries(kcm_plymouth
   KF5::CoreAddons
-  KF5::Auth
+  KF5::AuthCore
   KF5::I18n
   KF5::Declarative
   KF5::QuickAddons
@@ -43,7 +43,7 @@ add_executable(kplymouththemeinstaller
 
 target_link_libraries(kplymouththemeinstaller
     KF5::I18n
-    KF5::Auth
+    KF5::AuthCore
     KF5::CoreAddons
     KF5::Archive
     KF5::ConfigCore)
@@ -53,7 +53,7 @@ install(TARGETS kplymouththemeinstaller ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
 add_executable(plymouthhelper helper.cpp ${helper_mocs})
 target_link_libraries(plymouthhelper
     KF5::Archive
-    KF5::Auth
+    KF5::AuthCore
     KF5::ConfigCore
     KF5::I18n)
 install(TARGETS plymouthhelper DESTINATION ${KAUTH_HELPER_INSTALL_DIR})
