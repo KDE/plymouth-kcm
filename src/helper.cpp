@@ -149,6 +149,33 @@ ActionReply PlymouthHelper::save(const QVariantMap &args)
     int ret = 0;
 
     QProcess process;
+    
+    /*Special case for Arch Linux*/
+    if (QFile::exists(QStringLiteral("/usr/bin/mkinitcpio"))) {
+        qDebug() << "Running mkinitcpio -p linux  now";
+        process.start(QStringLiteral("/usr/bin/mkinitcpio"), QStringList() << QStringLiteral("-p") << QStringLiteral("linux"));
+        if (!process.waitForStarted()) {
+            reply = ActionReply::BackendError;
+            reply.setErrorDescription(i18n("Cannot start mkinitcpio."));
+            return reply;
+        }
+        if (!process.waitForFinished(60000)) {
+            reply = ActionReply::BackendError;
+            reply.setErrorDescription(i18n("mkinitcpio failed to run."));
+            return reply;
+        }
+        ret = process.exitCode();
+
+        if (ret == 0) {
+            return ActionReply::SuccessReply();
+        } else {
+            reply = ActionReply(ActionReply::HelperErrorReply());
+            reply.setErrorCode(static_cast<ActionReply::Error>(ret));
+            reply.setErrorDescription(i18n("mkinitcpio returned with error condition %1.", ret));
+            return reply;
+        }
+    }
+    
     qDebug() << "Running update-initramfs -u  now";
     process.start(QStringLiteral("/usr/sbin/update-initramfs"), QStringList() << QStringLiteral("-u"));
     if (!process.waitForStarted()) {
