@@ -27,7 +27,6 @@
 
 #include <KQuickAddons/ConfigModule>
 
-class QQuickView;
 class QStandardItemModel;
 
 class KCMPlymouth : public KQuickAddons::ConfigModule
