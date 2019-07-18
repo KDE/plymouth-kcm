@@ -29,15 +29,13 @@
 #include <QDebug>
 #include <QStandardPaths>
 #include <QProcess>
-#include <QQuickView>
 
-#include <QtQml>
 #include <QQmlEngine>
-#include <QQmlContext>
+#include <QQuickItem>
+#include <QQuickWindow>
 #include <QStandardItemModel>
 
 #include <KLocalizedString>
-#include <KMessageBox>
 
 #include <kauthaction.h>
 #include <kauthexecutejob.h>
@@ -53,24 +51,23 @@ K_PLUGIN_FACTORY_WITH_JSON(KCMPlymouthFactory, "kcm_plymouth.json", registerPlug
 KCMPlymouth::KCMPlymouth(QObject* parent, const QVariantList& args)
     : KQuickAddons::ConfigModule(parent, args)
 {
-    //This flag seems to be needed in order for QQuickWidget to work
-    //see https://bugreports.qt-project.org/browse/QTBUG-40765
-    //also, it seems to work only if set in the kcm, not in the systemsettings' main
-    qApp->setAttribute(Qt::AA_DontCreateNativeWidgetSiblings);
     qmlRegisterType<QStandardItemModel>();
     qmlRegisterType<KCMPlymouth>();
-    KAboutData* about = new KAboutData(QStringLiteral("kcm_plymouth"), i18n("Configure Plymouth Splash Screen"),
+    KAboutData* about = new KAboutData(QStringLiteral("kcm_plymouth"), i18n("Boot Splash Screen"),
                                        QStringLiteral(PLYMOUTH_KCM_VERSION), QString(), KAboutLicense::LGPL);
     about->addAuthor(i18n("Marco Martin"), QString(), QStringLiteral("mart@kde.org"));
     setAboutData(about);
-    setButtons(Apply | Default);
+    setButtons(Apply);
 
     m_model = new QStandardItemModel(this);
-    QHash<int, QByteArray> roles = m_model->roleNames();
-    roles[PluginNameRole] = "pluginName";
-    roles[ScreenhotRole] = "screenshot";
-    roles[UninstallableRole] = "uninstallable";
-    m_model->setItemRoleNames(roles);
+
+    m_model->setItemRoleNames({
+        {Qt::DisplayRole, QByteArrayLiteral("display")},
+        {DescriptionRole, QByteArrayLiteral("description")},
+        {PluginNameRole, QByteArrayLiteral("pluginName")},
+        {ScreenhotRole, QByteArrayLiteral("screenshot")},
+        {UninstallableRole, QByteArrayLiteral("uninstallable")}
+    });
 
     //setAuthActionName("org.kde.kcontrol.kcmplymouth.save");
     //setNeedsAuthorization(true);
@@ -81,12 +78,64 @@ KCMPlymouth::~KCMPlymouth()
     delete m_newStuffDialog.data();
 }
 
-void KCMPlymouth::getNewStuff()
+void KCMPlymouth::reloadModel()
+{
+    m_model->clear();
+
+    QDir dir(QStringLiteral(PLYMOUTH_THEMES_DIR));
+    if (!dir.exists()) {
+        return;
+    }
+
+    KConfigGroup installedCg(KSharedConfig::openConfig(QStringLiteral("kplymouththemeinstallerrc")), "DownloadedThemes");
+
+    dir.setFilter(QDir::NoDotAndDotDot|QDir::Dirs);
+
+    const auto list = dir.entryInfoList();
+    for (const QFileInfo &fileInfo : list) {
+        const QString pluginName = fileInfo.fileName();
+        QDir themeDir(fileInfo.filePath());
+
+        KConfig file(themeDir.filePath(pluginName + QLatin1String(".plymouth")), KConfig::SimpleConfig);
+        KConfigGroup grp = file.group("Plymouth Theme");
+
+        QString displayName = grp.readEntry("Name", QString());
+        if (displayName.isEmpty()) {
+            displayName = pluginName;
+        }
+
+        QStandardItem *row = new QStandardItem(displayName);
+        row->setData(pluginName, PluginNameRole);
+        row->setData(grp.readEntry("Description", QString()), DescriptionRole);
+        row->setData(installedCg.entryMap().contains(fileInfo.fileName()), UninstallableRole);
+
+        //the theme has a preview
+        if (QFile::exists(themeDir.path() + QStringLiteral("/preview.png"))) {
+            row->setData(QString(themeDir.path() + QStringLiteral("/preview.png")), ScreenhotRole);
+        //fetch it downloaded from kns
+        } else {
+            const QString fileName = installedCg.readEntry(fileInfo.fileName(), QString());
+            if (fileName.isEmpty()) {
+                row->setData(QString(), ScreenhotRole);
+            } else {
+                row->setData(fileName + QStringLiteral(".png"), ScreenhotRole);
+            }
+        }
+
+        m_model->appendRow(row);
+    }
+
+    emit selectedPluginIndexChanged();
+}
+
+void KCMPlymouth::getNewStuff(QQuickItem *ctx)
 {
     if (!m_newStuffDialog) {
         m_newStuffDialog = new KNS3::DownloadDialog( QLatin1String("plymouth.knsrc") );
-        m_newStuffDialog.data()->setWindowTitle(i18n("Download New Splash Screens"));
-        connect(m_newStuffDialog.data(), &KNS3::DownloadDialog::accepted, this,  &KCMPlymouth::load);
+        m_newStuffDialog->setWindowTitle(i18n("Download New Boot Splash Screens"));
+        m_newStuffDialog->setWindowModality(Qt::WindowModal);
+        m_newStuffDialog->winId(); // so it creates the windowHandle();
+        connect(m_newStuffDialog.data(), &KNS3::DownloadDialog::accepted, this, &KCMPlymouth::reloadModel);
         connect(m_newStuffDialog.data(), &KNS3::DownloadDialog::finished, m_newStuffDialog.data(),  &KNS3::DownloadDialog::deleteLater);
 
         connect(m_newStuffDialog->engine(), &KNSCore::Engine::signalEntryChanged, this, [=](const KNSCore::EntryInternal &entry){
@@ -97,7 +146,12 @@ void KCMPlymouth::getNewStuff()
             KIO::file_copy(QUrl(entry.previewUrl(KNSCore::EntryInternal::PreviewBig1)), QUrl::fromLocalFile(QString(entry.installedFiles().first() + QStringLiteral(".png"))), -1,  KIO::Overwrite | KIO::HideProgressInfo);
         });
     }
-    m_newStuffDialog.data()->show();
+
+    if (ctx && ctx->window()) {
+        m_newStuffDialog->windowHandle()->setTransientParent(ctx->window());
+    }
+
+    m_newStuffDialog->show();
 }
 
 QStandardItemModel *KCMPlymouth::themesModel()
@@ -116,13 +170,26 @@ void KCMPlymouth::setSelectedPlugin(const QString &plugin)
         return;
     }
 
-    const bool firstTime = m_selectedPlugin.isNull();
     m_selectedPlugin = plugin;
     emit selectedPluginChanged();
+    emit selectedPluginIndexChanged();
 
-    if (!firstTime) {
-        setNeedsSave(true);
+    setNeedsSave(true);
+}
+
+bool KCMPlymouth::busy() const
+{
+    return m_busy;
+}
+
+void KCMPlymouth::setBusy(const bool &busy)
+{
+    if (m_busy == busy) {
+        return;
     }
+
+    m_busy = busy;
+    emit busyChanged();
 }
 
 int KCMPlymouth::selectedPluginIndex() const
@@ -137,45 +204,19 @@ int KCMPlymouth::selectedPluginIndex() const
 
 void KCMPlymouth::load()
 {
-    m_model->clear();
-    QDir dir(QStringLiteral(PLYMOUTH_THEMES_DIR));
-    if (!dir.exists()) {
-        return;
-    }
+    reloadModel();
 
     KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral(PLYMOUTH_CONFIG_PATH)), "Daemon");
-    m_selectedPlugin = cg.readEntry("Theme");
-    KConfigGroup installedCg(KSharedConfig::openConfig(QStringLiteral("kplymouththemeinstallerrc")), "DownloadedThemes");
 
-    dir.setFilter(QDir::NoDotAndDotDot|QDir::Dirs);
-    QFileInfoList list = dir.entryInfoList();
-    for (int i = 0; i < list.size(); ++i) {
-        QFileInfo fileInfo = list.at(i);
-        QStandardItem* row = new QStandardItem(fileInfo.fileName());
-        row->setData(fileInfo.fileName(), PluginNameRole);
-        row->setData(installedCg.entryMap().contains(fileInfo.fileName()), UninstallableRole);
-        QDir themeDir(fileInfo.filePath());
-        //the theme has a preview
-        if (QFile::exists(themeDir.path() + QStringLiteral("/preview.png"))) {
-            row->setData(QString(themeDir.path() + QStringLiteral("/preview.png")), ScreenhotRole);
-        //fetch it downloaded from kns
-        } else {
-            const QString fileName = installedCg.readEntry(fileInfo.fileName(), QString());
-            if (fileName.isEmpty()) {
-                row->setData(QString(), ScreenhotRole);
-            } else {
-                row->setData(fileName + QStringLiteral(".png"), ScreenhotRole);
-            }
-        }
+    setSelectedPlugin(cg.readEntry("Theme"));
 
-        m_model->appendRow(row);
-    }
     setNeedsSave(false);
 }
 
 
 void KCMPlymouth::save()
 {
+    setBusy(true);
     QVariantMap helperargs;
     helperargs[QStringLiteral("theme")] = m_selectedPlugin;
 
@@ -188,8 +229,12 @@ void KCMPlymouth::save()
     KAuth::ExecuteJob *job = action.execute();
     bool rc = job->exec();
     if (!rc) {
-        KMessageBox::error(nullptr, i18n("Unable to authenticate/execute the action: %1, %2", job->error(), job->errorString()));
+        if (job->error() == KAuth::ActionReply::UserCancelledError) {
+            emit showErrorMessage(i18n("Unable to authenticate/execute the action: %1 (%2)", job->error(), job->errorString()));
+        }
+        load();
     }
+    setBusy(false);
 }
 
 void KCMPlymouth::uninstall(const QString &plugin)
@@ -205,10 +250,11 @@ void KCMPlymouth::uninstall(const QString &plugin)
     KAuth::ExecuteJob *job = action.execute();
     bool rc = job->exec();
     if (!rc) {
-        KMessageBox::error(nullptr, i18n("Unable to authenticate/execute the action: %1, %2", job->error(), job->errorString()));
+        emit showErrorMessage(i18n("Unable to authenticate/execute the action: %1 (%2)", job->error(), job->errorString()));
     } else {
         KConfigGroup installedCg(KSharedConfig::openConfig(QStringLiteral("kplymouththemeinstallerrc")), "DownloadedThemes");
         installedCg.deleteEntry(plugin);
+        emit showSuccessMessage(i18n("Theme uninstalled successfully."));
         load();
     }
 }

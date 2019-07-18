@@ -27,7 +27,7 @@
 
 #include <KQuickAddons/ConfigModule>
 
-class QQuickView;
+class QQuickItem;
 class QStandardItemModel;
 
 class KCMPlymouth : public KQuickAddons::ConfigModule
@@ -35,10 +35,13 @@ class KCMPlymouth : public KQuickAddons::ConfigModule
     Q_OBJECT
     Q_PROPERTY(QStandardItemModel *themesModel READ themesModel CONSTANT)
     Q_PROPERTY(QString selectedPlugin READ selectedPlugin WRITE setSelectedPlugin NOTIFY selectedPluginChanged)
+    Q_PROPERTY(int selectedPluginIndex READ selectedPluginIndex NOTIFY selectedPluginIndexChanged)
+    Q_PROPERTY(bool busy READ busy WRITE setBusy NOTIFY busyChanged)
 
 public:
     enum Roles {
-        PluginNameRole = Qt::UserRole +1,
+        DescriptionRole = Qt::UserRole + 1,
+        PluginNameRole,
         ScreenhotRole,
         UninstallableRole
     };
@@ -50,8 +53,13 @@ public:
     QString selectedPlugin() const;
     void setSelectedPlugin(const QString &plugin);
 
-    Q_INVOKABLE int selectedPluginIndex() const;
-    Q_INVOKABLE void getNewStuff();
+    int selectedPluginIndex() const;
+
+    bool busy() const;
+    void setBusy(const bool &busy);
+
+    Q_INVOKABLE void reloadModel();
+    Q_INVOKABLE void getNewStuff(QQuickItem *ctx);
     Q_INVOKABLE void uninstall(const QString &plugin);
 
 public Q_SLOTS:
@@ -61,10 +69,17 @@ public Q_SLOTS:
 
 Q_SIGNALS:
     void selectedPluginChanged();
+    void selectedPluginIndexChanged();
+
+    void busyChanged();
+
+    void showSuccessMessage(const QString &message);
+    void showErrorMessage(const QString &message);
 
 private:
     QStandardItemModel *m_model;
     QString m_selectedPlugin;
+    bool m_busy = false;
     QPointer<KNS3::DownloadDialog> m_newStuffDialog;
 };
 

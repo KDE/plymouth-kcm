@@ -45,7 +45,6 @@ ActionReply PlymouthHelper::save(const QVariantMap &args)
         reply.setErrorDescription(i18n("No theme specified in helper parameters."));
         return reply;
     }
-    qWarning()<<"KAUTH HELPER CALLED SAVE WITH" << theme;
 
     {
         KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral(PLYMOUTH_CONFIG_PATH)), "Daemon");
@@ -181,7 +180,6 @@ ActionReply PlymouthHelper::install(const QVariantMap &args)
     if (themearchive.isEmpty()) {
         return ActionReply::BackendError;
     }
-    qWarning()<<"KAUTH HELPER CALLED INSTALL WITH" << themearchive;
 
     QDir basedir(QStringLiteral(PLYMOUTH_THEMES_DIR));
     if (!basedir.exists()) {
@@ -292,7 +290,6 @@ ActionReply PlymouthHelper::uninstall(const QVariantMap &args)
         qWarning()<<"No theme specified.";
         return ActionReply::BackendError;
     }
-    qWarning()<<"KAUTH HELPER CALLED UNINSTALL WITH" << theme;
 
     QDir dir(QStringLiteral(PLYMOUTH_THEMES_DIR));
     if (!dir.exists()) {
