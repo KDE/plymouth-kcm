@@ -58,6 +58,8 @@ KCMPlymouth::KCMPlymouth(QObject* parent, const QVariantList& args)
     about->addAuthor(i18n("Marco Martin"), QString(), QStringLiteral("mart@kde.org"));
     setAboutData(about);
     setButtons(Apply);
+    setAuthActionName(QStringLiteral("org.kde.kcontrol.kcmplymouth.save"));
+    setNeedsAuthorization(true);
 
     m_model = new QStandardItemModel(this);
 
@@ -68,9 +70,6 @@ KCMPlymouth::KCMPlymouth(QObject* parent, const QVariantList& args)
         {ScreenhotRole, QByteArrayLiteral("screenshot")},
         {UninstallableRole, QByteArrayLiteral("uninstallable")}
     });
-
-    //setAuthActionName("org.kde.kcontrol.kcmplymouth.save");
-    //setNeedsAuthorization(true);
 }
 
 KCMPlymouth::~KCMPlymouth()
@@ -220,8 +219,7 @@ void KCMPlymouth::save()
     QVariantMap helperargs;
     helperargs[QStringLiteral("theme")] = m_selectedPlugin;
 
-    //KAuth::Action action(authActionName());
-    KAuth::Action action(QStringLiteral("org.kde.kcontrol.kcmplymouth.save"));
+    KAuth::Action action(authActionName());
     action.setHelperId(QStringLiteral("org.kde.kcontrol.kcmplymouth"));
     action.setArguments(helperargs);
     action.setTimeout(60000);
