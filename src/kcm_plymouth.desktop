@@ -63,6 +63,7 @@ Comment[zh_CN]=选择 Plymouth 启动屏幕
 Comment[zh_TW]=選擇 Plymouth 開機啟動畫面
 X-KDE-Keywords=plymouth,splash,splash screen,boot splash
 X-KDE-Keywords[ca]=plymouth,splash,pantalla de presentació,presentació d'inici
+X-KDE-Keywords[cs]=plymouth,úvod,úvodní obrazovka,startovací obrazovka
 X-KDE-Keywords[de]=plymouth,splash,splash screen,Startbildschirm
 X-KDE-Keywords[en_GB]=plymouth,splash,splash screen,boot splash
 X-KDE-Keywords[es]=plymouth,pantalla de bienvenida,pantalla de arranque
