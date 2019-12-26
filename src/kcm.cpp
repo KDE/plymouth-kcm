@@ -28,6 +28,7 @@
 #include <KSharedConfig>
 #include <QDebug>
 #include <QStandardPaths>
+#include <QtGlobal>
 #include <QProcess>
 
 #include <QQmlEngine>
@@ -51,8 +52,13 @@ K_PLUGIN_FACTORY_WITH_JSON(KCMPlymouthFactory, "kcm_plymouth.json", registerPlug
 KCMPlymouth::KCMPlymouth(QObject* parent, const QVariantList& args)
     : KQuickAddons::ConfigModule(parent, args)
 {
+#if (QT_VERSION < QT_VERSION_CHECK(5,14,0))
     qmlRegisterType<QStandardItemModel>();
     qmlRegisterType<KCMPlymouth>();
+#else
+    qmlRegisterAnonymousType<QStandardItemModel>("KCMPlymouth", 1);
+    qmlRegisterAnonymousType<KCMPlymouth>("KCMPlymouth", 1);
+#endif
     KAboutData* about = new KAboutData(QStringLiteral("kcm_plymouth"), i18n("Boot Splash Screen"),
                                        QStringLiteral(PLYMOUTH_KCM_VERSION), QString(), KAboutLicense::LGPL);
     about->addAuthor(i18n("Marco Martin"), QString(), QStringLiteral("mart@kde.org"));
