@@ -67,7 +67,7 @@ ActionReply PlymouthHelper::save(const QVariantMap &args)
         QProcess checkProcess;
         QByteArray data;
         qDebug() << "Running update-alternatives --list default.plymouth now";
-        checkProcess.start(QStringLiteral("update-alternatives --list default.plymouth"));
+        checkProcess.start(QStringLiteral("update-alternatives --list default.plymouth"), QStringList());
         if (!checkProcess.waitForStarted()) {
             reply = ActionReply::BackendError;
             reply.setErrorDescription(i18n("Cannot start update-alternatives."));
