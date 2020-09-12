@@ -106,7 +106,7 @@ int main(int argc, char **argv)
             if (dir->entries().count() > 1) {
                 helperargs[QStringLiteral("theme")] = QFileInfo(archive->fileName()).baseName();
             } else {
-                helperargs[QStringLiteral("theme")] = dir->entries().first();
+                helperargs[QStringLiteral("theme")] = dir->entries().constFirst();
             }
         } else {
             helperargs[QStringLiteral("theme")] = themefile;

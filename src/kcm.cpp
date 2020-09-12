@@ -148,7 +148,7 @@ void KCMPlymouth::getNewStuff(QQuickItem *ctx)
                 return;
             }
 
-            KIO::file_copy(QUrl(entry.previewUrl(KNSCore::EntryInternal::PreviewBig1)), QUrl::fromLocalFile(QString(entry.installedFiles().first() + QStringLiteral(".png"))), -1,  KIO::Overwrite | KIO::HideProgressInfo);
+            KIO::file_copy(QUrl(entry.previewUrl(KNSCore::EntryInternal::PreviewBig1)), QUrl::fromLocalFile(QString(entry.installedFiles().constFirst() + QStringLiteral(".png"))), -1,  KIO::Overwrite | KIO::HideProgressInfo);
         });
     }
 
