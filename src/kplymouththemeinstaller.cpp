@@ -44,7 +44,7 @@ int main(int argc, char **argv)
 
     const QString description = i18n("Plymouth theme installer");
 
-    app.setApplicationVersion(QStringLiteral(PLYMOUTH_KCM_VERSION));
+    app.setApplicationVersion(QStringLiteral(PROJECT_VERSION));
     parser.addVersionOption();
     parser.addHelpOption();
     parser.setApplicationDescription(description);
