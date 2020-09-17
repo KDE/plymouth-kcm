@@ -1,7 +1,7 @@
 project(plymouthkcm)
 
 cmake_minimum_required(VERSION 2.8.12)
-set(KF5_MIN_VERSION "5.66.0")
+set(KF5_MIN_VERSION "5.74")
 set(QT_MIN_VERSION "5.14.0")
 
 ################# Disallow in-source build #################
