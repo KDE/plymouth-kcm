@@ -21,9 +21,6 @@ target_link_libraries(kcm_plymouth
   KF5::NewStuffCore
   KF5::ConfigCore
   KF5::KIOCore
-
-  Qt5::Widgets
-  ${X11_LIBRARIES}
 )
 
 kcoreaddons_desktop_to_json(kcm_plymouth "kcm_plymouth.desktop" SERVICE_TYPES kcmodule.desktop)
