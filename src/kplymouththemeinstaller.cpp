@@ -20,22 +20,22 @@
 #include "config-kcm.h"
 
 #include <QCoreApplication>
+#include <QDebug>
 #include <QDir>
 #include <QFile>
-#include <QDebug>
-#include <QProcess>
 #include <QMimeDatabase>
-#include <qcommandlineparser.h>
+#include <QProcess>
 #include <qcommandlineoption.h>
+#include <qcommandlineparser.h>
 
-#include "kzip.h"
 #include "ktar.h"
+#include "kzip.h"
 #include <KArchive>
 #include <KConfigGroup>
 #include <KSharedConfig>
-#include <klocalizedstring.h>
 #include <kauthaction.h>
 #include <kauthexecutejob.h>
+#include <klocalizedstring.h>
 
 int main(int argc, char **argv)
 {
@@ -76,7 +76,7 @@ int main(int argc, char **argv)
     QVariantMap helperargs;
     helperargs[QStringLiteral("themearchive")] = themefile;
 
-    //support uninstalling from an archive
+    // support uninstalling from an archive
     QMimeDatabase db;
     QMimeType mimeType = db.mimeTypeForFile(themefile);
     bool isArchive = false;
@@ -84,6 +84,7 @@ int main(int argc, char **argv)
         QScopedPointer<KArchive> archive;
         if (mimeType.inherits(QStringLiteral("application/zip"))) {
             archive.reset(new KZip(themefile));
+            // clang-format off
         } else if (mimeType.inherits(QStringLiteral("application/tar"))
             || mimeType.inherits(QStringLiteral("application/x-gzip"))
             || mimeType.inherits(QStringLiteral("application/x-bzip"))
@@ -92,6 +93,7 @@ int main(int argc, char **argv)
             || mimeType.inherits(QStringLiteral("application/x-bzip-compressed-tar"))
             || mimeType.inherits(QStringLiteral("application/x-compressed-tar"))) {
             archive.reset(new KTar(themefile));
+            // clang-format on
         }
         if (archive) {
             isArchive = true;
@@ -101,8 +103,8 @@ int main(int argc, char **argv)
                 exit(-1);
             }
             const KArchiveDirectory *dir = archive->directory();
-            //if there is more than an item in the file,
-            //plugin is a subdirectory with the same name as the file
+            // if there is more than an item in the file,
+            // plugin is a subdirectory with the same name as the file
             if (dir->entries().count() > 1) {
                 helperargs[QStringLiteral("theme")] = QFileInfo(archive->fileName()).baseName();
             } else {
@@ -113,7 +115,8 @@ int main(int argc, char **argv)
         }
     }
 
-    KAuth::Action action(parser.isSet(QStringLiteral("install")) ? QStringLiteral("org.kde.kcontrol.kcmplymouth.install") : QStringLiteral("org.kde.kcontrol.kcmplymouth.uninstall"));
+    KAuth::Action action(parser.isSet(QStringLiteral("install")) ? QStringLiteral("org.kde.kcontrol.kcmplymouth.install")
+                                                                 : QStringLiteral("org.kde.kcontrol.kcmplymouth.uninstall"));
     action.setHelperId(QStringLiteral("org.kde.kcontrol.kcmplymouth"));
     action.setArguments(helperargs);
 
@@ -129,14 +132,14 @@ int main(int argc, char **argv)
         cg.writeEntry(job->data().value(QStringLiteral("plugin")).toString(), themefile);
     } else {
         if (!isArchive) {
-            //try to take the file name from the config file
+            // try to take the file name from the config file
             themefile = cg.readEntry(job->data().value(QStringLiteral("plugin")).toString(), QString());
         }
 
         if (themefile.isEmpty()) {
-            //remove archive
+            // remove archive
             QFile(themefile).remove();
-            //remove screenshot
+            // remove screenshot
             QFile::remove(QString(themefile + QStringLiteral(".png")));
         }
 

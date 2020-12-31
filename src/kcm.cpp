@@ -21,15 +21,15 @@
 #include "kcm.h"
 #include "config-kcm.h"
 
-#include <KPluginFactory>
-#include <KPluginLoader>
 #include <KAboutData>
 #include <KConfigGroup>
+#include <KPluginFactory>
+#include <KPluginLoader>
 #include <KSharedConfig>
 #include <QDebug>
+#include <QProcess>
 #include <QStandardPaths>
 #include <QtGlobal>
-#include <QProcess>
 
 #include <QQmlEngine>
 #include <QQuickItem>
@@ -44,18 +44,18 @@
 #include <KNewStuff3/KNSCore/Engine>
 #include <KNewStuff3/KNSCore/EntryInternal>
 
-#include <kio/job.h>
 #include <KIO/CopyJob>
+#include <kio/job.h>
 
 K_PLUGIN_FACTORY_WITH_JSON(KCMPlymouthFactory, "kcm_plymouth.json", registerPlugin<KCMPlymouth>();)
 
-KCMPlymouth::KCMPlymouth(QObject* parent, const QVariantList& args)
+KCMPlymouth::KCMPlymouth(QObject *parent, const QVariantList &args)
     : KQuickAddons::ConfigModule(parent, args)
 {
     qmlRegisterAnonymousType<QStandardItemModel>("KCMPlymouth", 1);
     qmlRegisterAnonymousType<KCMPlymouth>("KCMPlymouth", 1);
-    KAboutData* about = new KAboutData(QStringLiteral("kcm_plymouth"), i18n("Boot Splash Screen"),
-                                       QStringLiteral(PROJECT_VERSION), QString(), KAboutLicense::LGPL);
+    KAboutData *about =
+        new KAboutData(QStringLiteral("kcm_plymouth"), i18n("Boot Splash Screen"), QStringLiteral(PROJECT_VERSION), QString(), KAboutLicense::LGPL);
     about->addAuthor(i18n("Marco Martin"), QString(), QStringLiteral("mart@kde.org"));
     setAboutData(about);
     setButtons(Apply);
@@ -64,13 +64,11 @@ KCMPlymouth::KCMPlymouth(QObject* parent, const QVariantList& args)
 
     m_model = new QStandardItemModel(this);
 
-    m_model->setItemRoleNames({
-        {Qt::DisplayRole, QByteArrayLiteral("display")},
-        {DescriptionRole, QByteArrayLiteral("description")},
-        {PluginNameRole, QByteArrayLiteral("pluginName")},
-        {ScreenhotRole, QByteArrayLiteral("screenshot")},
-        {UninstallableRole, QByteArrayLiteral("uninstallable")}
-    });
+    m_model->setItemRoleNames({{Qt::DisplayRole, QByteArrayLiteral("display")},
+                               {DescriptionRole, QByteArrayLiteral("description")},
+                               {PluginNameRole, QByteArrayLiteral("pluginName")},
+                               {ScreenhotRole, QByteArrayLiteral("screenshot")},
+                               {UninstallableRole, QByteArrayLiteral("uninstallable")}});
 }
 
 KCMPlymouth::~KCMPlymouth()
@@ -89,7 +87,7 @@ void KCMPlymouth::reloadModel()
 
     KConfigGroup installedCg(KSharedConfig::openConfig(QStringLiteral("kplymouththemeinstallerrc")), "DownloadedThemes");
 
-    dir.setFilter(QDir::NoDotAndDotDot|QDir::Dirs);
+    dir.setFilter(QDir::NoDotAndDotDot | QDir::Dirs);
 
     const auto list = dir.entryInfoList();
     for (const QFileInfo &fileInfo : list) {
@@ -109,10 +107,10 @@ void KCMPlymouth::reloadModel()
         row->setData(grp.readEntry("Description", QString()), DescriptionRole);
         row->setData(installedCg.entryMap().contains(fileInfo.fileName()), UninstallableRole);
 
-        //the theme has a preview
+        // the theme has a preview
         if (QFile::exists(themeDir.path() + QStringLiteral("/preview.png"))) {
             row->setData(QString(themeDir.path() + QStringLiteral("/preview.png")), ScreenhotRole);
-        //fetch it downloaded from kns
+            // fetch it downloaded from kns
         } else {
             const QString fileName = installedCg.readEntry(fileInfo.fileName(), QString());
             if (fileName.isEmpty()) {
@@ -131,19 +129,22 @@ void KCMPlymouth::reloadModel()
 void KCMPlymouth::getNewStuff(QQuickItem *ctx)
 {
     if (!m_newStuffDialog) {
-        m_newStuffDialog = new KNS3::DownloadDialog( QLatin1String("plymouth.knsrc") );
+        m_newStuffDialog = new KNS3::DownloadDialog(QLatin1String("plymouth.knsrc"));
         m_newStuffDialog->setWindowTitle(i18n("Download New Boot Splash Screens"));
         m_newStuffDialog->setWindowModality(Qt::WindowModal);
         m_newStuffDialog->winId(); // so it creates the windowHandle();
         connect(m_newStuffDialog.data(), &KNS3::DownloadDialog::accepted, this, &KCMPlymouth::reloadModel);
-        connect(m_newStuffDialog.data(), &KNS3::DownloadDialog::finished, m_newStuffDialog.data(),  &KNS3::DownloadDialog::deleteLater);
+        connect(m_newStuffDialog.data(), &KNS3::DownloadDialog::finished, m_newStuffDialog.data(), &KNS3::DownloadDialog::deleteLater);
 
-        connect(m_newStuffDialog->engine(), &KNSCore::Engine::signalEntryChanged, this, [=](const KNSCore::EntryInternal &entry){
+        connect(m_newStuffDialog->engine(), &KNSCore::Engine::signalEntryChanged, this, [=](const KNSCore::EntryInternal &entry) {
             if (!entry.isValid() || entry.status() != KNS3::Entry::Installed) {
                 return;
             }
 
-            KIO::file_copy(QUrl(entry.previewUrl(KNSCore::EntryInternal::PreviewBig1)), QUrl::fromLocalFile(QString(entry.installedFiles().constFirst() + QStringLiteral(".png"))), -1,  KIO::Overwrite | KIO::HideProgressInfo);
+            KIO::file_copy(QUrl(entry.previewUrl(KNSCore::EntryInternal::PreviewBig1)),
+                           QUrl::fromLocalFile(QString(entry.installedFiles().constFirst() + QStringLiteral(".png"))),
+                           -1,
+                           KIO::Overwrite | KIO::HideProgressInfo);
         });
     }
 
@@ -213,7 +214,6 @@ void KCMPlymouth::load()
     setNeedsSave(false);
 }
 
-
 void KCMPlymouth::save()
 {
     setBusy(true);
@@ -241,7 +241,7 @@ void KCMPlymouth::uninstall(const QString &plugin)
     QVariantMap helperargs;
     helperargs[QStringLiteral("theme")] = plugin;
 
-    //KAuth::Action action(authActionName());
+    // KAuth::Action action(authActionName());
     KAuth::Action action(QStringLiteral("org.kde.kcontrol.kcmplymouth.uninstall"));
     action.setHelperId(QStringLiteral("org.kde.kcontrol.kcmplymouth"));
     action.setArguments(helperargs);
@@ -259,12 +259,11 @@ void KCMPlymouth::uninstall(const QString &plugin)
 }
 
 void KCMPlymouth::defaults()
-{/*TODO
-    if (!) {
-        return;
-    }
-*/
-
+{ /*TODO
+     if (!) {
+         return;
+     }
+ */
 }
 
 #include "kcm.moc"
