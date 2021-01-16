@@ -1,0 +1,11 @@
+*~
+*.diff
+*.kate-swp
+*.kdev4
+.*.swp
+.swp.*
+/build*/
+CMakeLists.txt.user*
+.clang-format
+cmake-build-debug*
+.idea
