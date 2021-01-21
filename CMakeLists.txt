@@ -1,7 +1,7 @@
 project(plymouthkcm)
 
 cmake_minimum_required(VERSION 2.8.12)
-set(KF5_MIN_VERSION "5.74")
+set(KF5_MIN_VERSION "5.78")
 set(QT_MIN_VERSION "5.15.0")
 
 set(CMAKE_CXX_STANDARD 17)
