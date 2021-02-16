@@ -41,7 +41,6 @@
 #include <kauthaction.h>
 #include <kauthexecutejob.h>
 
-#include <KNewStuff3/KNSCore/Engine>
 #include <KNewStuff3/KNSCore/EntryInternal>
 
 #include <KIO/CopyJob>
@@ -73,7 +72,6 @@ KCMPlymouth::KCMPlymouth(QObject *parent, const QVariantList &args)
 
 KCMPlymouth::~KCMPlymouth()
 {
-    delete m_newStuffDialog.data();
 }
 
 void KCMPlymouth::reloadModel()
@@ -126,33 +124,20 @@ void KCMPlymouth::reloadModel()
     emit selectedPluginIndexChanged();
 }
 
-void KCMPlymouth::getNewStuff(QQuickItem *ctx)
+void KCMPlymouth::onChangedEntriesChanged(const QQmlListReference &changedEntries)
 {
-    if (!m_newStuffDialog) {
-        m_newStuffDialog = new KNS3::DownloadDialog(QLatin1String("plymouth.knsrc"));
-        m_newStuffDialog->setWindowTitle(i18n("Download New Boot Splash Screens"));
-        m_newStuffDialog->setWindowModality(Qt::WindowModal);
-        m_newStuffDialog->winId(); // so it creates the windowHandle();
-        connect(m_newStuffDialog.data(), &KNS3::DownloadDialog::accepted, this, &KCMPlymouth::reloadModel);
-        connect(m_newStuffDialog.data(), &KNS3::DownloadDialog::finished, m_newStuffDialog.data(), &KNS3::DownloadDialog::deleteLater);
-
-        connect(m_newStuffDialog->engine(), &KNSCore::Engine::signalEntryChanged, this, [=](const KNSCore::EntryInternal &entry) {
-            if (!entry.isValid() || entry.status() != KNS3::Entry::Installed) {
-                return;
-            }
-
+    static QStringList alreadyCopiedThumbnails;
+    for (int i = 0; i < changedEntries.count(); ++i) {
+        auto entry = qobject_cast<KNSCore::EntryWrapper *>(changedEntries.at(i))->entry();
+        if (entry.isValid() && entry.status() == KNS3::Entry::Installed && !alreadyCopiedThumbnails.contains(entry.uniqueId())) {
+            alreadyCopiedThumbnails.append(entry.uniqueId());
             KIO::file_copy(QUrl(entry.previewUrl(KNSCore::EntryInternal::PreviewBig1)),
                            QUrl::fromLocalFile(QString(entry.installedFiles().constFirst() + QStringLiteral(".png"))),
                            -1,
                            KIO::Overwrite | KIO::HideProgressInfo);
-        });
+        }
     }
-
-    if (ctx && ctx->window()) {
-        m_newStuffDialog->windowHandle()->setTransientParent(ctx->window());
-    }
-
-    m_newStuffDialog->show();
+    reloadModel();
 }
 
 QStandardItemModel *KCMPlymouth::themesModel()

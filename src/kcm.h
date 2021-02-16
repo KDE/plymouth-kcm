@@ -21,9 +21,8 @@
 #ifndef _KCM_PLYMOUTH_H
 #define _KCM_PLYMOUTH_H
 
+#include <KNewStuff3/KNSCore/EntryWrapper>
 #include <QDir>
-
-#include <KNewStuff3/KNS3/DownloadDialog>
 
 #include <KQuickAddons/ConfigModule>
 
@@ -59,7 +58,7 @@ public:
     void setBusy(const bool &busy);
 
     Q_INVOKABLE void reloadModel();
-    Q_INVOKABLE void getNewStuff(QQuickItem *ctx);
+    Q_INVOKABLE void onChangedEntriesChanged(const QQmlListReference &changedEntries);
     Q_INVOKABLE void uninstall(const QString &plugin);
 
 public Q_SLOTS:
@@ -80,7 +79,6 @@ private:
     QStandardItemModel *m_model;
     QString m_selectedPlugin;
     bool m_busy = false;
-    QPointer<KNS3::DownloadDialog> m_newStuffDialog;
 };
 
 #endif
