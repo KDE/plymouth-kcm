@@ -46,6 +46,9 @@ KCM.GridViewKCM {
             kcm.selectedPlugin = model.pluginName;
             view.forceActiveFocus();
         }
+        onDoubleClicked: {
+            kcm.save();
+        }
     }
 
     footer: ColumnLayout {
