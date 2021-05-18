@@ -7,8 +7,8 @@ X-KDE-ServiceTypes=KCModule
 X-KDE-Library=kcm_plymouth
 X-KDE-ParentApp=kcontrol
 
-X-KDE-System-Settings-Parent-Category=session
-X-KDE-Weight=80
+X-KDE-System-Settings-Parent-Category=appearance
+X-KDE-Weight=200
 
 Name=Boot Splash Screen
 Name[ca]=Pantalla de presentació d'inici
