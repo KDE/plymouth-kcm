@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=System Splash
+Name[ar]=شاشة بدء النظام
 Name[ca]=Pantalla de presentació del sistema
 Name[ca@valencia]=Pantalla de presentació del sistema
 Name[cs]=Úvodní obrazovka
@@ -40,6 +41,7 @@ Name[x-test]=xxSystem Splashxx
 Name[zh_CN]=系统启动屏幕
 Name[zh_TW]=系統啟動畫面
 Comment=Plymouth splash screen
+Comment[ar]=شاشة بدء Plymouth
 Comment[ca]=Pantalla de presentació del Plymouth
 Comment[ca@valencia]=Pantalla de presentació del Plymouth
 Comment[cs]=Úvodní obrazovka Plymouth
