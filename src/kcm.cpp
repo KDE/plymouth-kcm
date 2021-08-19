@@ -12,7 +12,6 @@
 #include <KAboutData>
 #include <KConfigGroup>
 #include <KPluginFactory>
-#include <KPluginLoader>
 #include <KSharedConfig>
 #include <QDebug>
 #include <QProcess>
