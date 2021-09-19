@@ -95,4 +95,5 @@ X-KDE-Keywords[sl]=plymouth,splash,splash screen,boot splash,boot logo,boot them
 X-KDE-Keywords[sv]=plymouth,start,startskärm,startlogotyp,starttema,tema,visuell,skal,starta,initiera,initiering
 X-KDE-Keywords[uk]=plymouth,splash,splash screen,boot splash,boot logo,boot theme,startup,start-up,start up,theme,visual,skin,boot up,boot-up,initialize,initialization,плімут,вітання,вітальна сторінка,вітальне вікно,завантаження,вітальний екран,вітання при завантаженні,логотип завантаження,тема завантаження,запуск,тема,візуальний,шкірка,оболонка,завантаження,ініціалізація,започаткування
 X-KDE-Keywords[x-test]=xxplymouthxx,xxsplashxx,xxsplash screenxx,xxboot splashxx,xxboot logoxx,xxboot themexx,xxstartupxx,xxstart-upxx,xxstart upxx,xxthemexx,xxvisualxx,xxskinxx,xxboot upxx,xxboot-upxx,xxinitializexx,xxinitializationxx
+X-KDE-Keywords[zh_CN]=plymouth,splash,splash screen,boot splash,boot logo,boot theme,startup,start-up,start up,theme,visual,skin,boot up,boot-up,initialize,initialization,欢迎屏幕,启动屏幕,启动图标,启动标识,启动主题,启动,主题,视觉效果,视觉,皮肤,初始化
 Categories=Qt;KDE;X-KDE-settings-plymouth;
