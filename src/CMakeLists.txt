@@ -6,7 +6,7 @@ SET(PLYMOUTH_CONFIG_PATH "/etc/plymouth/plymouthd.conf" CACHE STRING "where the 
 configure_file (config-kcm.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kcm.h )
 
 set(kcm_plymouth_SRCS
-  kcm.cpp
+  kcm.cpp kcm.h
 )
 
 add_library(kcm_plymouth MODULE ${kcm_plymouth_SRCS})
@@ -46,7 +46,7 @@ target_link_libraries(kplymouththemeinstaller
 install(TARGETS kplymouththemeinstaller ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
 
 #polkit stuff
-add_executable(plymouthhelper helper.cpp ${helper_mocs})
+add_executable(plymouthhelper helper.cpp helper.h ${helper_mocs})
 target_link_libraries(plymouthhelper
     KF5::Archive
     KF5::AuthCore
