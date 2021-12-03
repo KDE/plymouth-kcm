@@ -23,11 +23,8 @@ target_link_libraries(kcm_plymouth
   KF5::KIOCore
 )
 
-kcoreaddons_desktop_to_json(kcm_plymouth "kcm_plymouth.desktop" SERVICE_TYPES kcmodule.desktop)
-
-#this desktop file is installed only for retrocompatibility with sycoca
-install(FILES kcm_plymouth.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
-install(TARGETS kcm_plymouth DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
+install(FILES kcm_plymouth.desktop DESTINATION ${KDE_INSTALL_APPDIR})
+install(TARGETS kcm_plymouth DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcms/systemsettings)
 install(FILES plymouth.knsrc DESTINATION ${KDE_INSTALL_KNSRCDIR})
 
 kpackage_install_package(package kcm_plymouth kcms)
