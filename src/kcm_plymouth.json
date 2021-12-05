@@ -2,6 +2,11 @@
     "Categories": "Qt;KDE;X-KDE-settings-plymouth;",
     "KPlugin": {
         "Description": "Choose Plymouth boot splash screen",
+        "Description[ca]": "Trieu la pantalla de presentació d'inici del Plymouth",
+        "Description[nl]": "Opstartscherm van Plymouth kiezen",
+        "Description[sv]": "Välj Plymouth startskärm",
+        "Description[uk]": "Вибір зображення для екрана вітання Plymouth",
+        "Description[x-test]": "xxChoose Plymouth boot splash screenxx",
         "Icon": "preferences-desktop-display",
         "Name": "Boot Splash Screen",
         "Name[ar]": "شاشة بدء التشغيل",
