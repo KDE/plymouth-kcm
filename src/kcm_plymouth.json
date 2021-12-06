@@ -3,7 +3,10 @@
     "KPlugin": {
         "Description": "Choose Plymouth boot splash screen",
         "Description[ca]": "Trieu la pantalla de presentació d'inici del Plymouth",
+        "Description[fr]": "Sélectionner l'écran de démarrage de Plymouth",
         "Description[nl]": "Opstartscherm van Plymouth kiezen",
+        "Description[pl]": "Wybierz ekran powitalny Plymouth",
+        "Description[sl]": "Izberi pozdravno okno Plymouth ob zagonu",
         "Description[sv]": "Välj Plymouth startskärm",
         "Description[uk]": "Вибір зображення для екрана вітання Plymouth",
         "Description[x-test]": "xxChoose Plymouth boot splash screenxx",
