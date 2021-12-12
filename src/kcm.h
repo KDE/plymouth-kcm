@@ -64,7 +64,7 @@ Q_SIGNALS:
     void showErrorMessage(const QString &message);
 
 private:
-    QStandardItemModel *m_model;
+    QStandardItemModel *const m_model;
     QString m_selectedPlugin;
     bool m_busy = false;
 };

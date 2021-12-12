@@ -211,8 +211,8 @@ ActionReply PlymouthHelper::install(const QVariantMap &args)
         themeName = QFileInfo(archive->fileName()).baseName();
         themePath = installpath;
     } else {
-        themeName = dir->entries().first();
-        themePath = installpath + dir->entries().first();
+        themeName = dir->entries().constFirst();
+        themePath = installpath + dir->entries().constFirst();
     }
     dir->copyTo(installpath);
 

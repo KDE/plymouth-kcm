@@ -37,6 +37,7 @@ K_PLUGIN_FACTORY_WITH_JSON(KCMPlymouthFactory, "kcm_plymouth.json", registerPlug
 
 KCMPlymouth::KCMPlymouth(QObject *parent, const QVariantList &args)
     : KQuickAddons::ConfigModule(parent, args)
+    , m_model(new QStandardItemModel(this))
 {
     qmlRegisterAnonymousType<QStandardItemModel>("KCMPlymouth", 1);
     qmlRegisterAnonymousType<KCMPlymouth>("KCMPlymouth", 1);
@@ -48,7 +49,6 @@ KCMPlymouth::KCMPlymouth(QObject *parent, const QVariantList &args)
     setAuthActionName(QStringLiteral("org.kde.kcontrol.kcmplymouth.save"));
     setNeedsAuthorization(true);
 
-    m_model = new QStandardItemModel(this);
 
     m_model->setItemRoleNames({{Qt::DisplayRole, QByteArrayLiteral("display")},
                                {DescriptionRole, QByteArrayLiteral("description")},
