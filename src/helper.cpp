@@ -39,6 +39,37 @@ static bool hasUpdateAlternatives()
     return !QStandardPaths::findExecutable(updateAlternatives()).isEmpty();
 }
 
+static ActionReply updateAlternativesInstall(const QString &installPath)
+{
+    QProcess process;
+    process.start(updateAlternatives(),
+                  {QStringLiteral("--install"),
+                   QStringLiteral("/usr/share/plymouth/themes/default.plymouth"),
+                   QStringLiteral("default.plymouth"),
+                   installPath,
+                   QStringLiteral("100")});
+
+    ActionReply reply = ActionReply::SuccessReply();
+    if (!process.waitForStarted()) {
+        reply = ActionReply::BackendError;
+        reply.setErrorDescription(i18n("Cannot start update-alternatives."));
+        return reply;
+    }
+    if (!process.waitForFinished()) {
+        reply = ActionReply::BackendError;
+        reply.setErrorDescription(i18n("update-alternatives failed to run."));
+        return reply;
+    }
+
+    if (int ret = process.exitCode(); ret != 0) {
+        reply = ActionReply(ActionReply::HelperErrorReply());
+        reply.setErrorCode(static_cast<ActionReply::Error>(ret));
+        reply.setErrorDescription(i18n("update-alternatives returned with error condition %1.", ret));
+        return reply;
+    }
+    return reply;
+}
+
 ActionReply PlymouthHelper::save(const QVariantMap &args)
 {
     const QString theme = args.value(QStringLiteral("theme")).toString();
@@ -93,29 +124,7 @@ ActionReply PlymouthHelper::save(const QVariantMap &args)
         const QString installFile = dir.path() + QLatin1Char('/') + themeFile.first();
         if (!data.contains(installFile.toUtf8())) {
             qDebug() << "Plymouth file not found in update-alternatives. So install it";
-            QProcess installProcess;
-            installProcess.start(updateAlternatives(),
-                                 {QStringLiteral("--install"),
-                                  QStringLiteral("/usr/share/plymouth/themes/default.plymouth"),
-                                  QStringLiteral("default.plymouth"),
-                                  installFile,
-                                  QStringLiteral("100")});
-
-            if (!installProcess.waitForStarted()) {
-                reply = ActionReply::BackendError;
-                reply.setErrorDescription(i18n("Cannot start update-alternatives."));
-                return reply;
-            }
-            if (!installProcess.waitForFinished()) {
-                reply = ActionReply::BackendError;
-                reply.setErrorDescription(i18n("update-alternatives failed to run."));
-                return reply;
-            }
-
-            if (int ret = installProcess.exitCode(); ret != 0) {
-                reply = ActionReply(ActionReply::HelperErrorReply());
-                reply.setErrorCode(static_cast<ActionReply::Error>(ret));
-                reply.setErrorDescription(i18n("update-alternatives returned with error condition %1.", ret));
+            if (auto reply = updateAlternativesInstall(installFile); reply.failed()) {
                 return reply;
             }
         } else {
@@ -246,28 +255,7 @@ ActionReply PlymouthHelper::install(const QVariantMap &args)
             return reply;
         }
 
-        QProcess process;
-        process.start(updateAlternatives(),
-                      {QStringLiteral("--install"),
-                       QStringLiteral("/usr/share/plymouth/themes/default.plymouth"),
-                       QStringLiteral("default.plymouth"),
-                       themePath + QLatin1Char('/') + themeFile.first(),
-                       QStringLiteral("100")});
-        if (!process.waitForStarted()) {
-            reply = ActionReply::BackendError;
-            reply.setErrorDescription(i18n("Cannot start update-alternatives."));
-            return reply;
-        }
-        if (!process.waitForFinished()) {
-            reply = ActionReply::BackendError;
-            reply.setErrorDescription(i18n("update-alternatives failed to run."));
-            return reply;
-        }
-
-        if (int ret = process.exitCode(); ret != 0) {
-            reply = ActionReply(ActionReply::HelperErrorReply());
-            reply.setErrorCode(static_cast<ActionReply::Error>(ret));
-            reply.setErrorDescription(i18n("update-alternatives returned with error condition %1.", ret));
+        if (auto reply = updateAlternativesInstall(themePath + QLatin1Char('/') + themeFile.first()); reply.failed()) {
             return reply;
         }
     }
