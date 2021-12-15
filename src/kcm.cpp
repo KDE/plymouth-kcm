@@ -107,7 +107,7 @@ void KCMPlymouth::reloadModel()
         m_model->appendRow(row);
     }
 
-    emit selectedPluginIndexChanged();
+    Q_EMIT selectedPluginIndexChanged();
 }
 
 void KCMPlymouth::onChangedEntriesChanged(const QQmlListReference &changedEntries)
@@ -143,8 +143,8 @@ void KCMPlymouth::setSelectedPlugin(const QString &plugin)
     }
 
     m_selectedPlugin = plugin;
-    emit selectedPluginChanged();
-    emit selectedPluginIndexChanged();
+    Q_EMIT selectedPluginChanged();
+    Q_EMIT selectedPluginIndexChanged();
 
     setNeedsSave(true);
 }
@@ -161,7 +161,7 @@ void KCMPlymouth::setBusy(const bool &busy)
     }
 
     m_busy = busy;
-    emit busyChanged();
+    Q_EMIT busyChanged();
 }
 
 int KCMPlymouth::selectedPluginIndex() const
@@ -200,7 +200,7 @@ void KCMPlymouth::save()
     bool rc = job->exec();
     if (!rc) {
         if (job->error() == KAuth::ActionReply::UserCancelledError) {
-            emit showErrorMessage(i18n("Unable to authenticate/execute the action: %1 (%2)", job->error(), job->errorString()));
+            Q_EMIT showErrorMessage(i18n("Unable to authenticate/execute the action: %1 (%2)", job->error(), job->errorString()));
         }
         load();
     }
@@ -220,11 +220,11 @@ void KCMPlymouth::uninstall(const QString &plugin)
     KAuth::ExecuteJob *job = action.execute();
     bool rc = job->exec();
     if (!rc) {
-        emit showErrorMessage(i18n("Unable to authenticate/execute the action: %1 (%2)", job->error(), job->errorString()));
+        Q_EMIT showErrorMessage(i18n("Unable to authenticate/execute the action: %1 (%2)", job->error(), job->errorString()));
     } else {
         KConfigGroup installedCg(KSharedConfig::openConfig(QStringLiteral("kplymouththemeinstallerrc")), "DownloadedThemes");
         installedCg.deleteEntry(plugin);
-        emit showSuccessMessage(i18n("Theme uninstalled successfully."));
+        Q_EMIT showSuccessMessage(i18n("Theme uninstalled successfully."));
         load();
     }
 }
