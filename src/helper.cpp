@@ -1,4 +1,5 @@
 /*
+ *  SPDX-FileCopyrightText: 2021 Harald Sitter <sitter@kde.org>
  *  SPDX-FileCopyrightText: 2016 Marco Martin <mart@kde.org>
  *  SPDX-FileCopyrightText: 1998 Luca Montecchiani <m.luca@usa.net>
  *
@@ -8,6 +9,9 @@
 
 #include "helper.h"
 #include "config-kcm.h"
+
+#include <algorithm>
+#include <chrono>
 
 #include <QDebug>
 #include <QDir>
@@ -22,6 +26,8 @@
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KSharedConfig>
+
+using namespace std::chrono_literals;
 
 ActionReply PlymouthHelper::save(const QVariantMap &args)
 {
@@ -45,13 +51,13 @@ ActionReply PlymouthHelper::save(const QVariantMap &args)
     if (QFile::exists(QStringLiteral("/usr/sbin/update-alternatives"))) {
         // find the .plymouth file in the theme
         QDir dir(QStringLiteral(PLYMOUTH_THEMES_DIR) + theme);
-        QStringList themeFile = dir.entryList(QStringList() << QStringLiteral("*.plymouth"));
+        const QStringList themeFile = dir.entryList(QStringList() << QStringLiteral("*.plymouth"));
         if (themeFile.count() != 1) {
             reply = ActionReply::BackendError;
             reply.setErrorDescription(i18n("Theme corrupted: .plymouth file not found inside theme."));
             return reply;
         }
-        int ret = 0;
+
         QProcess checkProcess;
         QByteArray data;
         qDebug() << "Running update-alternatives --list default.plymouth now";
@@ -65,24 +71,25 @@ ActionReply PlymouthHelper::save(const QVariantMap &args)
             reply = ActionReply::BackendError;
             reply.setErrorDescription(i18n("update-alternatives failed to run."));
             return reply;
-        } else {
-            data = checkProcess.readAllStandardOutput();
         }
-        ret = checkProcess.exitCode();
+        data = checkProcess.readAllStandardOutput();
 
-        if (ret != 0) {
+        if (int ret = checkProcess.exitCode(); ret != 0) {
             reply = ActionReply(ActionReply::HelperErrorReply());
             reply.setErrorCode(static_cast<ActionReply::Error>(ret));
             reply.setErrorDescription(i18n("update-alternatives returned with error condition %1.", ret));
             return reply;
         }
-        QString installFile = dir.path() + QLatin1Char('/') + themeFile.first();
+        const QString installFile = dir.path() + QLatin1Char('/') + themeFile.first();
         if (!data.contains(installFile.toUtf8())) {
             qDebug() << "Plymouth file not found in update-alternatives. So install it";
             QProcess installProcess;
             installProcess.start(QStringLiteral("update-alternatives"),
-                                 QStringList() << QStringLiteral("--install") << QStringLiteral("/usr/share/plymouth/themes/default.plymouth")
-                                               << QStringLiteral("default.plymouth") << installFile << QStringLiteral("100"));
+                                 {QStringLiteral("--install"),
+                                  QStringLiteral("/usr/share/plymouth/themes/default.plymouth"),
+                                  QStringLiteral("default.plymouth"),
+                                  installFile,
+                                  QStringLiteral("100")});
 
             if (!installProcess.waitForStarted()) {
                 reply = ActionReply::BackendError;
@@ -94,9 +101,8 @@ ActionReply PlymouthHelper::save(const QVariantMap &args)
                 reply.setErrorDescription(i18n("update-alternatives failed to run."));
                 return reply;
             }
-            ret = installProcess.exitCode();
 
-            if (ret != 0) {
+            if (int ret = installProcess.exitCode(); ret != 0) {
                 reply = ActionReply(ActionReply::HelperErrorReply());
                 reply.setErrorCode(static_cast<ActionReply::Error>(ret));
                 reply.setErrorDescription(i18n("update-alternatives returned with error condition %1.", ret));
@@ -116,9 +122,8 @@ ActionReply PlymouthHelper::save(const QVariantMap &args)
                 reply.setErrorDescription(i18n("update-alternatives failed to run."));
                 return reply;
             }
-            ret = process.exitCode();
 
-            if (ret != 0) {
+            if (int ret = process.exitCode(); ret != 0) {
                 reply = ActionReply(ActionReply::HelperErrorReply());
                 reply.setErrorCode(static_cast<ActionReply::Error>(ret));
                 reply.setErrorDescription(i18n("update-alternatives returned with error condition %1.", ret));
@@ -126,8 +131,6 @@ ActionReply PlymouthHelper::save(const QVariantMap &args)
             }
         }
     }
-
-    int ret = 0;
 
     QProcess process;
     qDebug() << "Running update-initramfs -u  now";
@@ -137,21 +140,20 @@ ActionReply PlymouthHelper::save(const QVariantMap &args)
         reply.setErrorDescription(i18n("Cannot start initramfs."));
         return reply;
     }
-    if (!process.waitForFinished(60000)) {
+    if (!process.waitForFinished(std::chrono::milliseconds(1min).count())) {
         reply = ActionReply::BackendError;
         reply.setErrorDescription(i18n("Initramfs failed to run."));
         return reply;
     }
-    ret = process.exitCode();
 
+    int ret = process.exitCode();
     if (ret == 0) {
         return ActionReply::SuccessReply();
-    } else {
-        reply = ActionReply(ActionReply::HelperErrorReply());
-        reply.setErrorCode(static_cast<ActionReply::Error>(ret));
-        reply.setErrorDescription(i18n("Initramfs returned with error condition %1.", ret));
-        return reply;
     }
+    reply = ActionReply(ActionReply::HelperErrorReply());
+    reply.setErrorCode(static_cast<ActionReply::Error>(ret));
+    reply.setErrorDescription(i18n("Initramfs returned with error condition %1.", ret));
+    return reply;
 }
 
 ActionReply PlymouthHelper::install(const QVariantMap &args)
@@ -178,25 +180,28 @@ ActionReply PlymouthHelper::install(const QVariantMap &args)
     // FIXME: KArchive should provide "safe mode" for this!
     QScopedPointer<KArchive> archive;
 
+    static QVector<QString> tarTypes = {
+        QStringLiteral("application/tar"),
+        QStringLiteral("application/x-gzip"),
+        QStringLiteral("application/x-bzip"),
+        QStringLiteral("application/x-lzma"),
+        QStringLiteral("application/x-xz"),
+        QStringLiteral("application/x-bzip-compressed-tar"),
+        QStringLiteral("application/x-compressed-tar"),
+    };
+
     if (mimeType.inherits(QStringLiteral("application/zip"))) {
         archive.reset(new KZip(themearchive));
-        // clang-format off
-    } else if (mimeType.inherits(QStringLiteral("application/tar"))
-                || mimeType.inherits(QStringLiteral("application/x-gzip"))
-                || mimeType.inherits(QStringLiteral("application/x-bzip"))
-                || mimeType.inherits(QStringLiteral("application/x-lzma"))
-                || mimeType.inherits(QStringLiteral("application/x-xz"))
-                || mimeType.inherits(QStringLiteral("application/x-bzip-compressed-tar"))
-                || mimeType.inherits(QStringLiteral("application/x-compressed-tar"))) {
+    } else if (std::any_of(tarTypes.cbegin(), tarTypes.cend(), [&](const auto &type) {
+                   return mimeType.inherits(type);
+               })) {
         archive.reset(new KTar(themearchive));
-        // clang-format on
     } else {
         qCritical() << "Could not determine type of archive file '" << themearchive << "'";
         return ActionReply::BackendError;
     }
 
-    bool success = archive->open(QIODevice::ReadOnly);
-    if (!success) {
+    if (!archive->open(QIODevice::ReadOnly)) {
         qCritical() << "Cannot open archive file '" << themearchive << "'";
         return ActionReply::BackendError;
     }
@@ -224,17 +229,20 @@ ActionReply PlymouthHelper::install(const QVariantMap &args)
     if (QFile::exists(QStringLiteral("/usr/sbin/update-alternatives"))) {
         // find the .plymouth file in the theme
         QDir dir(themePath);
-        QStringList themeFile = dir.entryList(QStringList() << QStringLiteral("*.plymouth"));
+        const QStringList themeFile = dir.entryList({QStringLiteral("*.plymouth")});
         if (themeFile.count() != 1) {
             reply = ActionReply::BackendError;
             reply.setErrorDescription(i18n("Theme corrupted: .plymouth file not found inside theme."));
             return reply;
         }
-        int ret = 0;
+
         QProcess process;
         process.start(QStringLiteral("update-alternatives"),
-                      QStringList() << QStringLiteral("--install") << QStringLiteral("/usr/share/plymouth/themes/default.plymouth")
-                                    << QStringLiteral("default.plymouth") << themePath + QLatin1Char('/') + themeFile.first() << QStringLiteral("100"));
+                      {QStringLiteral("--install"),
+                       QStringLiteral("/usr/share/plymouth/themes/default.plymouth"),
+                       QStringLiteral("default.plymouth"),
+                       themePath + QLatin1Char('/') + themeFile.first(),
+                       QStringLiteral("100")});
         if (!process.waitForStarted()) {
             reply = ActionReply::BackendError;
             reply.setErrorDescription(i18n("Cannot start update-alternatives."));
@@ -245,9 +253,8 @@ ActionReply PlymouthHelper::install(const QVariantMap &args)
             reply.setErrorDescription(i18n("update-alternatives failed to run."));
             return reply;
         }
-        ret = process.exitCode();
 
-        if (ret != 0) {
+        if (int ret = process.exitCode(); ret != 0) {
             reply = ActionReply(ActionReply::HelperErrorReply());
             reply.setErrorCode(static_cast<ActionReply::Error>(ret));
             reply.setErrorDescription(i18n("update-alternatives returned with error condition %1.", ret));
@@ -289,7 +296,7 @@ ActionReply PlymouthHelper::uninstall(const QVariantMap &args)
     // Special case: Ubuntu derivatives, which work different from everybody else
     if (QFile::exists(QStringLiteral("/usr/sbin/update-alternatives"))) {
         // find the .plymouth file in the theme
-        QStringList themeFile = dir.entryList(QStringList() << QStringLiteral("*.plymouth"));
+        const QStringList themeFile = dir.entryList(QStringList() << QStringLiteral("*.plymouth"));
         if (themeFile.count() != 1) {
             reply = ActionReply::BackendError;
             reply.setErrorDescription(i18n("Theme corrupted: .plymouth file not found inside theme."));
@@ -299,7 +306,7 @@ ActionReply PlymouthHelper::uninstall(const QVariantMap &args)
         QProcess process;
 
         process.start(QStringLiteral("update-alternatives"),
-                      QStringList() << QStringLiteral("--remove") << QStringLiteral("default.plymouth") << dir.path() + QLatin1Char('/') + themeFile.first());
+                      {QStringLiteral("--remove"), QStringLiteral("default.plymouth"), dir.path() + QLatin1Char('/') + themeFile.first()});
         if (!process.waitForStarted()) {
             reply = ActionReply::BackendError;
             reply.setErrorDescription(i18n("Cannot start update-alternatives."));
@@ -322,9 +329,8 @@ ActionReply PlymouthHelper::uninstall(const QVariantMap &args)
 
     if (dir.removeRecursively()) {
         return ActionReply::SuccessReply();
-    } else {
-        return ActionReply::BackendError;
     }
+    return ActionReply::BackendError;
 }
 
 KAUTH_HELPER_MAIN("org.kde.kcontrol.kcmplymouth", PlymouthHelper)

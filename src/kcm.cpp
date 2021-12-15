@@ -49,7 +49,6 @@ KCMPlymouth::KCMPlymouth(QObject *parent, const QVariantList &args)
     setAuthActionName(QStringLiteral("org.kde.kcontrol.kcmplymouth.save"));
     setNeedsAuthorization(true);
 
-
     m_model->setItemRoleNames({{Qt::DisplayRole, QByteArrayLiteral("display")},
                                {DescriptionRole, QByteArrayLiteral("description")},
                                {PluginNameRole, QByteArrayLiteral("pluginName")},
