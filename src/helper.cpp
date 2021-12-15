@@ -29,6 +29,16 @@
 
 using namespace std::chrono_literals;
 
+static QString updateAlternatives()
+{
+    return QStringLiteral("update-alternatives");
+}
+
+static bool hasUpdateAlternatives()
+{
+    return !QStandardPaths::findExecutable(updateAlternatives()).isEmpty();
+}
+
 ActionReply PlymouthHelper::save(const QVariantMap &args)
 {
     const QString theme = args.value(QStringLiteral("theme")).toString();
@@ -48,7 +58,7 @@ ActionReply PlymouthHelper::save(const QVariantMap &args)
     configFile.setPermissions(QFileDevice::ReadOwner | QFileDevice::WriteOwner | QFileDevice::ReadGroup | QFileDevice::ReadOther);
 
     // Special case: Ubuntu derivatives, which work different from everybody else
-    if (QFile::exists(QStringLiteral("/usr/sbin/update-alternatives"))) {
+    if (hasUpdateAlternatives()) {
         // find the .plymouth file in the theme
         QDir dir(QStringLiteral(PLYMOUTH_THEMES_DIR) + theme);
         const QStringList themeFile = dir.entryList(QStringList() << QStringLiteral("*.plymouth"));
@@ -61,7 +71,7 @@ ActionReply PlymouthHelper::save(const QVariantMap &args)
         QProcess checkProcess;
         QByteArray data;
         qDebug() << "Running update-alternatives --list default.plymouth now";
-        checkProcess.start(QStringLiteral("update-alternatives"), {QStringLiteral("--list"), QStringLiteral("default.plymouth")});
+        checkProcess.start(updateAlternatives(), {QStringLiteral("--list"), QStringLiteral("default.plymouth")});
         if (!checkProcess.waitForStarted()) {
             reply = ActionReply::BackendError;
             reply.setErrorDescription(i18n("Cannot start update-alternatives."));
@@ -84,7 +94,7 @@ ActionReply PlymouthHelper::save(const QVariantMap &args)
         if (!data.contains(installFile.toUtf8())) {
             qDebug() << "Plymouth file not found in update-alternatives. So install it";
             QProcess installProcess;
-            installProcess.start(QStringLiteral("update-alternatives"),
+            installProcess.start(updateAlternatives(),
                                  {QStringLiteral("--install"),
                                   QStringLiteral("/usr/share/plymouth/themes/default.plymouth"),
                                   QStringLiteral("default.plymouth"),
@@ -226,7 +236,7 @@ ActionReply PlymouthHelper::install(const QVariantMap &args)
     archive->close();
 
     // Special case: Ubuntu derivatives, which work different from everybody else
-    if (QFile::exists(QStringLiteral("/usr/sbin/update-alternatives"))) {
+    if (hasUpdateAlternatives()) {
         // find the .plymouth file in the theme
         QDir dir(themePath);
         const QStringList themeFile = dir.entryList({QStringLiteral("*.plymouth")});
@@ -237,7 +247,7 @@ ActionReply PlymouthHelper::install(const QVariantMap &args)
         }
 
         QProcess process;
-        process.start(QStringLiteral("update-alternatives"),
+        process.start(updateAlternatives(),
                       {QStringLiteral("--install"),
                        QStringLiteral("/usr/share/plymouth/themes/default.plymouth"),
                        QStringLiteral("default.plymouth"),
@@ -294,7 +304,7 @@ ActionReply PlymouthHelper::uninstall(const QVariantMap &args)
     }
 
     // Special case: Ubuntu derivatives, which work different from everybody else
-    if (QFile::exists(QStringLiteral("/usr/sbin/update-alternatives"))) {
+    if (hasUpdateAlternatives()) {
         // find the .plymouth file in the theme
         const QStringList themeFile = dir.entryList(QStringList() << QStringLiteral("*.plymouth"));
         if (themeFile.count() != 1) {
