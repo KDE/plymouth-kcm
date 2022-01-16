@@ -3,6 +3,7 @@ Icon=preferences-desktop-display
 
 Type=Application
 NoDisplay=true
+Exec=systemsettings kcm_plymouth
 
 Name=Boot Splash Screen
 Name[ar]=شاشة بدء التشغيل
