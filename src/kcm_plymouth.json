@@ -3,6 +3,7 @@
     "KPlugin": {
         "Description": "Choose Plymouth boot splash screen",
         "Description[ar]": "اختر شاشة بدء تشغيل Plymouth",
+        "Description[ca@valencia]": "Trieu la pantalla de presentació d'inici del Plymouth",
         "Description[ca]": "Trieu la pantalla de presentació d'inici del Plymouth",
         "Description[cs]": "Vyberte úvodní startovací obrazovku Plymouth",
         "Description[en_GB]": "Choose Plymouth boot splash screen",
@@ -28,6 +29,7 @@
         "Icon": "preferences-desktop-display",
         "Name": "Boot Splash Screen",
         "Name[ar]": "شاشة بدء التشغيل",
+        "Name[ca@valencia]": "Pantalla de presentació d'inici",
         "Name[ca]": "Pantalla de presentació d'inici",
         "Name[cs]": "Úvodní startovací obrazovka",
         "Name[da]": "Opstartsbillede under boot",
