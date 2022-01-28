@@ -11,6 +11,7 @@
 
 #include <KNewStuff3/KNSCore/EntryWrapper>
 #include <QDir>
+#include <QStandardItemModel>
 
 #include <KQuickAddons/ConfigModule>
 

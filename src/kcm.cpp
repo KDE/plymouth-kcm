@@ -21,7 +21,6 @@
 #include <QQmlEngine>
 #include <QQuickItem>
 #include <QQuickWindow>
-#include <QStandardItemModel>
 
 #include <KLocalizedString>
 
