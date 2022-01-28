@@ -43,7 +43,7 @@ target_link_libraries(kplymouththemeinstaller
 install(TARGETS kplymouththemeinstaller ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
 
 #polkit stuff
-add_executable(plymouthhelper helper.cpp helper.h ${helper_mocs})
+add_executable(plymouthhelper helper.cpp helper.h)
 target_link_libraries(plymouthhelper
     KF5::Archive
     KF5::AuthCore
