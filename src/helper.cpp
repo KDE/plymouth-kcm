@@ -1,5 +1,5 @@
 /*
- *  SPDX-FileCopyrightText: 2021 Harald Sitter <sitter@kde.org>
+ *  SPDX-FileCopyrightText: 2021-2022 Harald Sitter <sitter@kde.org>
  *  SPDX-FileCopyrightText: 2016 Marco Martin <mart@kde.org>
  *  SPDX-FileCopyrightText: 1998 Luca Montecchiani <m.luca@usa.net>
  *
@@ -159,7 +159,10 @@ ActionReply PlymouthHelper::save(const QVariantMap &args)
         reply.setErrorDescription(i18n("Cannot start initramfs."));
         return reply;
     }
-    if (!process.waitForFinished(std::chrono::milliseconds(1min).count())) {
+    // We don't know how long this will take. The helper will need to generate N=installed_kernels initrds.
+    // Be very generous with the timeout! https://bugs.kde.org/show_bug.cgi?id=400641
+    // NB: there is also a timeout in the KCM
+    if (!process.waitForFinished(std::chrono::milliseconds(15min).count())) {
         reply = ActionReply::BackendError;
         reply.setErrorDescription(i18n("Initramfs failed to run."));
         return reply;
