@@ -1,6 +1,7 @@
 /*
  *  SPDX-FileCopyrightText: 2017 Marco Martin <mart@kde.org>
  *  SPDX-FileCopyrightText: 2014 Vishesh Handa <me@vhanda.in>
+ *  SPDX-FileCopyrightText: 2022 Harald Sitter <sitter@kde.org>
  *
  *  SPDX-License-Identifier: GPL-2.0-or-later
  *
@@ -8,6 +9,8 @@
 
 #include "kcm.h"
 #include "config-kcm.h"
+
+#include <chrono>
 
 #include <KAboutData>
 #include <KConfigGroup>
@@ -31,6 +34,8 @@
 
 #include <KIO/CopyJob>
 #include <kio/job.h>
+
+using namespace std::chrono_literals;
 
 K_PLUGIN_FACTORY_WITH_JSON(KCMPlymouthFactory, "kcm_plymouth.json", registerPlugin<KCMPlymouth>();)
 
@@ -193,7 +198,10 @@ void KCMPlymouth::save()
     KAuth::Action action(authActionName());
     action.setHelperId(QStringLiteral("org.kde.kcontrol.kcmplymouth"));
     action.setArguments(helperargs);
-    action.setTimeout(60000);
+    // We don't know how long this will take. The helper will need to generate N=installed_kernels initrds.
+    // Be very generous with the timeout! https://bugs.kde.org/show_bug.cgi?id=400641
+    // NB: there is also a timeout in the helper
+    action.setTimeout(std::chrono::milliseconds(15min).count());
 
     KAuth::ExecuteJob *job = action.execute();
     bool rc = job->exec();
