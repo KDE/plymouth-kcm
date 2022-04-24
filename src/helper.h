@@ -8,7 +8,7 @@
 #ifndef PLYMOUTH_HELPER_H
 #define PLYMOUTH_HELPER_H
 
-#include <kauth.h>
+#include <KAuth/ActionReply>
 
 using namespace KAuth;
 

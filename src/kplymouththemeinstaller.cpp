@@ -19,10 +19,10 @@
 #include "ktar.h"
 #include "kzip.h"
 #include <KArchive>
+#include <KAuth/Action>
+#include <KAuth/ExecuteJob>
 #include <KConfigGroup>
 #include <KSharedConfig>
-#include <kauthaction.h>
-#include <kauthexecutejob.h>
 #include <klocalizedstring.h>
 
 int main(int argc, char **argv)

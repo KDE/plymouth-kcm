@@ -27,8 +27,8 @@
 
 #include <KLocalizedString>
 
-#include <kauthaction.h>
-#include <kauthexecutejob.h>
+#include <KAuth/Action>
+#include <KAuth/ExecuteJob>
 
 #include <KNewStuff3/KNSCore/EntryInternal>
 

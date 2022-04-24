@@ -20,6 +20,8 @@
 #include <QProcess>
 #include <QRegularExpression>
 
+#include <KAuth/HelperSupport>
+
 #include "ktar.h"
 #include "kzip.h"
 #include <KArchive>
