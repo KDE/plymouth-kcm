@@ -7,6 +7,7 @@ Exec=systemsettings kcm_plymouth
 
 Name=Boot Splash Screen
 Name[ar]=شاشة بدء التشغيل
+Name[bg]=Екран за начално зареждане
 Name[ca]=Pantalla de presentació d'arrencada
 Name[ca@valencia]=Pantalla de presentació d'arrancada
 Name[cs]=Úvodní startovací obrazovka
@@ -44,6 +45,7 @@ Name[zh_CN]=启动屏幕
 Name[zh_TW]=開機啟動畫面
 Comment=Choose Plymouth boot splash screen
 Comment[ar]=اختر شاشة بدء تشغيل Plymouth
+Comment[bg]=Изберете картина за начално зареждане на Plymouth
 Comment[ca]=Trieu la pantalla de presentació d'arrencada del Plymouth
 Comment[ca@valencia]=Trieu la pantalla de presentació d'arrancada de Plymouth
 Comment[cs]=Vyberte úvodní startovací obrazovku Plymouth
