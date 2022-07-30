@@ -32,7 +32,7 @@ include(KDEGitCommitHooks)
 find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick Test Gui)
 
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
-                    Archive NewStuff NewStuffCore KIO Declarative I18n Config)
+                    Archive NewStuff NewStuffCore KIO Declarative I18n Config KCMUtils)
 
 find_package(Plymouth REQUIRED)
 

@@ -20,5 +20,6 @@ Dependencies:
     'frameworks/kservice': '@latest'
     'frameworks/kwidgetsaddons': '@latest'
     'frameworks/kxmlgui': '@latest'
+    'frameworks/kcmutils': '@latest'
 Options:
   require-passing-tests-on: [ 'Linux', 'FreeBSD']

@@ -11,6 +11,7 @@ set(kcm_plymouth_SRCS
 
 add_library(kcm_plymouth MODULE ${kcm_plymouth_SRCS})
 
+kcmutils_generate_desktop_file(kcm_plymouth)
 target_link_libraries(kcm_plymouth
   KF5::CoreAddons
   KF5::AuthCore
@@ -23,7 +24,6 @@ target_link_libraries(kcm_plymouth
   KF5::KIOCore
 )
 
-install(FILES kcm_plymouth.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 install(TARGETS kcm_plymouth DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcms/systemsettings)
 install(FILES plymouth.knsrc DESTINATION ${KDE_INSTALL_KNSRCDIR})
 
