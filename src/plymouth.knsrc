@@ -1,5 +1,15 @@
 [KNewStuff3]
 Name=Boot Splash Screens
+Name[ar]=شاشات بدء التشغيل
+Name[bg]=Екран за начално зареждане
+Name[ca]=Pantalles de presentació d'arrencada
+Name[ca@valencia]=Pantalles de presentació d'arrancada
+Name[es]=Pantallas de arranque
+Name[eu]=Abioko plast-pantailak
+Name[nl]=Opstartschermen
+Name[pt]=Ecrãs Iniciais de Arranque
+Name[uk]=Екрани вітання під час завантаження
+Name[x-test]=xxBoot Splash Screensxx
 ProvidersUrl=https://autoconfig.kde.org/ocs/providers.xml
 Categories=Plymouth Themes
 #StandardResource=tmp
