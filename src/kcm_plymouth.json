@@ -1,6 +1,7 @@
 {
     "Categories": "Qt;KDE;X-KDE-settings-plymouth;",
     "KPlugin": {
+        "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=systemsettings&component=kcm_plymouth",
         "Description": "Choose Plymouth boot splash screen",
         "Description[ar]": "اختر شاشة بدء تشغيل Plymouth",
         "Description[bg]": "Избиране на екран за начално зареждане на Plymouth",
