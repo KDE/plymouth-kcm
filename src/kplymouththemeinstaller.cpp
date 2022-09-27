@@ -9,10 +9,9 @@
 
 #include <QCoreApplication>
 #include <QDebug>
-#include <QDir>
 #include <QFile>
+#include <QFileInfo>
 #include <QMimeDatabase>
-#include <QProcess>
 #include <qcommandlineoption.h>
 #include <qcommandlineparser.h>
 

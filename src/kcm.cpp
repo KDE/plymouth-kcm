@@ -16,14 +16,7 @@
 #include <KConfigGroup>
 #include <KPluginFactory>
 #include <KSharedConfig>
-#include <QDebug>
-#include <QProcess>
 #include <QStandardPaths>
-#include <QtGlobal>
-
-#include <QQmlEngine>
-#include <QQuickItem>
-#include <QQuickWindow>
 
 #include <KLocalizedString>
 
@@ -32,7 +25,6 @@
 
 #include <KNewStuff3/KNSCore/EntryInternal>
 
-#include <KIO/CopyJob>
 #include <kio/job.h>
 
 using namespace std::chrono_literals;
