@@ -1,0 +1,142 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plymouth-kcm package.
+#
+# Kristóf Kiszel <ulysses@kubuntu.org>, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: plymouth-kcm\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-28 00:52+0000\n"
+"PO-Revision-Date: 2019-12-08 18:34+0100\n"
+"Last-Translator: Kristóf Kiszel <ulysses@kubuntu.org>\n"
+"Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 20.03.70\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Kiszel Kristóf"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "ulysses@kubuntu.org"
+
+#: helper.cpp:57 helper.cpp:110 helper.cpp:138 helper.cpp:315
+#, kde-format
+msgid "Cannot start update-alternatives."
+msgstr "Nem lehet elindítani az update-alternatives-t."
+
+#: helper.cpp:62 helper.cpp:115 helper.cpp:143 helper.cpp:320
+#, kde-format
+msgid "update-alternatives failed to run."
+msgstr "Az update-alternatives futása meghiúsult."
+
+#: helper.cpp:69 helper.cpp:123 helper.cpp:150 helper.cpp:328
+#, kde-format
+msgid "update-alternatives returned with error condition %1."
+msgstr "Az update-alternatives a következő hibakóddal tért vissza: %1."
+
+#: helper.cpp:82
+#, kde-format
+msgid "No theme specified in helper parameters."
+msgstr "Nincs megadva téma a segéd paraméterei közt."
+
+#: helper.cpp:100 helper.cpp:259 helper.cpp:305
+#, kde-format
+msgid "Theme corrupted: .plymouth file not found inside theme."
+msgstr "A téma sérült: nem található .plymouth fájl a témán belül."
+
+#: helper.cpp:161
+#, kde-format
+msgid "Cannot start initramfs."
+msgstr "Nem lehet elindítani az initramfs-t."
+
+#: helper.cpp:169
+#, kde-format
+msgid "Initramfs failed to run."
+msgstr "Az initramfs futása meghiúsult."
+
+#: helper.cpp:179
+#, kde-format
+msgid "Initramfs returned with error condition %1."
+msgstr "Az initramfs a következő hibakóddal tért vissza: %1."
+
+#: helper.cpp:289
+#, kde-format
+msgid "Theme folder %1 does not exist."
+msgstr "A(z) %1 témamappa nem létezik."
+
+#: helper.cpp:295
+#, kde-format
+msgid "Theme %1 does not exist."
+msgstr "A(z) %1 téma nem létezik."
+
+#: kcm.cpp:41
+#, kde-format
+msgid "Boot Splash Screen"
+msgstr "Rendszerindító nyitóképernyő"
+
+#: kcm.cpp:42
+#, kde-format
+msgid "Marco Martin"
+msgstr "Marco Martin"
+
+#: kcm.cpp:202 kcm.cpp:222
+#, kde-format
+msgid "Unable to authenticate/execute the action: %1 (%2)"
+msgstr "Nem sikerült hitelesíteni/végrehajtani a műveletet: %1, (%2)"
+
+#: kcm.cpp:226
+#, kde-format
+msgid "Theme uninstalled successfully."
+msgstr "A téma sikeresen eltávolítva."
+
+#: kplymouththemeinstaller.cpp:32
+#, kde-format
+msgid "Plymouth theme installer"
+msgstr "Plymouth-téma telepítő"
+
+#: kplymouththemeinstaller.cpp:38
+#, kde-format
+msgid "Install a theme."
+msgstr "Téma telepítése."
+
+#: kplymouththemeinstaller.cpp:39
+#, kde-format
+msgid "Uninstall a theme."
+msgstr "Téma eltávolítása."
+
+#: kplymouththemeinstaller.cpp:41
+#, kde-format
+msgid "The theme to install, must be an existing archive file."
+msgstr "A telepítendő témának egy létező archívumfájlnak kell lennie."
+
+#: kplymouththemeinstaller.cpp:113
+#, kde-format
+msgid "Unable to authenticate/execute the action: %1, %2"
+msgstr "Nem sikerült hitelesíteni/végrehajtani a műveletet: %1, %2"
+
+#: package/contents/ui/main.qml:17
+#, kde-format
+msgid "This module lets you choose the Plymouth boot splash screen."
+msgstr ""
+"Ebben a modulban választhatja ki a Plymouth rendszerindító nyitóképernyőt."
+
+#: package/contents/ui/main.qml:40
+#, kde-format
+msgid "Uninstall"
+msgstr "Eltávolítás"
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgid "Get New Boot Splash Screens..."
+msgstr "Új rendszerindító nyitóképernyők letöltése…"
+
+#~ msgid "Download New Boot Splash Screens"
+#~ msgstr "Új rendszerindító nyitóképernyők letöltése"

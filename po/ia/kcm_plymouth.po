@@ -1,0 +1,141 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plymouth-kcm package.
+#
+# giovanni <g.sora@tiscali.it>, 2019, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: plymouth-kcm\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-28 00:52+0000\n"
+"PO-Revision-Date: 2021-12-20 21:49+0100\n"
+"Last-Translator: giovanni <g.sora@tiscali.it>\n"
+"Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
+"Language: ia\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 21.12.0\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Giovanni Sora"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "g.sora@tiscali.it"
+
+#: helper.cpp:57 helper.cpp:110 helper.cpp:138 helper.cpp:315
+#, kde-format
+msgid "Cannot start update-alternatives."
+msgstr "Non pote trovar update-alternatives (alternativas de actualisar)."
+
+#: helper.cpp:62 helper.cpp:115 helper.cpp:143 helper.cpp:320
+#, kde-format
+msgid "update-alternatives failed to run."
+msgstr "update-alternatives falleva a executar."
+
+#: helper.cpp:69 helper.cpp:123 helper.cpp:150 helper.cpp:328
+#, kde-format
+msgid "update-alternatives returned with error condition %1."
+msgstr "update-aternatives retornava con condition de error %1."
+
+#: helper.cpp:82
+#, kde-format
+msgid "No theme specified in helper parameters."
+msgstr "Necun thema specificate in le parmetros del adjutante."
+
+#: helper.cpp:100 helper.cpp:259 helper.cpp:305
+#, kde-format
+msgid "Theme corrupted: .plymouth file not found inside theme."
+msgstr "Thema corrumpite: file de plymouth non trovate intra le thema."
+
+#: helper.cpp:161
+#, kde-format
+msgid "Cannot start initramfs."
+msgstr "Non pte initiar initramfs."
+
+#: helper.cpp:169
+#, kde-format
+msgid "Initramfs failed to run."
+msgstr "Initramfs falleva a executar."
+
+#: helper.cpp:179
+#, kde-format
+msgid "Initramfs returned with error condition %1."
+msgstr "Initramfs retornava con condition de error %1."
+
+#: helper.cpp:289
+#, kde-format
+msgid "Theme folder %1 does not exist."
+msgstr "Dossier de thema %1 non existe."
+
+#: helper.cpp:295
+#, kde-format
+msgid "Theme %1 does not exist."
+msgstr "Thema %1 non existe."
+
+#: kcm.cpp:41
+#, kde-format
+msgid "Boot Splash Screen"
+msgstr "Schermo de Splash de Boot"
+
+#: kcm.cpp:42
+#, kde-format
+msgid "Marco Martin"
+msgstr "Marco Martin"
+
+#: kcm.cpp:202 kcm.cpp:222
+#, kde-format
+msgid "Unable to authenticate/execute the action: %1 (%2)"
+msgstr "Il non pote authenticar/executar le action: %1,(%2)"
+
+#: kcm.cpp:226
+#, kde-format
+msgid "Theme uninstalled successfully."
+msgstr "Thema de-installate con successo."
+
+#: kplymouththemeinstaller.cpp:32
+#, kde-format
+msgid "Plymouth theme installer"
+msgstr "Installator de thema Plymouth"
+
+#: kplymouththemeinstaller.cpp:38
+#, kde-format
+msgid "Install a theme."
+msgstr "Installa un thema"
+
+#: kplymouththemeinstaller.cpp:39
+#, kde-format
+msgid "Uninstall a theme."
+msgstr "De-installa un thema"
+
+#: kplymouththemeinstaller.cpp:41
+#, kde-format
+msgid "The theme to install, must be an existing archive file."
+msgstr "Le thema a installar, debe esser un file de archivo existente"
+
+#: kplymouththemeinstaller.cpp:113
+#, kde-format
+msgid "Unable to authenticate/execute the action: %1, %2"
+msgstr "Il non pote authenticar/executar le action: %1,%2"
+
+#: package/contents/ui/main.qml:17
+#, kde-format
+msgid "This module lets you choose the Plymouth boot splash screen."
+msgstr "Iste modulo te permitte seliger le schermo de boot splash de Plymouth."
+
+#: package/contents/ui/main.qml:40
+#, kde-format
+msgid "Uninstall"
+msgstr "De-installa"
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgid "Get New Boot Splash Screens..."
+msgstr "Obtene nove schermos de boot splash..."
+
+#~ msgid "Download New Boot Splash Screens"
+#~ msgstr "Discarga nove schermos de battimento (splash)"

@@ -1,0 +1,146 @@
+# translation of kcm_plymouth.po to Slovak
+# Roman Paholik <wizzardsk@gmail.com>, 2016, 2017.
+# Matej Mrenica <matejm98mthw@gmail.com>, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_plymouth\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-28 00:52+0000\n"
+"PO-Revision-Date: 2019-08-17 11:22+0200\n"
+"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
+"Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 19.07.90\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Roman Paholík"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "wizzardsk@gmail.com"
+
+#: helper.cpp:57 helper.cpp:110 helper.cpp:138 helper.cpp:315
+#, kde-format
+msgid "Cannot start update-alternatives."
+msgstr "Nemôžem spustiť update-alternatives."
+
+#: helper.cpp:62 helper.cpp:115 helper.cpp:143 helper.cpp:320
+#, kde-format
+msgid "update-alternatives failed to run."
+msgstr "update-alternatives sa nepodarilo spustiť."
+
+#: helper.cpp:69 helper.cpp:123 helper.cpp:150 helper.cpp:328
+#, kde-format
+msgid "update-alternatives returned with error condition %1."
+msgstr "update-alternatives vrátil chybu v podmienke %1."
+
+#: helper.cpp:82
+#, kde-format
+msgid "No theme specified in helper parameters."
+msgstr "Neurčená téma v pomocných parametroch."
+
+#: helper.cpp:100 helper.cpp:259 helper.cpp:305
+#, kde-format
+msgid "Theme corrupted: .plymouth file not found inside theme."
+msgstr "Téma poškodená: súbor .plymouth sa nenašiel v téme."
+
+#: helper.cpp:161
+#, kde-format
+msgid "Cannot start initramfs."
+msgstr "Nemôžem spustiť initramfs."
+
+#: helper.cpp:169
+#, kde-format
+msgid "Initramfs failed to run."
+msgstr "Initramfs sa nepodarilo spustiť."
+
+#: helper.cpp:179
+#, kde-format
+msgid "Initramfs returned with error condition %1."
+msgstr "Initramfs vrátil chybu v podmienke %1."
+
+#: helper.cpp:289
+#, kde-format
+msgid "Theme folder %1 does not exist."
+msgstr "Priečinok témy %1 neexistuje."
+
+#: helper.cpp:295
+#, kde-format
+msgid "Theme %1 does not exist."
+msgstr "Téma %1 neexistuje."
+
+#: kcm.cpp:41
+#, kde-format
+msgid "Boot Splash Screen"
+msgstr "Úvodná obrazovka"
+
+#: kcm.cpp:42
+#, kde-format
+msgid "Marco Martin"
+msgstr "Marco Martin"
+
+#: kcm.cpp:202 kcm.cpp:222
+#, kde-format
+msgid "Unable to authenticate/execute the action: %1 (%2)"
+msgstr "Nepodarilo sa overiť/spustiť akciu: %1 (%2)"
+
+#: kcm.cpp:226
+#, kde-format
+msgid "Theme uninstalled successfully."
+msgstr "Téma úspešne odinštalovaná."
+
+#: kplymouththemeinstaller.cpp:32
+#, kde-format
+msgid "Plymouth theme installer"
+msgstr "Inštalátor tém Plymouth"
+
+#: kplymouththemeinstaller.cpp:38
+#, kde-format
+msgid "Install a theme."
+msgstr "Nainštalovať tému."
+
+#: kplymouththemeinstaller.cpp:39
+#, kde-format
+msgid "Uninstall a theme."
+msgstr "Odinštalovať tému."
+
+#: kplymouththemeinstaller.cpp:41
+#, kde-format
+msgid "The theme to install, must be an existing archive file."
+msgstr "Téma na nainštalovanie, musí byť existujúci súbor archívu."
+
+#: kplymouththemeinstaller.cpp:113
+#, kde-format
+msgid "Unable to authenticate/execute the action: %1, %2"
+msgstr "Nepodarilo sa overiť/spustiť akciu: %1, %2"
+
+#: package/contents/ui/main.qml:17
+#, kde-format
+msgid "This module lets you choose the Plymouth boot splash screen."
+msgstr "Tento modul vám umožní nastaviť vzhľad Plymouth úvodnej obrazovky."
+
+#: package/contents/ui/main.qml:40
+#, kde-format
+msgid "Uninstall"
+msgstr "Odinštalovať"
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgid "Get New Boot Splash Screens..."
+msgstr "Získať nové úvodné obrazovky..."
+
+#~ msgid "Download New Boot Splash Screens"
+#~ msgstr "Stiahnuť nové úvodné obrazovky"
+
+#~ msgid "Configure Plymouth Splash Screen"
+#~ msgstr "Nastaviť úvodnú obrazovku Plymouth"
+
+#~ msgid "Select a global splash screen for the system"
+#~ msgstr "Vyberte globálnu úvodnú obrazovku pre systém"

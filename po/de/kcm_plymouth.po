@@ -1,0 +1,152 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Burkhard Lück <lueck@hube-lueck.de>, 2017, 2019, 2020.
+# Frederik Schwarzer <schwarzer@kde.org>, 2020, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-28 00:52+0000\n"
+"PO-Revision-Date: 2022-02-20 10:08+0100\n"
+"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
+"Language-Team: German <kde-i18n-doc@kde.org>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 21.08.0\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Burkhard Lück"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "lueck@hube-lueck.de"
+
+#: helper.cpp:57 helper.cpp:110 helper.cpp:138 helper.cpp:315
+#, kde-format
+msgid "Cannot start update-alternatives."
+msgstr "„update-alternatives“  kann nicht gestartet werden."
+
+#: helper.cpp:62 helper.cpp:115 helper.cpp:143 helper.cpp:320
+#, kde-format
+msgid "update-alternatives failed to run."
+msgstr "Die Ausführung von „update-alternatives“ ist fehlgeschlagen."
+
+#: helper.cpp:69 helper.cpp:123 helper.cpp:150 helper.cpp:328
+#, kde-format
+msgid "update-alternatives returned with error condition %1."
+msgstr "„update-alternatives“ wurde mit dem Fehler %1 beendet."
+
+#: helper.cpp:82
+#, kde-format
+msgid "No theme specified in helper parameters."
+msgstr ""
+"Es wurde kein Design in den Parametern für das Hilfsprogramm angegeben."
+
+#: helper.cpp:100 helper.cpp:259 helper.cpp:305
+#, kde-format
+msgid "Theme corrupted: .plymouth file not found inside theme."
+msgstr "Design defekt: Es wurde keine Datei „.plymouth“ im Design gefunden."
+
+#: helper.cpp:161
+#, kde-format
+msgid "Cannot start initramfs."
+msgstr "„initramfs“  kann nicht gestartet werden."
+
+#: helper.cpp:169
+#, kde-format
+msgid "Initramfs failed to run."
+msgstr "Die Ausführung von „Initramfs ist fehlgeschlagen."
+
+#: helper.cpp:179
+#, kde-format
+msgid "Initramfs returned with error condition %1."
+msgstr "„Initramfs“ wurde mit dem Fehler %1 beendet."
+
+#: helper.cpp:289
+#, kde-format
+msgid "Theme folder %1 does not exist."
+msgstr "Der Designordner %1 existiert nicht"
+
+#: helper.cpp:295
+#, kde-format
+msgid "Theme %1 does not exist."
+msgstr "Das Design %1 existiert nicht."
+
+#: kcm.cpp:41
+#, kde-format
+msgid "Boot Splash Screen"
+msgstr "Systemstartbildschirm"
+
+#: kcm.cpp:42
+#, kde-format
+msgid "Marco Martin"
+msgstr "Marco Martin"
+
+#: kcm.cpp:202 kcm.cpp:222
+#, kde-format
+msgid "Unable to authenticate/execute the action: %1 (%2)"
+msgstr ""
+"Authentifizierung nicht möglich, Aktion kann nicht ausgeführt werden: %1 (%2)"
+
+#: kcm.cpp:226
+#, kde-format
+msgid "Theme uninstalled successfully."
+msgstr "Das Design wurde erfolgreich deinstalliert."
+
+#: kplymouththemeinstaller.cpp:32
+#, kde-format
+msgid "Plymouth theme installer"
+msgstr "Installationsprogramm für Plymouth-Designs"
+
+#: kplymouththemeinstaller.cpp:38
+#, kde-format
+msgid "Install a theme."
+msgstr "Installiert ein Design."
+
+#: kplymouththemeinstaller.cpp:39
+#, kde-format
+msgid "Uninstall a theme."
+msgstr "Deinstalliert ein Design"
+
+#: kplymouththemeinstaller.cpp:41
+#, kde-format
+msgid "The theme to install, must be an existing archive file."
+msgstr "Das zu installierende Design muss eine vorhandene Archivdatei sein."
+
+#: kplymouththemeinstaller.cpp:113
+#, kde-format
+msgid "Unable to authenticate/execute the action: %1, %2"
+msgstr ""
+"Authentifizierung nicht möglich, Aktion kann nicht ausgeführt werden: %1, %2"
+
+#: package/contents/ui/main.qml:17
+#, kde-format
+msgid "This module lets you choose the Plymouth boot splash screen."
+msgstr ""
+"Mit diesem Modul können Sie den Plymouth-Systemstartbildschirm auswählen."
+
+#: package/contents/ui/main.qml:40
+#, kde-format
+msgid "Uninstall"
+msgstr "Deinstallieren"
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgid "Get New Boot Splash Screens..."
+msgstr "Neue Systemstartbildschirme holen ..."
+
+#~ msgid "Download New Boot Splash Screens"
+#~ msgstr "Neue Systemstartbildschirme herunterladen"
+
+#~ msgid "Configure Plymouth Splash Screen"
+#~ msgstr "Plymouth-Startbildschirm einrichten"
+
+#~ msgid "Select a global splash screen for the system"
+#~ msgstr "Auswahl eines globalen Startbildschirms für das System"
