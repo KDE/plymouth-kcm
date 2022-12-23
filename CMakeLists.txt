@@ -28,6 +28,7 @@ include(KDECMakeSettings)
 include(KDECompilerSettings NO_POLICY_SCOPE)
 include(KDEClangFormat)
 include(KDEGitCommitHooks)
+include(ECMDeprecationSettings)
 
 find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick Test Gui)
 
@@ -37,8 +38,10 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
 find_package(Plymouth REQUIRED)
 
 add_definitions(-DQT_NO_CAST_FROM_ASCII -DQT_NO_CAST_TO_ASCII -DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT -DQT_NO_URL_CAST_FROM_STRING)
-add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050f02)
-add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x055800)
+
+ecm_set_disabled_deprecation_versions(QT 5.15.2
+    KF 5.101
+)
 
 add_subdirectory(src)
 
