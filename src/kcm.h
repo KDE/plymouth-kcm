@@ -16,7 +16,6 @@
 #include <KQuickAddons/ConfigModule>
 
 class QQuickItem;
-class QStandardItemModel;
 
 class KCMPlymouth : public KQuickAddons::ConfigModule
 {
