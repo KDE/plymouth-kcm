@@ -1,6 +1,7 @@
 [Domain]
 Name=Plymouth Control Module
 Name[ar]=وحدة تحكم Plymouth
+Name[be]=Модуль кіравання Plymouth
 Name[bg]=Контролен модул на Plymouth
 Name[ca]=Mòdul de control del Plymouth
 Name[ca@valencia]=Mòdul de control de Plymouth
@@ -48,6 +49,7 @@ Icon=preferences-desktop-display
 [org.kde.kcontrol.kcmplymouth.save]
 Name=Save the Plymouth Theme
 Name[ar]=احفظ سمة Plymouth
+Name[be]=Захаваць тэму Plymouth
 Name[bg]=Запазване на темата за Plymouth 
 Name[ca]=Desa el tema del Plymouth
 Name[ca@valencia]=Guarda el tema de Plymouth
@@ -91,6 +93,7 @@ Name[zh_CN]=保存 Plymouth 主题
 Name[zh_TW]=儲存 Plymouth 主題
 Description=System policies prevent you from applying the Plymouth theme.
 Description[ar]=تمنعك سياسات النظام من تطبيق سمة Plymouth.
+Description[be]=Сістэмныя правілы не дазваляюць ужыць тэму Plymouth.
 Description[bg]=Системни правила не позволяват да се приложи темата за Plymouth .
 Description[ca]=Les polítiques del sistema impedeixen que apliqueu el tema del Plymouth.
 Description[ca@valencia]=Les polítiques del sistema impedixen que apliqueu el tema de Plymouth.
@@ -137,6 +140,7 @@ Policy=auth_admin
 [org.kde.kcontrol.kcmplymouth.install]
 Name=Install a new Plymouth Theme
 Name[ar]=ثبّت سمة Plymouth جديدة
+Name[be]=Усталяваць новую тэму Plymouth
 Name[bg]=Инсталиране на нова тема за Plymouth 
 Name[ca]=Instal·la un tema nou del Plymouth
 Name[ca@valencia]=Instal·la un tema nou de Plymouth
@@ -180,6 +184,7 @@ Name[zh_CN]=安装一个新的 Plymouth 主题
 Name[zh_TW]=安裝新 Plymouth 主題
 Description=System policies prevent you from installing a Plymouth theme.
 Description[ar]=تمنعك سياسات النظام من تثبيت سمة Plymouth.
+Description[be]=Сістэмныя правілы не дазваляюць усталяванне тэмы Plymouth.
 Description[bg]=Системни правила не позволяват да се инсталира тема за Plymouth .
 Description[ca]=Les polítiques del sistema impedeixen que instal·leu un tema del Plymouth.
 Description[ca@valencia]=Les polítiques del sistema impedixen que instal·leu un tema de Plymouth.
@@ -226,6 +231,7 @@ Policy=auth_admin
 [org.kde.kcontrol.kcmplymouth.uninstall]
 Name=Uninstall a new Plymouth Theme
 Name[ar]=أزل سمة Plymouth الجديدة
+Name[be]=Выдаліць новую тэму Plymouth
 Name[bg]=Деинсталиране на тема за Plymouth 
 Name[ca]=Desinstal·la un tema nou del Plymouth
 Name[ca@valencia]=Desinstal·la un tema nou de Plymouth
@@ -269,6 +275,7 @@ Name[zh_CN]=卸载新的 Plymouth 主题
 Name[zh_TW]=解除安裝新 Plymouth 主題
 Description=System policies prevent you from uninstalling a Plymouth theme.
 Description[ar]=تمنعك سياسات النظام من إزالة سمة Plymouth.
+Description[be]=Сістэмныя правілы не дазваляюць выдаленне тэмы Plymouth.
 Description[bg]=Системни правила не позволяват да се деинсталира тема за Plymouth .
 Description[ca]=Les polítiques del sistema impedeixen que desinstal·leu un tema del Plymouth.
 Description[ca@valencia]=Les polítiques del sistema impedixen que desinstal·leu un tema de Plymouth.
