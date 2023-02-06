@@ -18,7 +18,7 @@ KCM.GridViewKCM {
 
     actions.main: NewStuff.Action {
         id: newStuffButton
-        text: i18n("Get New Boot Splash Screens…")
+        text: i18nc("@action:button as in, get new Plymouth boot splash screens", "Get New…")
         enabled: !kcm.busy
         icon.name: "get-hot-new-stuff"
         configFile: "plymouth.knsrc"
