@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_plymouth\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-28 00:52+0000\n"
+"POT-Creation-Date: 2023-02-06 03:00+0000\n"
 "PO-Revision-Date: 2019-08-02 19:12+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -125,15 +125,16 @@ msgid "This module lets you choose the Plymouth boot splash screen."
 msgstr ""
 "Este módulo permite-lhe escolher o ecrã inicial de arranque do Plymouth."
 
-#: package/contents/ui/main.qml:40
+#: package/contents/ui/main.qml:21
+#, fuzzy, kde-format
+#| msgid "Get New Boot Splash Screens..."
+msgid "Get New Boot Splash Screens…"
+msgstr "Obter Novos Ecrãs Iniciais de Arranque..."
+
+#: package/contents/ui/main.qml:49
 #, kde-format
 msgid "Uninstall"
 msgstr "Desinstalar"
-
-#: package/contents/ui/main.qml:72
-#, kde-format
-msgid "Get New Boot Splash Screens..."
-msgstr "Obter Novos Ecrãs Iniciais de Arranque..."
 
 #~ msgid "Download New Boot Splash Screens"
 #~ msgstr "Obter Novos Ecrãs Iniciais de Arranque"
