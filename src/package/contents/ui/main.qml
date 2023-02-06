@@ -10,11 +10,20 @@ import QtQuick.Layouts 1.1
 import QtQuick.Window 2.2
 import QtQuick.Controls 2.3 as QtControls
 import org.kde.kirigami 2.4 as Kirigami
-import org.kde.kcm 1.1 as KCM
-import org.kde.newstuff 1.62 as NewStuff
+import org.kde.kcm 1.3 as KCM
+import org.kde.newstuff 1.91 as NewStuff
 
 KCM.GridViewKCM {
     KCM.ConfigModule.quickHelp: i18n("This module lets you choose the Plymouth boot splash screen.")
+
+    actions.main: NewStuff.Action {
+        id: newStuffButton
+        text: i18n("Get New Boot Splash Screens…")
+        enabled: !kcm.busy
+        icon.name: "get-hot-new-stuff"
+        configFile: "plymouth.knsrc"
+        onChangedEntriesChanged: kcm.onChangedEntriesChanged(newStuffButton.changedEntries);
+    }
 
     view.model: kcm.themesModel
     view.currentIndex: kcm.selectedPluginIndex
@@ -63,16 +72,6 @@ KCM.GridViewKCM {
             Layout.fillWidth: true
             visible: kcm.busy
             indeterminate: true
-        }
-
-        NewStuff.Button {
-            id: newStuffButton
-            Layout.alignment: Qt.AlignRight
-            enabled: !kcm.busy
-            text: i18n("Get New Boot Splash Screens...")
-            icon.name: "get-hot-new-stuff"
-            configFile: "plymouth.knsrc"
-            onChangedEntriesChanged: kcm.onChangedEntriesChanged(newStuffButton.changedEntries);
         }
     }
 
