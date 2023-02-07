@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plymouth-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-06 03:00+0000\n"
+"POT-Creation-Date: 2023-02-07 02:53+0000\n"
 "PO-Revision-Date: 2019-12-28 15:47-0800\n"
 "Last-Translator: A S Alam <alam.yellow@gmail.com>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -130,7 +130,7 @@ msgstr ""
 #: package/contents/ui/main.qml:21
 #, fuzzy, kde-format
 #| msgid "Download New Boot Splash Screens"
-msgid "Get New Boot Splash Screens…"
+msgid "Get New Boot Splash Screens..."
 msgstr "ਨਵੀਆਂ ਬੂਟ ਸਪਲੈਸ਼ ਸਕਰੀਨਾਂ ਡਾਊਨਲੋਡ ਕਰੋ"
 
 #: package/contents/ui/main.qml:49

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-06 03:00+0000\n"
+"POT-Creation-Date: 2023-02-07 02:53+0000\n"
 "PO-Revision-Date: 2020-04-05 02:02+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -130,7 +130,7 @@ msgstr "이 모듈에서 Plymouth 부트 화면을 선택할 수 있습니다."
 #: package/contents/ui/main.qml:21
 #, fuzzy, kde-format
 #| msgid "Get New Boot Splash Screens..."
-msgid "Get New Boot Splash Screens…"
+msgid "Get New Boot Splash Screens..."
 msgstr "새 부트 화면 가져오기..."
 
 #: package/contents/ui/main.qml:49

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_plymouth\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-06 03:00+0000\n"
+"POT-Creation-Date: 2023-02-07 02:53+0000\n"
 "PO-Revision-Date: 2022-08-26 17:26+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -131,7 +131,7 @@ msgstr "このモジュールで Plymouth 起動スプラッシュスクリー�
 #: package/contents/ui/main.qml:21
 #, fuzzy, kde-format
 #| msgid "Get New Boot Splash Screens..."
-msgid "Get New Boot Splash Screens…"
+msgid "Get New Boot Splash Screens..."
 msgstr "新しい起動スプラッシュスクリーンを入手..."
 
 #: package/contents/ui/main.qml:49

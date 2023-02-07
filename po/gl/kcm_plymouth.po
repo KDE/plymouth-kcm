@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-06 03:00+0000\n"
+"POT-Creation-Date: 2023-02-07 02:53+0000\n"
 "PO-Revision-Date: 2019-08-19 20:47+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -131,7 +131,7 @@ msgstr "Este módulo permítelle escoller a pantalla de arranque de Plymouth."
 #: package/contents/ui/main.qml:21
 #, fuzzy, kde-format
 #| msgid "Get New Boot Splash Screens..."
-msgid "Get New Boot Splash Screens…"
+msgid "Get New Boot Splash Screens..."
 msgstr "Obter novas pantallas de arranque…"
 
 #: package/contents/ui/main.qml:49

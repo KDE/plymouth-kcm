@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plymouth-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-06 03:00+0000\n"
+"POT-Creation-Date: 2023-02-07 02:53+0000\n"
 "PO-Revision-Date: 2020-09-19 09:21+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -133,7 +133,7 @@ msgstr "Acest modul vă permite să alegeți ecranul de demarare Plymouth."
 #: package/contents/ui/main.qml:21
 #, fuzzy, kde-format
 #| msgid "Get New Boot Splash Screens..."
-msgid "Get New Boot Splash Screens…"
+msgid "Get New Boot Splash Screens..."
 msgstr "Obține ecrane de demarare noi..."
 
 #: package/contents/ui/main.qml:49
