@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-28 00:52+0000\n"
+"POT-Creation-Date: 2023-02-07 01:01+0000\n"
 "PO-Revision-Date: 2023-01-12 10:31\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -127,12 +127,16 @@ msgstr "无法验证/执行操作：%1, %2"
 msgid "This module lets you choose the Plymouth boot splash screen."
 msgstr "此模块允许您选择 Plymouth 启动屏幕。"
 
-#: package/contents/ui/main.qml:40
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgctxt "@action:button as in, get new Plymouth boot splash screens"
+msgid "Get New…"
+msgstr ""
+
+#: package/contents/ui/main.qml:49
 #, kde-format
 msgid "Uninstall"
 msgstr "卸载"
 
-#: package/contents/ui/main.qml:72
-#, kde-format
-msgid "Get New Boot Splash Screens..."
-msgstr "获取新的开机闪屏..."
+#~ msgid "Get New Boot Splash Screens..."
+#~ msgstr "获取新的开机闪屏..."

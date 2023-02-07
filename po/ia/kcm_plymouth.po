@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plymouth-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-28 00:52+0000\n"
+"POT-Creation-Date: 2023-02-07 01:01+0000\n"
 "PO-Revision-Date: 2021-12-20 21:49+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -127,15 +127,19 @@ msgstr "Il non pote authenticar/executar le action: %1,%2"
 msgid "This module lets you choose the Plymouth boot splash screen."
 msgstr "Iste modulo te permitte seliger le schermo de boot splash de Plymouth."
 
-#: package/contents/ui/main.qml:40
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgctxt "@action:button as in, get new Plymouth boot splash screens"
+msgid "Get New…"
+msgstr ""
+
+#: package/contents/ui/main.qml:49
 #, kde-format
 msgid "Uninstall"
 msgstr "De-installa"
 
-#: package/contents/ui/main.qml:72
-#, kde-format
-msgid "Get New Boot Splash Screens..."
-msgstr "Obtene nove schermos de boot splash..."
+#~ msgid "Get New Boot Splash Screens..."
+#~ msgstr "Obtene nove schermos de boot splash..."
 
 #~ msgid "Download New Boot Splash Screens"
 #~ msgstr "Discarga nove schermos de battimento (splash)"

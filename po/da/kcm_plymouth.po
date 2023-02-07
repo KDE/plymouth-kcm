@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-28 00:52+0000\n"
+"POT-Creation-Date: 2023-02-07 01:01+0000\n"
 "PO-Revision-Date: 2019-11-22 20:58+0100\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -127,15 +127,19 @@ msgstr "Kan ikke autentificere/køre handlingen: %1, %2"
 msgid "This module lets you choose the Plymouth boot splash screen."
 msgstr "Dette modul lader dig vælge Plymouth boot-opstartsskærm."
 
-#: package/contents/ui/main.qml:40
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgctxt "@action:button as in, get new Plymouth boot splash screens"
+msgid "Get New…"
+msgstr ""
+
+#: package/contents/ui/main.qml:49
 #, kde-format
 msgid "Uninstall"
 msgstr "Afinstallér"
 
-#: package/contents/ui/main.qml:72
-#, kde-format
-msgid "Get New Boot Splash Screens..."
-msgstr "Hent nye opstartsskærmbilleder..."
+#~ msgid "Get New Boot Splash Screens..."
+#~ msgstr "Hent nye opstartsskærmbilleder..."
 
 #~ msgid "Download New Boot Splash Screens"
 #~ msgstr "Download nye boot-opstartsskærme"

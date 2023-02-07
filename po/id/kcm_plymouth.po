@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-28 00:52+0000\n"
+"POT-Creation-Date: 2023-02-07 01:01+0000\n"
 "PO-Revision-Date: 2019-11-05 18:42+0700\n"
 "Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -126,15 +126,19 @@ msgstr "Tidak dapat mengontentikasi/mengeksekusi tindakan: %1, %2"
 msgid "This module lets you choose the Plymouth boot splash screen."
 msgstr "Modul ini memungkinkan kamu memilih layar splash boot."
 
-#: package/contents/ui/main.qml:40
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgctxt "@action:button as in, get new Plymouth boot splash screens"
+msgid "Get New…"
+msgstr ""
+
+#: package/contents/ui/main.qml:49
 #, kde-format
 msgid "Uninstall"
 msgstr "Copot"
 
-#: package/contents/ui/main.qml:72
-#, kde-format
-msgid "Get New Boot Splash Screens..."
-msgstr "Dapatkan Layar Splash Boot Baru..."
+#~ msgid "Get New Boot Splash Screens..."
+#~ msgstr "Dapatkan Layar Splash Boot Baru..."
 
 #~ msgid "Download New Boot Splash Screens"
 #~ msgstr "Unduh Layar Splash Boot Baru"
