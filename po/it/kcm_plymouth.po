@@ -129,8 +129,7 @@ msgstr ""
 "Questo modulo ti permette di scegliere la schermata d'avvio di Plymouth."
 
 #: package/contents/ui/main.qml:21
-#, fuzzy, kde-format
-#| msgid "Get New Boot Splash Screens..."
+#, kde-format
 msgid "Get New Boot Splash Screens..."
 msgstr "Ottieni nuove schermate d'avvio..."
 

@@ -127,8 +127,7 @@ msgid "This module lets you choose the Plymouth boot splash screen."
 msgstr "Modul ini memungkinkan kamu memilih layar splash boot."
 
 #: package/contents/ui/main.qml:21
-#, fuzzy, kde-format
-#| msgid "Get New Boot Splash Screens..."
+#, kde-format
 msgid "Get New Boot Splash Screens..."
 msgstr "Dapatkan Layar Splash Boot Baru..."
 

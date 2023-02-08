@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-07 02:53+0000\n"
-"PO-Revision-Date: 2023-02-06 10:14+0100\n"
+"PO-Revision-Date: 2023-02-07 10:16+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
 "Language: nl\n"
@@ -128,10 +128,9 @@ msgid "This module lets you choose the Plymouth boot splash screen."
 msgstr "Deze module laat u het opstartscherm van Plymouth kiezen."
 
 #: package/contents/ui/main.qml:21
-#, fuzzy, kde-format
-#| msgid "Get New Boot Splash Screens…"
+#, kde-format
 msgid "Get New Boot Splash Screens..."
-msgstr "Nieuwe opstartschermen ophalen…"
+msgstr "Nieuwe opstartschermen ophalen..."
 
 #: package/contents/ui/main.qml:49
 #, kde-format

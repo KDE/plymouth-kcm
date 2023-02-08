@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plymouth-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-07 02:53+0000\n"
-"PO-Revision-Date: 2023-02-06 11:50+0100\n"
+"PO-Revision-Date: 2023-02-07 09:05+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -134,10 +134,9 @@ msgstr ""
 "Plymouth."
 
 #: package/contents/ui/main.qml:21
-#, fuzzy, kde-format
-#| msgid "Get New Boot Splash Screens…"
+#, kde-format
 msgid "Get New Boot Splash Screens..."
-msgstr "Obtén pantalles de presentació d'arrencada noves…"
+msgstr "Obtén pantalles de presentació d'arrencada noves..."
 
 #: package/contents/ui/main.qml:49
 #, kde-format
