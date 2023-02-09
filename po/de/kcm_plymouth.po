@@ -133,8 +133,7 @@ msgstr ""
 "Mit diesem Modul können Sie den Plymouth-Systemstartbildschirm auswählen."
 
 #: package/contents/ui/main.qml:21
-#, fuzzy, kde-format
-#| msgid "Get New Boot Splash Screens..."
+#, kde-format
 msgid "Get New Boot Splash Screens..."
 msgstr "Neue Systemstartbildschirme holen ..."
 
