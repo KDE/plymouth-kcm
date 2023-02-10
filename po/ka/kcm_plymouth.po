@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plymouth-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-07 01:01+0000\n"
-"PO-Revision-Date: 2023-01-06 06:06+0100\n"
+"PO-Revision-Date: 2023-02-09 14:33+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -133,7 +133,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button as in, get new Plymouth boot splash screens"
 msgid "Get New…"
-msgstr ""
+msgstr "ახლის მიღება…"
 
 #: package/contents/ui/main.qml:49
 #, kde-format
