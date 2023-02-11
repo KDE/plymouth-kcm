@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-07 01:01+0000\n"
-"PO-Revision-Date: 2023-01-03 10:01\n"
+"PO-Revision-Date: 2023-02-09 14:47\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -135,7 +135,7 @@ msgstr "Гэты модуль дазваляе абраць застаўку э�
 #, kde-format
 msgctxt "@action:button as in, get new Plymouth boot splash screens"
 msgid "Get New…"
-msgstr ""
+msgstr "Атрымаць новыя…"
 
 #: package/contents/ui/main.qml:49
 #, kde-format
