@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_plymouth\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2019-12-27 03:36+0100\n"
+"POT-Creation-Date: 2023-02-07 01:01+0000\n"
 "PO-Revision-Date: 2017-05-07 21:01+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -28,113 +28,106 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "caslav.ilic@gmx.net"
 
-#: helper.cpp:45
-#, kde-format
-msgid "No theme specified in helper parameters."
-msgstr "Није задата тема у параметрима помоћника."
-
-#: helper.cpp:63 helper.cpp:246 helper.cpp:313
-#, kde-format
-msgid "Theme corrupted: .plymouth file not found inside theme."
-msgstr "Тема искварена: нема .plymouth фајла унутар теме."
-
 # literal-segment: update-alternatives
-#: helper.cpp:73 helper.cpp:104 helper.cpp:129 helper.cpp:258 helper.cpp:324
+#: helper.cpp:57 helper.cpp:110 helper.cpp:138 helper.cpp:315
 #, kde-format
 msgid "Cannot start update-alternatives."
 msgstr "Не могу да покренем update-alternatives."
 
 # literal-segment: update-alternatives
-#: helper.cpp:78 helper.cpp:109 helper.cpp:134 helper.cpp:263 helper.cpp:329
+#: helper.cpp:62 helper.cpp:115 helper.cpp:143 helper.cpp:320
 #, kde-format
 msgid "update-alternatives failed to run."
 msgstr "update-alternatives не може да се изврши."
 
-#: helper.cpp:89 helper.cpp:117 helper.cpp:142 helper.cpp:271 helper.cpp:337
+#: helper.cpp:69 helper.cpp:123 helper.cpp:150 helper.cpp:328
 #, kde-format
 msgid "update-alternatives returned with error condition %1."
 msgstr "update-alternatives враћа грешку %1."
 
-#: helper.cpp:155
+#: helper.cpp:82
+#, kde-format
+msgid "No theme specified in helper parameters."
+msgstr "Није задата тема у параметрима помоћника."
+
+#: helper.cpp:100 helper.cpp:259 helper.cpp:305
+#, kde-format
+msgid "Theme corrupted: .plymouth file not found inside theme."
+msgstr "Тема искварена: нема .plymouth фајла унутар теме."
+
+#: helper.cpp:161
 #, kde-format
 msgid "Cannot start initramfs."
 msgstr "Не могу да покренем initramfs."
 
-#: helper.cpp:160
+#: helper.cpp:169
 #, kde-format
 msgid "Initramfs failed to run."
 msgstr "initramfs не може да се изврши."
 
-#: helper.cpp:170
+#: helper.cpp:179
 #, kde-format
 msgid "Initramfs returned with error condition %1."
 msgstr "initramfs враћа грешку %1."
 
-#: helper.cpp:297
+#: helper.cpp:289
 #, kde-format
 msgid "Theme folder %1 does not exist."
 msgstr "Фасцикла теме %1 не постоји."
 
-#: helper.cpp:303
+#: helper.cpp:295
 #, kde-format
 msgid "Theme %1 does not exist."
 msgstr "Тема %1 не постоји."
 
-#: kcm.cpp:62
+#: kcm.cpp:41
 #, fuzzy, kde-format
 #| msgid "Get New Boot Splash Screens..."
 msgid "Boot Splash Screen"
 msgstr "Добави нове уводне екране подизања..."
 
-#: kcm.cpp:64
+#: kcm.cpp:42
 #, kde-format
 msgid "Marco Martin"
 msgstr "Марко Мартин"
 
-# >> @title:window
-#: kcm.cpp:140
-#, fuzzy, kde-format
-#| msgid "Download New Splash Screens"
-msgid "Download New Boot Splash Screens"
-msgstr "Преузимање нових уводних екрана"
-
-#: kcm.cpp:237 kcm.cpp:257
+#: kcm.cpp:202 kcm.cpp:222
 #, fuzzy, kde-format
 #| msgid "Unable to authenticate/execute the action: %1, %2"
 msgid "Unable to authenticate/execute the action: %1 (%2)"
 msgstr "Не могу да аутентификујем/извршим радњу: %1, %2"
 
-#: kcm.cpp:261
+#: kcm.cpp:226
 #, kde-format
 msgid "Theme uninstalled successfully."
 msgstr ""
 
-#: kplymouththemeinstaller.cpp:45
+#: kplymouththemeinstaller.cpp:32
 #, kde-format
 msgid "Plymouth theme installer"
 msgstr "Инсталатор Плимутових тема"
 
-#: kplymouththemeinstaller.cpp:51
+#: kplymouththemeinstaller.cpp:38
 #, kde-format
 msgid "Install a theme."
 msgstr "Инсталирај тему."
 
-#: kplymouththemeinstaller.cpp:52
+#: kplymouththemeinstaller.cpp:39
 #, kde-format
 msgid "Uninstall a theme."
 msgstr "Деинсталирај тему."
 
-#: kplymouththemeinstaller.cpp:54
+#: kplymouththemeinstaller.cpp:41
 #, kde-format
 msgid "The theme to install, must be an existing archive file."
 msgstr "Тема за инсталирање, мора да буде постојећи фајл архиве."
 
-#: kplymouththemeinstaller.cpp:123
+#: kplymouththemeinstaller.cpp:113
 #, kde-format
 msgid "Unable to authenticate/execute the action: %1, %2"
 msgstr "Не могу да аутентификујем/извршим радњу: %1, %2"
 
-#: package/contents/ui/main.qml:28
+#: package/contents/ui/main.qml:17
 #, fuzzy, kde-format
 #| msgid ""
 #| "This module lets you configure the look of the whole workspace with some "
@@ -144,12 +137,22 @@ msgstr ""
 "У овом модулу можете да подесите изглед целог радног простора, уз неколико "
 "спремних предефинисаних."
 
-#: package/contents/ui/main.qml:51
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgctxt "@action:button as in, get new Plymouth boot splash screens"
+msgid "Get New…"
+msgstr ""
+
+#: package/contents/ui/main.qml:49
 #, kde-format
 msgid "Uninstall"
 msgstr "Деинсталирај"
 
-#: package/contents/ui/main.qml:79
-#, kde-format
-msgid "Get New Boot Splash Screens..."
-msgstr "Добави нове уводне екране подизања..."
+# >> @title:window
+#, fuzzy
+#~| msgid "Download New Splash Screens"
+#~ msgid "Download New Boot Splash Screens"
+#~ msgstr "Преузимање нових уводних екрана"
+
+#~ msgid "Get New Boot Splash Screens..."
+#~ msgstr "Добави нове уводне екране подизања..."
