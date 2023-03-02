@@ -12,7 +12,6 @@
 
 #include <chrono>
 
-#include <KAboutData>
 #include <KConfigGroup>
 #include <KPluginFactory>
 #include <KSharedConfig>
@@ -31,16 +30,12 @@ using namespace std::chrono_literals;
 
 K_PLUGIN_FACTORY_WITH_JSON(KCMPlymouthFactory, "kcm_plymouth.json", registerPlugin<KCMPlymouth>();)
 
-KCMPlymouth::KCMPlymouth(QObject *parent, const QVariantList &args)
-    : KQuickAddons::ConfigModule(parent, args)
+KCMPlymouth::KCMPlymouth(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
+    : KQuickAddons::ConfigModule(parent, metaData, args)
     , m_model(new QStandardItemModel(this))
 {
     qmlRegisterAnonymousType<QStandardItemModel>("KCMPlymouth", 1);
     qmlRegisterAnonymousType<KCMPlymouth>("KCMPlymouth", 1);
-    KAboutData *about =
-        new KAboutData(QStringLiteral("kcm_plymouth"), i18n("Boot Splash Screen"), QStringLiteral(PROJECT_VERSION), QString(), KAboutLicense::LGPL);
-    about->addAuthor(i18n("Marco Martin"), QString(), QStringLiteral("mart@kde.org"));
-    setAboutData(about);
     setButtons(Apply);
     setAuthActionName(QStringLiteral("org.kde.kcontrol.kcmplymouth.save"));
     setNeedsAuthorization(true);
