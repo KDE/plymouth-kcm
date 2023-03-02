@@ -1,7 +1,7 @@
 project(plymouthkcm)
 
 cmake_minimum_required(VERSION 3.16)
-set(KF5_MIN_VERSION "5.102.0")
+set(KF6_MIN_VERSION "5.102.0")
 set(KDE_COMPILERSETTINGS_LEVEL "5.82")
 set(QT_MIN_VERSION "5.15.2")
 
@@ -15,7 +15,7 @@ endif()
 set(PROJECT_VERSION "5.27.80")
 set(PROJECT_VERSION_MAJOR 5)
 
-find_package(ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
+find_package(ECM ${KF6_MIN_VERSION} REQUIRED NO_MODULE)
 
 # where to look first for cmake modules, before ${CMAKE_ROOT}/Modules/ is checked
 set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake ${ECM_MODULE_PATH})
@@ -32,8 +32,8 @@ include(ECMDeprecationSettings)
 
 find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick Test Gui)
 
-find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
-                    Archive NewStuff NewStuffCore KIO Declarative I18n Config KCMUtils)
+find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
+                    Archive NewStuff NewStuffCore KIO Declarative I18n Config KCMUtils Package)
 
 find_package(Plymouth REQUIRED)
 

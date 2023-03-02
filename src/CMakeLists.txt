@@ -13,15 +13,15 @@ add_library(kcm_plymouth MODULE ${kcm_plymouth_SRCS})
 
 kcmutils_generate_desktop_file(kcm_plymouth)
 target_link_libraries(kcm_plymouth
-  KF5::CoreAddons
-  KF5::AuthCore
-  KF5::I18n
-  KF5::Declarative
-  KF5::QuickAddons
-  KF5::NewStuff
-  KF5::NewStuffCore
-  KF5::ConfigCore
-  KF5::KIOCore
+  KF6::CoreAddons
+  KF6::AuthCore
+  KF6::I18n
+  KF6::Declarative
+  KF6::QuickAddons
+  KF6::NewStuff
+  KF6::NewStuffCore
+  KF6::ConfigCore
+  KF6::KIOCore
 )
 
 install(TARGETS kcm_plymouth DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcms/systemsettings)
@@ -35,20 +35,20 @@ add_executable(kplymouththemeinstaller
 )
 
 target_link_libraries(kplymouththemeinstaller
-    KF5::I18n
-    KF5::AuthCore
-    KF5::CoreAddons
-    KF5::Archive
-    KF5::ConfigCore)
-install(TARGETS kplymouththemeinstaller ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
+    KF6::I18n
+    KF6::AuthCore
+    KF6::CoreAddons
+    KF6::Archive
+    KF6::ConfigCore)
+install(TARGETS kplymouththemeinstaller ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
 
 #polkit stuff
 add_executable(plymouthhelper helper.cpp helper.h)
 target_link_libraries(plymouthhelper
-    KF5::Archive
-    KF5::AuthCore
-    KF5::ConfigCore
-    KF5::I18n)
+    KF6::Archive
+    KF6::AuthCore
+    KF6::ConfigCore
+    KF6::I18n)
 install(TARGETS plymouthhelper DESTINATION ${KAUTH_HELPER_INSTALL_DIR})
 kauth_install_helper_files(plymouthhelper org.kde.kcontrol.kcmplymouth root)
 kauth_install_actions(org.kde.kcontrol.kcmplymouth kcmplymouth_actions.actions)
