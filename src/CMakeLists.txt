@@ -40,7 +40,7 @@ target_link_libraries(kplymouththemeinstaller
     KF5::CoreAddons
     KF5::Archive
     KF5::ConfigCore)
-install(TARGETS kplymouththemeinstaller ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS kplymouththemeinstaller ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
 #polkit stuff
 add_executable(plymouthhelper helper.cpp helper.h)
