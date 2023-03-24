@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_plymouth\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-07 01:01+0000\n"
+"POT-Creation-Date: 2023-03-24 02:08+0000\n"
 "PO-Revision-Date: 2017-05-07 21:01+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -29,18 +29,18 @@ msgid "Your emails"
 msgstr "caslav.ilic@gmx.net"
 
 # literal-segment: update-alternatives
-#: helper.cpp:57 helper.cpp:110 helper.cpp:138 helper.cpp:315
+#: helper.cpp:57 helper.cpp:110 helper.cpp:138 helper.cpp:326
 #, kde-format
 msgid "Cannot start update-alternatives."
 msgstr "Ne mogu da pokrenem update-alternatives."
 
 # literal-segment: update-alternatives
-#: helper.cpp:62 helper.cpp:115 helper.cpp:143 helper.cpp:320
+#: helper.cpp:62 helper.cpp:115 helper.cpp:143 helper.cpp:331
 #, kde-format
 msgid "update-alternatives failed to run."
 msgstr "update-alternatives ne može da se izvrši."
 
-#: helper.cpp:69 helper.cpp:123 helper.cpp:150 helper.cpp:328
+#: helper.cpp:69 helper.cpp:123 helper.cpp:150 helper.cpp:339
 #, kde-format
 msgid "update-alternatives returned with error condition %1."
 msgstr "update-alternatives vraća grešku %1."
@@ -50,32 +50,38 @@ msgstr "update-alternatives vraća grešku %1."
 msgid "No theme specified in helper parameters."
 msgstr "Nije zadata tema u parametrima pomoćnika."
 
-#: helper.cpp:100 helper.cpp:259 helper.cpp:305
+#: helper.cpp:100 helper.cpp:270 helper.cpp:316
 #, kde-format
 msgid "Theme corrupted: .plymouth file not found inside theme."
 msgstr "Tema iskvarena: nema .plymouth fajla unutar teme."
 
-#: helper.cpp:161
+#: helper.cpp:162
 #, kde-format
 msgid "Cannot start initramfs."
 msgstr "Ne mogu da pokrenem initramfs."
 
-#: helper.cpp:169
+#: helper.cpp:171
+#, fuzzy, kde-format
+#| msgid "Cannot start initramfs."
+msgid "Cannot start mkinitcpio."
+msgstr "Ne mogu da pokrenem initramfs."
+
+#: helper.cpp:180
 #, kde-format
 msgid "Initramfs failed to run."
 msgstr "initramfs ne može da se izvrši."
 
-#: helper.cpp:179
+#: helper.cpp:190
 #, kde-format
 msgid "Initramfs returned with error condition %1."
 msgstr "initramfs vraća grešku %1."
 
-#: helper.cpp:289
+#: helper.cpp:300
 #, kde-format
 msgid "Theme folder %1 does not exist."
 msgstr "Fascikla teme %1 ne postoji."
 
-#: helper.cpp:295
+#: helper.cpp:306
 #, kde-format
 msgid "Theme %1 does not exist."
 msgstr "Tema %1 ne postoji."

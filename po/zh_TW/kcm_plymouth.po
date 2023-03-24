@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-07 01:01+0000\n"
+"POT-Creation-Date: 2023-03-24 02:08+0000\n"
 "PO-Revision-Date: 2023-02-07 23:21+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -29,17 +29,17 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "s8321414@gmail.com"
 
-#: helper.cpp:57 helper.cpp:110 helper.cpp:138 helper.cpp:315
+#: helper.cpp:57 helper.cpp:110 helper.cpp:138 helper.cpp:326
 #, kde-format
 msgid "Cannot start update-alternatives."
 msgstr "無法啟動 update-alternatives。"
 
-#: helper.cpp:62 helper.cpp:115 helper.cpp:143 helper.cpp:320
+#: helper.cpp:62 helper.cpp:115 helper.cpp:143 helper.cpp:331
 #, kde-format
 msgid "update-alternatives failed to run."
 msgstr "update-alternatives 執行失敗。"
 
-#: helper.cpp:69 helper.cpp:123 helper.cpp:150 helper.cpp:328
+#: helper.cpp:69 helper.cpp:123 helper.cpp:150 helper.cpp:339
 #, kde-format
 msgid "update-alternatives returned with error condition %1."
 msgstr "update-alternatives 傳回錯誤代碼 %1。"
@@ -49,32 +49,38 @@ msgstr "update-alternatives 傳回錯誤代碼 %1。"
 msgid "No theme specified in helper parameters."
 msgstr "在助手程式中未指定主題。"
 
-#: helper.cpp:100 helper.cpp:259 helper.cpp:305
+#: helper.cpp:100 helper.cpp:270 helper.cpp:316
 #, kde-format
 msgid "Theme corrupted: .plymouth file not found inside theme."
 msgstr "主題已損毀：在主題中找不到 .plymouth 檔案。"
 
-#: helper.cpp:161
+#: helper.cpp:162
 #, kde-format
 msgid "Cannot start initramfs."
 msgstr "無法啟動 initramfs。"
 
-#: helper.cpp:169
+#: helper.cpp:171
+#, fuzzy, kde-format
+#| msgid "Cannot start initramfs."
+msgid "Cannot start mkinitcpio."
+msgstr "無法啟動 initramfs。"
+
+#: helper.cpp:180
 #, kde-format
 msgid "Initramfs failed to run."
 msgstr "initramfs 執行失敗。"
 
-#: helper.cpp:179
+#: helper.cpp:190
 #, kde-format
 msgid "Initramfs returned with error condition %1."
 msgstr "Initramfs 傳回錯誤代碼 %1。"
 
-#: helper.cpp:289
+#: helper.cpp:300
 #, kde-format
 msgid "Theme folder %1 does not exist."
 msgstr "主題資料夾 %1 不存在。"
 
-#: helper.cpp:295
+#: helper.cpp:306
 #, kde-format
 msgid "Theme %1 does not exist."
 msgstr "主題 %1 不存在。"

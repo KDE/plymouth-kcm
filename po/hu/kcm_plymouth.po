@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plymouth-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-07 01:01+0000\n"
+"POT-Creation-Date: 2023-03-24 02:08+0000\n"
 "PO-Revision-Date: 2019-12-08 18:34+0100\n"
 "Last-Translator: Kristóf Kiszel <ulysses@kubuntu.org>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -27,17 +27,17 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "ulysses@kubuntu.org"
 
-#: helper.cpp:57 helper.cpp:110 helper.cpp:138 helper.cpp:315
+#: helper.cpp:57 helper.cpp:110 helper.cpp:138 helper.cpp:326
 #, kde-format
 msgid "Cannot start update-alternatives."
 msgstr "Nem lehet elindítani az update-alternatives-t."
 
-#: helper.cpp:62 helper.cpp:115 helper.cpp:143 helper.cpp:320
+#: helper.cpp:62 helper.cpp:115 helper.cpp:143 helper.cpp:331
 #, kde-format
 msgid "update-alternatives failed to run."
 msgstr "Az update-alternatives futása meghiúsult."
 
-#: helper.cpp:69 helper.cpp:123 helper.cpp:150 helper.cpp:328
+#: helper.cpp:69 helper.cpp:123 helper.cpp:150 helper.cpp:339
 #, kde-format
 msgid "update-alternatives returned with error condition %1."
 msgstr "Az update-alternatives a következő hibakóddal tért vissza: %1."
@@ -47,32 +47,38 @@ msgstr "Az update-alternatives a következő hibakóddal tért vissza: %1."
 msgid "No theme specified in helper parameters."
 msgstr "Nincs megadva téma a segéd paraméterei közt."
 
-#: helper.cpp:100 helper.cpp:259 helper.cpp:305
+#: helper.cpp:100 helper.cpp:270 helper.cpp:316
 #, kde-format
 msgid "Theme corrupted: .plymouth file not found inside theme."
 msgstr "A téma sérült: nem található .plymouth fájl a témán belül."
 
-#: helper.cpp:161
+#: helper.cpp:162
 #, kde-format
 msgid "Cannot start initramfs."
 msgstr "Nem lehet elindítani az initramfs-t."
 
-#: helper.cpp:169
+#: helper.cpp:171
+#, fuzzy, kde-format
+#| msgid "Cannot start initramfs."
+msgid "Cannot start mkinitcpio."
+msgstr "Nem lehet elindítani az initramfs-t."
+
+#: helper.cpp:180
 #, kde-format
 msgid "Initramfs failed to run."
 msgstr "Az initramfs futása meghiúsult."
 
-#: helper.cpp:179
+#: helper.cpp:190
 #, kde-format
 msgid "Initramfs returned with error condition %1."
 msgstr "Az initramfs a következő hibakóddal tért vissza: %1."
 
-#: helper.cpp:289
+#: helper.cpp:300
 #, kde-format
 msgid "Theme folder %1 does not exist."
 msgstr "A(z) %1 témamappa nem létezik."
 
-#: helper.cpp:295
+#: helper.cpp:306
 #, kde-format
 msgid "Theme %1 does not exist."
 msgstr "A(z) %1 téma nem létezik."
