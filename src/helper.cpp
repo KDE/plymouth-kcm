@@ -154,12 +154,23 @@ ActionReply PlymouthHelper::save(const QVariantMap &args)
     }
 
     QProcess process;
-    qDebug() << "Running update-initramfs -u  now";
-    process.start(QStringLiteral("/usr/sbin/update-initramfs"), QStringList() << QStringLiteral("-u"));
-    if (!process.waitForStarted()) {
-        reply = ActionReply::BackendError;
-        reply.setErrorDescription(i18n("Cannot start initramfs."));
-        return reply;
+    if (QFileInfo::exists(QStringLiteral("/usr/sbin/update-initramfs"))) {
+        qDebug() << "Running update-initramfs -u now";
+        process.start(QStringLiteral("/usr/sbin/update-initramfs"), QStringList() << QStringLiteral("-u"));
+        if (!process.waitForStarted()) {
+            reply = ActionReply::BackendError;
+            reply.setErrorDescription(i18n("Cannot start initramfs."));
+            return reply;
+        }
+    }
+    if (QFileInfo::exists(QStringLiteral("/usr/bin/mkinitcpio"))) {
+        qDebug() << "Running mkinitcpio -P now";
+        process.start(QStringLiteral("/usr/bin/mkinitcpio"), QStringList() << QStringLiteral("-P"));
+        if (!process.waitForStarted()) {
+            reply = ActionReply::BackendError;
+            reply.setErrorDescription(i18n("Cannot start mkinitcpio."));
+            return reply;
+        }
     }
     // We don't know how long this will take. The helper will need to generate N=installed_kernels initrds.
     // Be very generous with the timeout! https://bugs.kde.org/show_bug.cgi?id=400641
