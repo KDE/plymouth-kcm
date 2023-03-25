@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kcm_plymouth\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-24 02:08+0000\n"
-"PO-Revision-Date: 2023-02-07 20:27+0300\n"
+"PO-Revision-Date: 2023-03-24 13:53+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -58,10 +58,9 @@ msgid "Cannot start initramfs."
 msgstr "Initramfs başlatılamıyor."
 
 #: helper.cpp:171
-#, fuzzy, kde-format
-#| msgid "Cannot start initramfs."
+#, kde-format
 msgid "Cannot start mkinitcpio."
-msgstr "Initramfs başlatılamıyor."
+msgstr "mkinitcpio başlatılamıyor."
 
 #: helper.cpp:180
 #, kde-format

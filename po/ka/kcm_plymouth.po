@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plymouth-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-24 02:08+0000\n"
-"PO-Revision-Date: 2023-02-09 14:33+0100\n"
+"PO-Revision-Date: 2023-03-25 02:32+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -59,10 +59,9 @@ msgid "Cannot start initramfs."
 msgstr "Initramfs-ის გაშვება შეუძლებელია."
 
 #: helper.cpp:171
-#, fuzzy, kde-format
-#| msgid "Cannot start initramfs."
+#, kde-format
 msgid "Cannot start mkinitcpio."
-msgstr "Initramfs-ის გაშვება შეუძლებელია."
+msgstr "mkinitcpio-ის გაშვება შეუძლებელია."
 
 #: helper.cpp:180
 #, kde-format
