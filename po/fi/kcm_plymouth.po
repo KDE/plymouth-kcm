@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-24 02:08+0000\n"
-"PO-Revision-Date: 2023-03-06 13:47+0200\n"
+"PO-Revision-Date: 2023-04-02 17:11+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -30,7 +30,7 @@ msgstr "translator@legisign.org"
 #: helper.cpp:57 helper.cpp:110 helper.cpp:138 helper.cpp:326
 #, kde-format
 msgid "Cannot start update-alternatives."
-msgstr "Ei voida käynnistää ohjelmaa update-alternatives."
+msgstr "Ei voida käynnistää update-alternatives-ohjelmaa."
 
 #: helper.cpp:62 helper.cpp:115 helper.cpp:143 helper.cpp:331
 #, kde-format
@@ -55,13 +55,12 @@ msgstr "Vioittunut teema: teemasta ei löydy .plymouth-tiedostoa."
 #: helper.cpp:162
 #, kde-format
 msgid "Cannot start initramfs."
-msgstr "Ei voida käynnistää ohjelmaa initramfs."
+msgstr "Ei voida käynnistää initramfs-ohjelmaa."
 
 #: helper.cpp:171
-#, fuzzy, kde-format
-#| msgid "Cannot start initramfs."
+#, kde-format
 msgid "Cannot start mkinitcpio."
-msgstr "Ei voida käynnistää ohjelmaa initramfs."
+msgstr "Ei voida käynnistää mkinitcpio-ohjelmaa."
 
 #: helper.cpp:180
 #, kde-format
