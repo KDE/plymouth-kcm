@@ -140,6 +140,3 @@ msgstr "Изтегляне на нови…"
 #, kde-format
 msgid "Uninstall"
 msgstr "Деинсталиране"
-
-#~ msgid "Get New Boot Splash Screens..."
-#~ msgstr "Изтегляне на нови екрани за начално зареждане..."
