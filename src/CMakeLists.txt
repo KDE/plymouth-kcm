@@ -5,29 +5,19 @@ SET(PLYMOUTH_THEMES_DIR "/usr/share/plymouth/themes/" CACHE STRING "Where Plymou
 SET(PLYMOUTH_CONFIG_PATH "/etc/plymouth/plymouthd.conf" CACHE STRING "where the main plymouth config file is")
 configure_file (config-kcm.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kcm.h )
 
-set(kcm_plymouth_SRCS
-  kcm.cpp kcm.h
-)
+kcmutils_add_qml_kcm(kcm_plymouth SOURCES kcm.cpp kcm.h)
 
-add_library(kcm_plymouth MODULE ${kcm_plymouth_SRCS})
-
-kcmutils_generate_desktop_file(kcm_plymouth)
 target_link_libraries(kcm_plymouth
   KF6::CoreAddons
   KF6::AuthCore
   KF6::I18n
-  KF6::Declarative
-  KF6::QuickAddons
-  KF6::NewStuff
+  KF6::KCMUtils
   KF6::NewStuffCore
   KF6::ConfigCore
   KF6::KIOCore
 )
 
-install(TARGETS kcm_plymouth DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcms/systemsettings)
 install(FILES plymouth.knsrc DESTINATION ${KDE_INSTALL_KNSRCDIR})
-
-kpackage_install_package(package kcm_plymouth kcms)
 
 #installer tool for knewstuff
 add_executable(kplymouththemeinstaller
@@ -39,7 +29,8 @@ target_link_libraries(kplymouththemeinstaller
     KF6::AuthCore
     KF6::CoreAddons
     KF6::Archive
-    KF6::ConfigCore)
+    KF6::ConfigCore
+)
 install(TARGETS kplymouththemeinstaller ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
 
 #polkit stuff
@@ -48,7 +39,8 @@ target_link_libraries(plymouthhelper
     KF6::Archive
     KF6::AuthCore
     KF6::ConfigCore
-    KF6::I18n)
+    KF6::I18n
+)
 install(TARGETS plymouthhelper DESTINATION ${KAUTH_HELPER_INSTALL_DIR})
 kauth_install_helper_files(plymouthhelper org.kde.kcontrol.kcmplymouth root)
 kauth_install_actions(org.kde.kcontrol.kcmplymouth kcmplymouth_actions.actions)

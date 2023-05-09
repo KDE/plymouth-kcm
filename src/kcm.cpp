@@ -22,8 +22,6 @@
 #include <KAuth/Action>
 #include <KAuth/ExecuteJob>
 
-#include <KNewStuff3/KNSCore/EntryInternal>
-
 #include <kio/job.h>
 
 using namespace std::chrono_literals;
@@ -31,14 +29,13 @@ using namespace std::chrono_literals;
 K_PLUGIN_FACTORY_WITH_JSON(KCMPlymouthFactory, "kcm_plymouth.json", registerPlugin<KCMPlymouth>();)
 
 KCMPlymouth::KCMPlymouth(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : KQuickAddons::ConfigModule(parent, metaData, args)
+    : KQuickConfigModule(parent, metaData, args)
     , m_model(new QStandardItemModel(this))
 {
     qmlRegisterAnonymousType<QStandardItemModel>("KCMPlymouth", 1);
     qmlRegisterAnonymousType<KCMPlymouth>("KCMPlymouth", 1);
     setButtons(Apply);
     setAuthActionName(QStringLiteral("org.kde.kcontrol.kcmplymouth.save"));
-    setNeedsAuthorization(true);
 
     m_model->setItemRoleNames({{Qt::DisplayRole, QByteArrayLiteral("display")},
                                {DescriptionRole, QByteArrayLiteral("description")},
@@ -84,14 +81,14 @@ void KCMPlymouth::reloadModel()
 
         // the theme has a preview
         if (QFile::exists(themeDir.path() + QStringLiteral("/preview.png"))) {
-            row->setData(QString(themeDir.path() + QStringLiteral("/preview.png")), ScreenhotRole);
+            row->setData(QUrl::fromLocalFile(themeDir.path() + QStringLiteral("/preview.png")), ScreenhotRole);
             // fetch it downloaded from kns
         } else {
             const QString fileName = installedCg.readEntry(fileInfo.fileName(), QString());
             if (fileName.isEmpty()) {
                 row->setData(QString(), ScreenhotRole);
             } else {
-                row->setData(fileName + QStringLiteral(".png"), ScreenhotRole);
+                row->setData(QUrl::fromLocalFile(fileName + QStringLiteral(".png")), ScreenhotRole);
             }
         }
 
@@ -101,18 +98,15 @@ void KCMPlymouth::reloadModel()
     Q_EMIT selectedPluginIndexChanged();
 }
 
-void KCMPlymouth::onChangedEntriesChanged(const QQmlListReference &changedEntries)
+void KCMPlymouth::onEntryEvent(const KNSCore::Entry &entry)
 {
     static QStringList alreadyCopiedThumbnails;
-    for (int i = 0; i < changedEntries.count(); ++i) {
-        auto entry = qobject_cast<KNSCore::EntryWrapper *>(changedEntries.at(i))->entry();
-        if (entry.isValid() && entry.status() == KNS3::Entry::Installed && !alreadyCopiedThumbnails.contains(entry.uniqueId())) {
-            alreadyCopiedThumbnails.append(entry.uniqueId());
-            KIO::file_copy(QUrl(entry.previewUrl(KNSCore::EntryInternal::PreviewBig1)),
-                           QUrl::fromLocalFile(QString(entry.installedFiles().constFirst() + QStringLiteral(".png"))),
-                           -1,
-                           KIO::Overwrite | KIO::HideProgressInfo);
-        }
+    if (entry.isValid() && entry.status() == KNSCore::Entry::Installed && !alreadyCopiedThumbnails.contains(entry.uniqueId())) {
+        alreadyCopiedThumbnails.append(entry.uniqueId());
+        KIO::file_copy(QUrl(entry.previewUrl(KNSCore::Entry::PreviewBig1)),
+                       QUrl::fromLocalFile(QString(entry.installedFiles().constFirst() + QStringLiteral(".png"))),
+                       -1,
+                       KIO::Overwrite | KIO::HideProgressInfo);
     }
     reloadModel();
 }

@@ -9,15 +9,15 @@
 #ifndef _KCM_PLYMOUTH_H
 #define _KCM_PLYMOUTH_H
 
-#include <KNewStuff3/KNSCore/EntryWrapper>
+#include <KQuickConfigModule>
 #include <QDir>
 #include <QStandardItemModel>
 
-#include <KQuickAddons/ConfigModule>
+#include <KNSCore/Entry>
 
 class QQuickItem;
 
-class KCMPlymouth : public KQuickAddons::ConfigModule
+class KCMPlymouth : public KQuickConfigModule
 {
     Q_OBJECT
     Q_PROPERTY(QStandardItemModel *themesModel READ themesModel CONSTANT)
@@ -46,7 +46,7 @@ public:
     void setBusy(const bool &busy);
 
     Q_INVOKABLE void reloadModel();
-    Q_INVOKABLE void onChangedEntriesChanged(const QQmlListReference &changedEntries);
+    Q_INVOKABLE void onEntryEvent(const KNSCore::Entry &entry);
     Q_INVOKABLE void uninstall(const QString &plugin);
 
 public Q_SLOTS:

@@ -14,15 +14,13 @@ import org.kde.kcm 1.3 as KCM
 import org.kde.newstuff 1.91 as NewStuff
 
 KCM.GridViewKCM {
-    KCM.ConfigModule.quickHelp: i18n("This module lets you choose the Plymouth boot splash screen.")
-
-    actions.main: NewStuff.Action {
+    actions: NewStuff.Action {
         id: newStuffButton
         text: i18nc("@action:button as in, get new Plymouth boot splash screens", "Get New…")
         enabled: !kcm.busy
         icon.name: "get-hot-new-stuff"
         configFile: "plymouth.knsrc"
-        onChangedEntriesChanged: kcm.onChangedEntriesChanged(newStuffButton.changedEntries);
+        onEntryEvent: (entry, event) =>  kcm.onEntryEvent(entry);
     }
 
     view.model: kcm.themesModel
@@ -40,12 +38,12 @@ KCM.GridViewKCM {
             anchors.fill: parent
             source: model.screenshot
             sourceSize: Qt.size(delegate.GridView.view.cellWidth * Screen.devicePixelRatio,
- delegate.GridView.view.cellHeight * Screen.devicePixelRatio)
+                                delegate.GridView.view.cellHeight * Screen.devicePixelRatio)
         }
 
         actions: [
             Kirigami.Action {
-                iconName: "edit-delete"
+                icon.name: "edit-delete"
                 tooltip: i18n("Uninstall")
                 enabled: model.uninstallable
                 onTriggered: kcm.uninstall(model.pluginName)

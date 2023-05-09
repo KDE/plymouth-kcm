@@ -33,7 +33,7 @@ include(ECMDeprecationSettings)
 find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick Test Gui)
 
 find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
-                    Archive NewStuff NewStuffCore KIO Declarative I18n Config KCMUtils Package)
+    Auth Archive NewStuff NewStuffCore KIO Declarative I18n Config KCMUtils Package)
 
 find_package(Plymouth REQUIRED)
 
