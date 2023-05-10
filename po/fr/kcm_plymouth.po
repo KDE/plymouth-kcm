@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_plymouth\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-24 02:08+0000\n"
+"POT-Creation-Date: 2023-05-10 02:05+0000\n"
 "PO-Revision-Date: 2023-03-25 09:16+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: fr\n"
@@ -19,17 +19,6 @@ msgstr ""
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Geoffray Levasseur, Matthieu Robin, Simon Depiets"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr ""
-"geoffray.levasseurbrandin@numericable.fr, kde@macolu.org, sdepiets@gmail.com"
 
 #: helper.cpp:57 helper.cpp:110 helper.cpp:138 helper.cpp:326
 #, kde-format
@@ -93,22 +82,12 @@ msgstr "Le dossier de thème %1 n'existe pas."
 msgid "Theme %1 does not exist."
 msgstr "Le thème %1 n'existe pas."
 
-#: kcm.cpp:41
-#, kde-format
-msgid "Boot Splash Screen"
-msgstr "Écran de démarrage "
-
-#: kcm.cpp:42
-#, kde-format
-msgid "Marco Martin"
-msgstr "Marco Martin"
-
-#: kcm.cpp:202 kcm.cpp:222
+#: kcm.cpp:191 kcm.cpp:211
 #, kde-format
 msgid "Unable to authenticate/execute the action: %1 (%2)"
 msgstr "Impossible d'authentifier / d'exécuter l'action : %1 (%2)"
 
-#: kcm.cpp:226
+#: kcm.cpp:215
 #, kde-format
 msgid "Theme uninstalled successfully."
 msgstr "Thème désinstallé avec succès."
@@ -138,21 +117,35 @@ msgstr "Le thème à installer, doit être un fichier d'archive existant."
 msgid "Unable to authenticate/execute the action: %1, %2"
 msgstr "Impossible d'authentifier / d'exécuter l'action : %1, %2"
 
-#: package/contents/ui/main.qml:17
-#, kde-format
-msgid "This module lets you choose the Plymouth boot splash screen."
-msgstr "Ce module vous permet de choisir l'écran de démarrage de Plymouth."
-
-#: package/contents/ui/main.qml:21
+#: ui/main.qml:19
 #, kde-format
 msgctxt "@action:button as in, get new Plymouth boot splash screens"
 msgid "Get New…"
 msgstr "Obtenir des nouveautés…"
 
-#: package/contents/ui/main.qml:49
+#: ui/main.qml:47
 #, kde-format
 msgid "Uninstall"
 msgstr "Désinstaller"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Geoffray Levasseur, Matthieu Robin, Simon Depiets"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "geoffray.levasseurbrandin@numericable.fr, kde@macolu.org, sdepiets@gmail."
+#~ "com"
+
+#~ msgid "Boot Splash Screen"
+#~ msgstr "Écran de démarrage "
+
+#~ msgid "Marco Martin"
+#~ msgstr "Marco Martin"
+
+#~ msgid "This module lets you choose the Plymouth boot splash screen."
+#~ msgstr "Ce module vous permet de choisir l'écran de démarrage de Plymouth."
 
 #~ msgid "Get New Boot Splash Screens..."
 #~ msgstr "Obtenir de nouveaux écrans de démarrage"

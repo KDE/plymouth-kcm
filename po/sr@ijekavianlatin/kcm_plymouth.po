@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_plymouth\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-24 02:08+0000\n"
+"POT-Creation-Date: 2023-05-10 02:05+0000\n"
 "PO-Revision-Date: 2017-05-07 21:01+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -17,16 +17,6 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Časlav Ilić"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "caslav.ilic@gmx.net"
 
 # literal-segment: update-alternatives
 #: helper.cpp:57 helper.cpp:110 helper.cpp:138 helper.cpp:326
@@ -86,24 +76,13 @@ msgstr "Fascikla teme %1 ne postoji."
 msgid "Theme %1 does not exist."
 msgstr "Tema %1 ne postoji."
 
-#: kcm.cpp:41
-#, fuzzy, kde-format
-#| msgid "Get New Boot Splash Screens..."
-msgid "Boot Splash Screen"
-msgstr "Dobavi nove uvodne ekrane podizanja..."
-
-#: kcm.cpp:42
-#, kde-format
-msgid "Marco Martin"
-msgstr "Marko Martin"
-
-#: kcm.cpp:202 kcm.cpp:222
+#: kcm.cpp:191 kcm.cpp:211
 #, fuzzy, kde-format
 #| msgid "Unable to authenticate/execute the action: %1, %2"
 msgid "Unable to authenticate/execute the action: %1 (%2)"
 msgstr "Ne mogu da autentifikujem/izvršim radnju: %1, %2"
 
-#: kcm.cpp:226
+#: kcm.cpp:215
 #, kde-format
 msgid "Theme uninstalled successfully."
 msgstr ""
@@ -133,26 +112,41 @@ msgstr "Tema za instaliranje, mora da bude postojeći fajl arhive."
 msgid "Unable to authenticate/execute the action: %1, %2"
 msgstr "Ne mogu da autentifikujem/izvršim radnju: %1, %2"
 
-#: package/contents/ui/main.qml:17
-#, fuzzy, kde-format
-#| msgid ""
-#| "This module lets you configure the look of the whole workspace with some "
-#| "ready to go presets."
-msgid "This module lets you choose the Plymouth boot splash screen."
-msgstr ""
-"U ovom modulu možete da podesite izgled celog radnog prostora, uz nekoliko "
-"spremnih predefinisanih."
-
-#: package/contents/ui/main.qml:21
+#: ui/main.qml:19
 #, kde-format
 msgctxt "@action:button as in, get new Plymouth boot splash screens"
 msgid "Get New…"
 msgstr ""
 
-#: package/contents/ui/main.qml:49
+#: ui/main.qml:47
 #, kde-format
 msgid "Uninstall"
 msgstr "Deinstaliraj"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Časlav Ilić"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "caslav.ilic@gmx.net"
+
+#, fuzzy
+#~| msgid "Get New Boot Splash Screens..."
+#~ msgid "Boot Splash Screen"
+#~ msgstr "Dobavi nove uvodne ekrane podizanja..."
+
+#~ msgid "Marco Martin"
+#~ msgstr "Marko Martin"
+
+#, fuzzy
+#~| msgid ""
+#~| "This module lets you configure the look of the whole workspace with some "
+#~| "ready to go presets."
+#~ msgid "This module lets you choose the Plymouth boot splash screen."
+#~ msgstr ""
+#~ "U ovom modulu možete da podesite izgled celog radnog prostora, uz "
+#~ "nekoliko spremnih predefinisanih."
 
 # >> @title:window
 #, fuzzy

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-24 02:08+0000\n"
+"POT-Creation-Date: 2023-05-10 02:05+0000\n"
 "PO-Revision-Date: 2023-03-31 21:19+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -18,16 +18,6 @@ msgstr ""
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Karl Ove Hufthammer"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "karl@huftis.org"
 
 #: helper.cpp:57 helper.cpp:110 helper.cpp:138 helper.cpp:326
 #, kde-format
@@ -84,22 +74,12 @@ msgstr "Temamappa %1 finst ikkje."
 msgid "Theme %1 does not exist."
 msgstr "Temaet %1 finst ikkje."
 
-#: kcm.cpp:41
-#, kde-format
-msgid "Boot Splash Screen"
-msgstr "Velkomstbilete ved maskinstart"
-
-#: kcm.cpp:42
-#, kde-format
-msgid "Marco Martin"
-msgstr "Marco Martin"
-
-#: kcm.cpp:202 kcm.cpp:222
+#: kcm.cpp:191 kcm.cpp:211
 #, kde-format
 msgid "Unable to authenticate/execute the action: %1 (%2)"
 msgstr "Klarte ikkje autentisera/køyra handlinga: %1 (%2)"
 
-#: kcm.cpp:226
+#: kcm.cpp:215
 #, kde-format
 msgid "Theme uninstalled successfully."
 msgstr "Temaet er no avinstallert."
@@ -129,18 +109,30 @@ msgstr "Temaet som skal installerast. Det må vera ei arkivfil."
 msgid "Unable to authenticate/execute the action: %1, %2"
 msgstr "Klarte ikkje autentisera/køyra handlinga: %1, %2"
 
-#: package/contents/ui/main.qml:17
-#, kde-format
-msgid "This module lets you choose the Plymouth boot splash screen."
-msgstr "Med denne modulen kan du velja velkomstbilete ved maskinstart."
-
-#: package/contents/ui/main.qml:21
+#: ui/main.qml:19
 #, kde-format
 msgctxt "@action:button as in, get new Plymouth boot splash screens"
 msgid "Get New…"
 msgstr "Hent nye …"
 
-#: package/contents/ui/main.qml:49
+#: ui/main.qml:47
 #, kde-format
 msgid "Uninstall"
 msgstr "Avinstaller"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Karl Ove Hufthammer"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "karl@huftis.org"
+
+#~ msgid "Boot Splash Screen"
+#~ msgstr "Velkomstbilete ved maskinstart"
+
+#~ msgid "Marco Martin"
+#~ msgstr "Marco Martin"
+
+#~ msgid "This module lets you choose the Plymouth boot splash screen."
+#~ msgstr "Med denne modulen kan du velja velkomstbilete ved maskinstart."

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plymouth-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-24 02:08+0000\n"
+"POT-Creation-Date: 2023-05-10 02:05+0000\n"
 "PO-Revision-Date: 2020-10-14 08:43+0300\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -16,16 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 20.04.2\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Stelios"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "sstavra@gmail.com"
 
 #: helper.cpp:57 helper.cpp:110 helper.cpp:138 helper.cpp:326
 #, kde-format
@@ -83,22 +73,12 @@ msgstr "Ο φάκελος %1 του θέματος δεν υπάρχει."
 msgid "Theme %1 does not exist."
 msgstr "Το θέμα %1 δεν υπάρχει."
 
-#: kcm.cpp:41
-#, kde-format
-msgid "Boot Splash Screen"
-msgstr "Αρχική οθόνη εκκίνησης"
-
-#: kcm.cpp:42
-#, kde-format
-msgid "Marco Martin"
-msgstr "Marco Martin"
-
-#: kcm.cpp:202 kcm.cpp:222
+#: kcm.cpp:191 kcm.cpp:211
 #, kde-format
 msgid "Unable to authenticate/execute the action: %1 (%2)"
 msgstr "Αδυναμία ταυτοποίησης/εκτέλεσης της ενέργειας: %1 (%2)"
 
-#: kcm.cpp:226
+#: kcm.cpp:215
 #, kde-format
 msgid "Theme uninstalled successfully."
 msgstr "Επιτυχής απεγκατάσταση του θέματος."
@@ -130,21 +110,34 @@ msgstr ""
 msgid "Unable to authenticate/execute the action: %1, %2"
 msgstr "Αδυναμία ταυτοποίησης/εκτέλεσης της ενέργειας: %1, %2"
 
-#: package/contents/ui/main.qml:17
-#, kde-format
-msgid "This module lets you choose the Plymouth boot splash screen."
-msgstr "Με αυτό το άρθρωμα επιλέγετε την αρχική οθόνη εκκίνησης του Plymouth."
-
-#: package/contents/ui/main.qml:21
+#: ui/main.qml:19
 #, kde-format
 msgctxt "@action:button as in, get new Plymouth boot splash screens"
 msgid "Get New…"
 msgstr ""
 
-#: package/contents/ui/main.qml:49
+#: ui/main.qml:47
 #, kde-format
 msgid "Uninstall"
 msgstr "Απεγκατάσταση"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Stelios"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "sstavra@gmail.com"
+
+#~ msgid "Boot Splash Screen"
+#~ msgstr "Αρχική οθόνη εκκίνησης"
+
+#~ msgid "Marco Martin"
+#~ msgstr "Marco Martin"
+
+#~ msgid "This module lets you choose the Plymouth boot splash screen."
+#~ msgstr ""
+#~ "Με αυτό το άρθρωμα επιλέγετε την αρχική οθόνη εκκίνησης του Plymouth."
 
 #~ msgid "Get New Boot Splash Screens..."
 #~ msgstr "Ανακτήστε νέες αρχικές οθόνες εκκίνησης..."

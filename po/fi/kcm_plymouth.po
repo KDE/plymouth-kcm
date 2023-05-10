@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-24 02:08+0000\n"
+"POT-Creation-Date: 2023-05-10 02:05+0000\n"
 "PO-Revision-Date: 2023-04-02 17:11+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -16,16 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.12.3\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Tommi Nieminen"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "translator@legisign.org"
 
 #: helper.cpp:57 helper.cpp:110 helper.cpp:138 helper.cpp:326
 #, kde-format
@@ -82,22 +72,12 @@ msgstr "Teemakansiota %1 ei ole olemassa."
 msgid "Theme %1 does not exist."
 msgstr "Teemaa %1 ei ole olemassa."
 
-#: kcm.cpp:41
-#, kde-format
-msgid "Boot Splash Screen"
-msgstr "Käynnistyskuva"
-
-#: kcm.cpp:42
-#, kde-format
-msgid "Marco Martin"
-msgstr "Marco Martin"
-
-#: kcm.cpp:202 kcm.cpp:222
+#: kcm.cpp:191 kcm.cpp:211
 #, kde-format
 msgid "Unable to authenticate/execute the action: %1 (%2)"
 msgstr "Toimintoa ei saatu todennetuksi tai suoritetuksi: %1 (%2)"
 
-#: kcm.cpp:226
+#: kcm.cpp:215
 #, kde-format
 msgid "Theme uninstalled successfully."
 msgstr "Teeman asennuksen poistaminen onnistui."
@@ -127,21 +107,33 @@ msgstr "Asennettava teema (olemassa oleva arkistotiedosto)."
 msgid "Unable to authenticate/execute the action: %1, %2"
 msgstr "Toimintoa ei saatu todennetuksi tai suoritetuksi: %1, %2"
 
-#: package/contents/ui/main.qml:17
-#, kde-format
-msgid "This module lets you choose the Plymouth boot splash screen."
-msgstr "Tässä osiossa voit valita Plymouth-käynnistyskuvan."
-
-#: package/contents/ui/main.qml:21
+#: ui/main.qml:19
 #, kde-format
 msgctxt "@action:button as in, get new Plymouth boot splash screens"
 msgid "Get New…"
 msgstr "Hae uusia…"
 
-#: package/contents/ui/main.qml:49
+#: ui/main.qml:47
 #, kde-format
 msgid "Uninstall"
 msgstr "Poista asennus"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Tommi Nieminen"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "translator@legisign.org"
+
+#~ msgid "Boot Splash Screen"
+#~ msgstr "Käynnistyskuva"
+
+#~ msgid "Marco Martin"
+#~ msgstr "Marco Martin"
+
+#~ msgid "This module lets you choose the Plymouth boot splash screen."
+#~ msgstr "Tässä osiossa voit valita Plymouth-käynnistyskuvan."
 
 #~ msgid "Get New Boot Splash Screens..."
 #~ msgstr "Hae uusi käynnistyskuvia…"

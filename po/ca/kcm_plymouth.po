@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plymouth-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-24 02:08+0000\n"
+"POT-Creation-Date: 2023-05-10 02:05+0000\n"
 "PO-Revision-Date: 2023-03-24 12:16+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -20,16 +20,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 "X-Generator: Lokalize 20.12.0\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Josep M. Ferrer"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "txemaq@gmail.com"
 
 #: helper.cpp:57 helper.cpp:110 helper.cpp:138 helper.cpp:326
 #, kde-format
@@ -86,22 +76,12 @@ msgstr "La carpeta %1 del tema no existeix."
 msgid "Theme %1 does not exist."
 msgstr "El tema %1 no existeix."
 
-#: kcm.cpp:41
-#, kde-format
-msgid "Boot Splash Screen"
-msgstr "Pantalla de presentació d'arrencada"
-
-#: kcm.cpp:42
-#, kde-format
-msgid "Marco Martin"
-msgstr "Marco Martin"
-
-#: kcm.cpp:202 kcm.cpp:222
+#: kcm.cpp:191 kcm.cpp:211
 #, kde-format
 msgid "Unable to authenticate/execute the action: %1 (%2)"
 msgstr "No s'ha pogut autenticar/executar l'acció: %1 (%2)"
 
-#: kcm.cpp:226
+#: kcm.cpp:215
 #, kde-format
 msgid "Theme uninstalled successfully."
 msgstr "El tema s'ha desinstal·lat correctament."
@@ -131,20 +111,32 @@ msgstr "El tema a instal·lar, cal que sigui un fitxer d'arxiu existent."
 msgid "Unable to authenticate/execute the action: %1, %2"
 msgstr "No s'ha pogut autenticar/executar l'acció: %1, %2"
 
-#: package/contents/ui/main.qml:17
-#, kde-format
-msgid "This module lets you choose the Plymouth boot splash screen."
-msgstr ""
-"Aquest mòdul permet triar la pantalla de presentació d'arrencada del "
-"Plymouth."
-
-#: package/contents/ui/main.qml:21
+#: ui/main.qml:19
 #, kde-format
 msgctxt "@action:button as in, get new Plymouth boot splash screens"
 msgid "Get New…"
 msgstr "Obtén nous…"
 
-#: package/contents/ui/main.qml:49
+#: ui/main.qml:47
 #, kde-format
 msgid "Uninstall"
 msgstr "Desinstal·la"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Josep M. Ferrer"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "txemaq@gmail.com"
+
+#~ msgid "Boot Splash Screen"
+#~ msgstr "Pantalla de presentació d'arrencada"
+
+#~ msgid "Marco Martin"
+#~ msgstr "Marco Martin"
+
+#~ msgid "This module lets you choose the Plymouth boot splash screen."
+#~ msgstr ""
+#~ "Aquest mòdul permet triar la pantalla de presentació d'arrencada del "
+#~ "Plymouth."

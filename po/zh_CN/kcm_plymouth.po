@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-24 02:08+0000\n"
+"POT-Creation-Date: 2023-05-10 02:05+0000\n"
 "PO-Revision-Date: 2023-02-24 12:44\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -16,16 +16,6 @@ msgstr ""
 "X-Crowdin-Language: zh-CN\n"
 "X-Crowdin-File: /kf5-trunk/messages/plymouth-kcm/kcm_plymouth.pot\n"
 "X-Crowdin-File-ID: 4773\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "KDE China,Guo Yunhe,Yang Boyuan"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "kde-china@kde.org,i@guoyunhe.me,073plan@gmail.com"
 
 #: helper.cpp:57 helper.cpp:110 helper.cpp:138 helper.cpp:326
 #, kde-format
@@ -83,22 +73,12 @@ msgstr "主题文件夹 %1 不存在。"
 msgid "Theme %1 does not exist."
 msgstr "主题 %1 不存在。"
 
-#: kcm.cpp:41
-#, kde-format
-msgid "Boot Splash Screen"
-msgstr "启动屏幕"
-
-#: kcm.cpp:42
-#, kde-format
-msgid "Marco Martin"
-msgstr "Marco Martin"
-
-#: kcm.cpp:202 kcm.cpp:222
+#: kcm.cpp:191 kcm.cpp:211
 #, kde-format
 msgid "Unable to authenticate/execute the action: %1 (%2)"
 msgstr "无法验证身份或执行操作：%1 (%2)"
 
-#: kcm.cpp:226
+#: kcm.cpp:215
 #, kde-format
 msgid "Theme uninstalled successfully."
 msgstr "主题卸载成功。"
@@ -128,18 +108,30 @@ msgstr "要安装的主题，必须为已存的压缩文件。"
 msgid "Unable to authenticate/execute the action: %1, %2"
 msgstr "无法验证/执行操作：%1, %2"
 
-#: package/contents/ui/main.qml:17
-#, kde-format
-msgid "This module lets you choose the Plymouth boot splash screen."
-msgstr "此模块允许您选择 Plymouth 启动屏幕。"
-
-#: package/contents/ui/main.qml:21
+#: ui/main.qml:19
 #, kde-format
 msgctxt "@action:button as in, get new Plymouth boot splash screens"
 msgid "Get New…"
 msgstr "获取新主题…"
 
-#: package/contents/ui/main.qml:49
+#: ui/main.qml:47
 #, kde-format
 msgid "Uninstall"
 msgstr "卸载"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "KDE China,Guo Yunhe,Yang Boyuan"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "kde-china@kde.org,i@guoyunhe.me,073plan@gmail.com"
+
+#~ msgid "Boot Splash Screen"
+#~ msgstr "启动屏幕"
+
+#~ msgid "Marco Martin"
+#~ msgstr "Marco Martin"
+
+#~ msgid "This module lets you choose the Plymouth boot splash screen."
+#~ msgstr "此模块允许您选择 Plymouth 启动屏幕。"

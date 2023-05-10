@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-24 02:08+0000\n"
+"POT-Creation-Date: 2023-05-10 02:05+0000\n"
 "PO-Revision-Date: 2023-02-09 14:47\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -20,16 +20,6 @@ msgstr ""
 "X-Crowdin-Language: be\n"
 "X-Crowdin-File: /main/be/plymouth-kcm/kcm_plymouth.po\n"
 "X-Crowdin-File-ID: 8966\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Antikruk"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "nashtlumach@gmail.com"
 
 #: helper.cpp:57 helper.cpp:110 helper.cpp:138 helper.cpp:326
 #, kde-format
@@ -87,22 +77,12 @@ msgstr "Каталог тэмы \"%1\" не існуе."
 msgid "Theme %1 does not exist."
 msgstr "Тэма \"%1\" не існуе."
 
-#: kcm.cpp:41
-#, kde-format
-msgid "Boot Splash Screen"
-msgstr "Застаўка экрана загрузкі"
-
-#: kcm.cpp:42
-#, kde-format
-msgid "Marco Martin"
-msgstr "Marco Martin"
-
-#: kcm.cpp:202 kcm.cpp:222
+#: kcm.cpp:191 kcm.cpp:211
 #, kde-format
 msgid "Unable to authenticate/execute the action: %1 (%2)"
 msgstr "Не ўдалося выканаць аўтэнтыфікацыю або дзеянне: %1, (%2)"
 
-#: kcm.cpp:226
+#: kcm.cpp:215
 #, kde-format
 msgid "Theme uninstalled successfully."
 msgstr "Тэма паспяхова выдаленая."
@@ -132,21 +112,33 @@ msgstr "Тэма для ўсталявання, павінна быць файл
 msgid "Unable to authenticate/execute the action: %1, %2"
 msgstr "Не ўдалося выканаць аўтэнтыфікацыю або дзеянне: %1, %2"
 
-#: package/contents/ui/main.qml:17
-#, kde-format
-msgid "This module lets you choose the Plymouth boot splash screen."
-msgstr "Гэты модуль дазваляе абраць застаўку экрана Plymouth."
-
-#: package/contents/ui/main.qml:21
+#: ui/main.qml:19
 #, kde-format
 msgctxt "@action:button as in, get new Plymouth boot splash screens"
 msgid "Get New…"
 msgstr "Атрымаць новыя…"
 
-#: package/contents/ui/main.qml:49
+#: ui/main.qml:47
 #, kde-format
 msgid "Uninstall"
 msgstr "Выдаліць"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Antikruk"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "nashtlumach@gmail.com"
+
+#~ msgid "Boot Splash Screen"
+#~ msgstr "Застаўка экрана загрузкі"
+
+#~ msgid "Marco Martin"
+#~ msgstr "Marco Martin"
+
+#~ msgid "This module lets you choose the Plymouth boot splash screen."
+#~ msgstr "Гэты модуль дазваляе абраць застаўку экрана Plymouth."
 
 #~ msgid "Get New Boot Splash Screens..."
 #~ msgstr "Атрымаць новыя застаўкі экрана загрузкі..."
