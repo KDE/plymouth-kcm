@@ -119,20 +119,3 @@ msgstr "Hent nye …"
 #, kde-format
 msgid "Uninstall"
 msgstr "Avinstaller"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Karl Ove Hufthammer"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "karl@huftis.org"
-
-#~ msgid "Boot Splash Screen"
-#~ msgstr "Velkomstbilete ved maskinstart"
-
-#~ msgid "Marco Martin"
-#~ msgstr "Marco Martin"
-
-#~ msgid "This module lets you choose the Plymouth boot splash screen."
-#~ msgstr "Med denne modulen kan du velja velkomstbilete ved maskinstart."
