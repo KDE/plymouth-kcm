@@ -98,6 +98,7 @@ Description[ar]=صلاحيات المدير مطلوبة لتغيير شاشة �
 Description[ca]=Es requereixen privilegis d'administració per a canviar la pantalla de presentació d'arrencada
 Description[ca@valencia]=Es requerixen privilegis d'administració per a canviar la pantalla de presentació d'arrancada
 Description[de]=Zum Ändern des Systemstartbildschirms sind Systemverwalterrechte erforderlich
+Description[en_GB]=Administrative privileges are required to change the boot splash screen
 Description[eo]=Administraj privilegioj estas necesaj por ŝanĝi la praŝargan ekranon
 Description[es]=Se necesitan privilegios administrativos para modificar la pantalla de arranque
 Description[fr]=Vous devez disposer des privilèges d'administrateur pour gérer l'écran de démarrage du système.
