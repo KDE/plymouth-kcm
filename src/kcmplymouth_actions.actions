@@ -111,6 +111,7 @@ Description[sl]=Za spremembo zagonskega otvoritvenega zaslona so zahtevane skrbn
 Description[tr]=Önyükleme açılış ekranını değiştirmek için yönetici ayrıcalıkları gereklidir
 Description[uk]=Для зміни екрана вітання під час завантаження потрібні права доступу адміністратора (root)
 Description[x-test]=xxAdministrative privileges are required to change the boot splash screenxx
+Description[zh_CN]=需要管理员权限才能更改启动屏幕
 Policy=auth_admin
 
 [org.kde.kcontrol.kcmplymouth.install]
