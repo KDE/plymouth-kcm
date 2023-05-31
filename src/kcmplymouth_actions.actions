@@ -95,6 +95,7 @@ Name[zh_CN]=保存 Plymouth 主题
 Name[zh_TW]=儲存 Plymouth 主題
 Description=Administrative privileges are required to change the boot splash screen
 Description[ar]=صلاحيات المدير مطلوبة لتغيير شاشة الإقلاع
+Description[bg]=Необходими са административни привилегии, за да промените екрана за начално зареждане
 Description[ca]=Es requereixen privilegis d'administració per a canviar la pantalla de presentació d'arrencada
 Description[ca@valencia]=Es requerixen privilegis d'administració per a canviar la pantalla de presentació d'arrancada
 Description[de]=Zum Ändern des Systemstartbildschirms sind Systemverwalterrechte erforderlich
