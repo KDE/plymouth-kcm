@@ -110,6 +110,7 @@ Description[ka]=ჩატვირთვისას ნაჩვენები
 Description[nl]=Er zijn beheersrechten vereist om het opstartstartscherm te wijzigen
 Description[nn]=Du treng rotbrukarløyve for å endra velkomstbiletet
 Description[pl]=Do zmiany ekranu powitalnego wymagane są uprawnienia administratora
+Description[pt_BR]=Privilégios administrativos são necessários para alterar a tela de inicialização
 Description[sl]=Za spremembo zagonskega otvoritvenega zaslona so zahtevane skrbniške pravice
 Description[tr]=Önyükleme açılış ekranını değiştirmek için yönetici ayrıcalıkları gereklidir
 Description[uk]=Для зміни екрана вітання під час завантаження потрібні права доступу адміністратора (root)
