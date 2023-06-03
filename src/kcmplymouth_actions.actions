@@ -102,6 +102,7 @@ Description[de]=Zum Ändern des Systemstartbildschirms sind Systemverwalterrecht
 Description[en_GB]=Administrative privileges are required to change the boot splash screen
 Description[eo]=Administraj privilegioj estas necesaj por ŝanĝi la praŝargan ekranon
 Description[es]=Se necesitan privilegios administrativos para modificar la pantalla de arranque
+Description[eu]=Abioko plasta pantaila aldatzeko pribilegio administratiboak behar dira
 Description[fr]=Vous devez disposer des privilèges d'administrateur pour gérer l'écran de démarrage du système.
 Description[gl]=Para cambiar a pantalla de arranque fan falla privilexios de administración
 Description[ia]=Privilegios administrative es requirite per cambiar le schermo initial, i.e. de boot splash
