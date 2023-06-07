@@ -117,21 +117,3 @@ msgstr "Získat nové…"
 #, kde-format
 msgid "Uninstall"
 msgstr "Odinstalovat"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Vít Pelčák"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "vit@pelcak.org"
-
-#~ msgid "Boot Splash Screen"
-#~ msgstr "Startovací obrazovka"
-
-#~ msgid "Marco Martin"
-#~ msgstr "Marco Martin"
-
-#~ msgid "This module lets you choose the Plymouth boot splash screen."
-#~ msgstr ""
-#~ "Tento modul vám umožní nastavit motiv startovací obrazovky Plymouth."
