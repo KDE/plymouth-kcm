@@ -13,11 +13,9 @@
 #include <chrono>
 
 #include <KConfigGroup>
+#include <KLocalizedString>
 #include <KPluginFactory>
 #include <KSharedConfig>
-#include <QStandardPaths>
-
-#include <KLocalizedString>
 
 #include <KAuth/Action>
 #include <KAuth/ExecuteJob>
@@ -26,10 +24,10 @@
 
 using namespace std::chrono_literals;
 
-K_PLUGIN_FACTORY_WITH_JSON(KCMPlymouthFactory, "kcm_plymouth.json", registerPlugin<KCMPlymouth>();)
+K_PLUGIN_CLASS_WITH_JSON(KCMPlymouth, "kcm_plymouth.json")
 
-KCMPlymouth::KCMPlymouth(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : KQuickConfigModule(parent, metaData, args)
+KCMPlymouth::KCMPlymouth(QObject *parent, const KPluginMetaData &metaData)
+    : KQuickConfigModule(parent, metaData)
     , m_model(new QStandardItemModel(this))
 {
     qmlRegisterAnonymousType<QStandardItemModel>("KCMPlymouth", 1);
@@ -37,11 +35,13 @@ KCMPlymouth::KCMPlymouth(QObject *parent, const KPluginMetaData &metaData, const
     setButtons(Apply);
     setAuthActionName(QStringLiteral("org.kde.kcontrol.kcmplymouth.save"));
 
-    m_model->setItemRoleNames({{Qt::DisplayRole, QByteArrayLiteral("display")},
-                               {DescriptionRole, QByteArrayLiteral("description")},
-                               {PluginNameRole, QByteArrayLiteral("pluginName")},
-                               {ScreenhotRole, QByteArrayLiteral("screenshot")},
-                               {UninstallableRole, QByteArrayLiteral("uninstallable")}});
+    m_model->setItemRoleNames({
+        {Qt::DisplayRole, QByteArrayLiteral("display")},
+        {DescriptionRole, QByteArrayLiteral("description")},
+        {PluginNameRole, QByteArrayLiteral("pluginName")},
+        {ScreenhotRole, QByteArrayLiteral("screenshot")},
+        {UninstallableRole, QByteArrayLiteral("uninstallable")},
+    });
 }
 
 KCMPlymouth::~KCMPlymouth()

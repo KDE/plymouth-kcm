@@ -32,8 +32,8 @@ public:
         ScreenhotRole,
         UninstallableRole,
     };
-    explicit KCMPlymouth(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
-    ~KCMPlymouth() Q_DECL_OVERRIDE;
+    explicit KCMPlymouth(QObject *parent, const KPluginMetaData &metaData);
+    ~KCMPlymouth() override;
 
     QStandardItemModel *themesModel();
 
@@ -50,9 +50,9 @@ public:
     Q_INVOKABLE void uninstall(const QString &plugin);
 
 public Q_SLOTS:
-    void load() Q_DECL_OVERRIDE;
-    void save() Q_DECL_OVERRIDE;
-    void defaults() Q_DECL_OVERRIDE;
+    void load() override;
+    void save() override;
+    void defaults() override;
 
 Q_SIGNALS:
     void selectedPluginChanged();
