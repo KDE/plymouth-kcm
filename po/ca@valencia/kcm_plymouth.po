@@ -121,22 +121,3 @@ msgstr "Obtín nous…"
 #, kde-format
 msgid "Uninstall"
 msgstr "Desinstal·la"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Josep M. Ferrer"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "txemaq@gmail.com"
-
-#~ msgid "Boot Splash Screen"
-#~ msgstr "Pantalla de presentació d'arrancada"
-
-#~ msgid "Marco Martin"
-#~ msgstr "Marco Martin"
-
-#~ msgid "This module lets you choose the Plymouth boot splash screen."
-#~ msgstr ""
-#~ "Este mòdul permet triar la pantalla de presentació d'arrancada de "
-#~ "Plymouth."
