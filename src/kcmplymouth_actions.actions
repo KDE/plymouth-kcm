@@ -109,6 +109,7 @@ Description[sl]=Avtenticirajte se, da spremenili zagonski zaslon dobrodošlice.
 Description[tr]=Önyükleme açılış ekranını değiştirmek için kimliğinizi doğrulayın.
 Description[uk]=Пройдіть розпізнавання для внесення змін до вікна вітання під час завантаження.
 Description[x-test]=xxAuthenticate to change the boot splash screen.xx
+Description[zh_CN]=请进行身份验证以更改启动画面。
 Policy=auth_admin
 
 [org.kde.kcontrol.kcmplymouth.install]
@@ -173,6 +174,7 @@ Description[sl]=Avtenticirajte se, da namestili temo Plymouth.
 Description[tr]=Bir Plymouth teması kurmak için kimliğinizi doğrulayın.
 Description[uk]=Пройдіть розпізнавання для встановлення теми Plymouth.
 Description[x-test]=xxAuthenticate to install a Plymouth theme.xx
+Description[zh_CN]=请进行身份验证以安装 Plymouth 主题。
 Policy=auth_admin
 
 [org.kde.kcontrol.kcmplymouth.uninstall]
@@ -237,4 +239,5 @@ Description[sl]=Avtenticirajte se, da odmestili temo Plymouth.
 Description[tr]=Bir Plymouth temasını kaldırmak için kimliğinizi doğrulayın.
 Description[uk]=Пройдіть розпізнавання для вилучення теми Plymouth.
 Description[x-test]=xxAuthenticate to uninstall a Plymouth theme.xx
+Description[zh_CN]=请进行身份验证以卸载 Plymouth 主题。
 Policy=auth_admin
