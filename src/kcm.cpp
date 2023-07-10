@@ -226,3 +226,5 @@ void KCMPlymouth::defaults()
 }
 
 #include "kcm.moc"
+
+#include "moc_kcm.cpp"

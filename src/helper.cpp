@@ -348,3 +348,5 @@ ActionReply PlymouthHelper::uninstall(const QVariantMap &args)
 }
 
 KAUTH_HELPER_MAIN("org.kde.kcontrol.kcmplymouth", PlymouthHelper)
+
+#include "moc_helper.cpp"
