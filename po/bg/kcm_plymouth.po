@@ -114,22 +114,3 @@ msgstr "Изтегляне на нови…"
 #, kde-format
 msgid "Uninstall"
 msgstr "Деинсталиране"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Минчо Кондарев"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "mkondarev@yahoo.de"
-
-#~ msgid "Boot Splash Screen"
-#~ msgstr "Екран за начално зареждане"
-
-#~ msgid "Marco Martin"
-#~ msgstr "Marco Martin"
-
-#~ msgid "This module lets you choose the Plymouth boot splash screen."
-#~ msgstr ""
-#~ "Този модул ви позволява да изберете началния екран на Plymouth при "
-#~ "зареждане."
