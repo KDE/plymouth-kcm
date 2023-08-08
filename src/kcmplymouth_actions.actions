@@ -117,6 +117,7 @@ Description[tr]=Önyükleme açılış ekranını değiştirmek için kimliğini
 Description[uk]=Пройдіть розпізнавання для внесення змін до вікна вітання під час завантаження.
 Description[x-test]=xxAuthenticate to change the boot splash screen.xx
 Description[zh_CN]=请进行身份验证以更改启动画面。
+Description[zh_TW]=認證以變更開機啟動畫面。
 Policy=auth_admin
 
 [org.kde.kcontrol.kcmplymouth.install]
@@ -189,6 +190,7 @@ Description[tr]=Bir Plymouth teması kurmak için kimliğinizi doğrulayın.
 Description[uk]=Пройдіть розпізнавання для встановлення теми Plymouth.
 Description[x-test]=xxAuthenticate to install a Plymouth theme.xx
 Description[zh_CN]=请进行身份验证以安装 Plymouth 主题。
+Description[zh_TW]=認證以安裝新 Plymouth 主題。
 Policy=auth_admin
 
 [org.kde.kcontrol.kcmplymouth.uninstall]
@@ -261,4 +263,5 @@ Description[tr]=Bir Plymouth temasını kaldırmak için kimliğinizi doğrulay�
 Description[uk]=Пройдіть розпізнавання для вилучення теми Plymouth.
 Description[x-test]=xxAuthenticate to uninstall a Plymouth theme.xx
 Description[zh_CN]=请进行身份验证以卸载 Plymouth 主题。
+Description[zh_TW]=認證以解除安裝新 Plymouth 主題。
 Policy=auth_admin
