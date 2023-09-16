@@ -117,34 +117,3 @@ msgstr "Yeni Al…"
 #, kde-format
 msgid "Uninstall"
 msgstr "Kaldır"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Kaan Özdinçer"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "kaanozdincer@gmail.com"
-
-#~ msgid "Boot Splash Screen"
-#~ msgstr "Önyükleme Açılış Ekranı"
-
-#~ msgid "Marco Martin"
-#~ msgstr "Marco Martin"
-
-#~ msgid "This module lets you choose the Plymouth boot splash screen."
-#~ msgstr "Bu modül, Plymooth önyükleme açılış ekranını seçmenizen izin verir."
-
-#~ msgid "Get New Boot Splash Screens..."
-#~ msgstr "Yeni Önyükleme Açılış Ekranları Al..."
-
-#, fuzzy
-#~| msgid "Download New Splash Screens"
-#~ msgid "Download New Boot Splash Screens"
-#~ msgstr "Yeni Açılış Ekranlarını İndir"
-
-#~ msgid "Configure Plymouth Splash Screen"
-#~ msgstr "Plymouth Açılış Ekranını Yapılandır"
-
-#~ msgid "Select a global splash screen for the system"
-#~ msgstr "Sistem için genel bir açılış ekranı seçin"
