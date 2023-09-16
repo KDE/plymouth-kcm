@@ -7,7 +7,7 @@ configure_file (config-kcm.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kcm.h )
 
 kcmutils_add_qml_kcm(kcm_plymouth SOURCES kcm.cpp kcm.h)
 
-target_link_libraries(kcm_plymouth
+target_link_libraries(kcm_plymouth PRIVATE
   KF6::CoreAddons
   KF6::AuthCore
   KF6::I18n
