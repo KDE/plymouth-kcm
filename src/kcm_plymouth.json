@@ -111,6 +111,6 @@
     "X-KDE-Keywords[x-test]": "xxplymouthxx,xxsplashxx,xxsplash screenxx,xxboot splashxx,xxboot logoxx,xxboot themexx,xxstartupxx,xxstart-upxx,xxstart upxx,xxthemexx,xxvisualxx,xxskinxx,xxboot upxx,xxboot-upxx,xxinitializexx,xxinitializationxx",
     "X-KDE-Keywords[zh_CN]": "plymouth,splash,splash screen,boot splash,boot logo,boot theme,startup,start-up,start up,theme,visual,skin,boot up,boot-up,initialize,initialization,欢迎屏幕,启动屏幕,启动图标,启动标识,启动主题,启动,主题,视觉效果,视觉,皮肤,初始化",
     "X-KDE-ParentApp": "kcontrol",
-    "X-KDE-System-Settings-Parent-Category": "appearance",
-    "X-KDE-Weight": 200
+    "X-KDE-System-Settings-Parent-Category": "themes",
+    "X-KDE-Weight": 120
 }
