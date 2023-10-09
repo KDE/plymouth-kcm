@@ -129,8 +129,7 @@ msgid "This module lets you choose the Plymouth boot splash screen."
 msgstr "このモジュールで Plymouth 起動スプラッシュスクリーンを選択できます。"
 
 #: package/contents/ui/main.qml:21
-#, fuzzy, kde-format
-#| msgid "Get New Boot Splash Screens..."
+#, kde-format
 msgid "Get New Boot Splash Screens..."
 msgstr "新しい起動スプラッシュスクリーンを入手..."
 
