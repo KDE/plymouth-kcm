@@ -215,7 +215,7 @@ ActionReply PlymouthHelper::install(const QVariantMap &args)
     // FIXME: KArchive should provide "safe mode" for this!
     QScopedPointer<KArchive> archive;
 
-    static QVector<QString> tarTypes = {
+    static QList<QString> tarTypes = {
         QStringLiteral("application/tar"),
         QStringLiteral("application/x-gzip"),
         QStringLiteral("application/x-bzip"),
