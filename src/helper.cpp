@@ -256,8 +256,6 @@ ActionReply PlymouthHelper::install(const QVariantMap &args)
     }
     dir->copyTo(installpath);
 
-    const QStringList themeFileList = dir->entries().filter(QRegularExpression(QStringLiteral("\\.plymouth$")));
-
     archive->close();
 
     // Special case: Ubuntu derivatives, which work different from everybody else
