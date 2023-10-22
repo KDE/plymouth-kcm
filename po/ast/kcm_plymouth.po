@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plymouth-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-10 02:05+0000\n"
+"POT-Creation-Date: 2023-10-22 02:06+0000\n"
 "PO-Revision-Date: 2023-05-05 22:29+0200\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
@@ -17,17 +17,17 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 23.04.0\n"
 
-#: helper.cpp:57 helper.cpp:110 helper.cpp:138 helper.cpp:326
+#: helper.cpp:57 helper.cpp:110 helper.cpp:138 helper.cpp:324
 #, kde-format
 msgid "Cannot start update-alternatives."
 msgstr ""
 
-#: helper.cpp:62 helper.cpp:115 helper.cpp:143 helper.cpp:331
+#: helper.cpp:62 helper.cpp:115 helper.cpp:143 helper.cpp:329
 #, kde-format
 msgid "update-alternatives failed to run."
 msgstr ""
 
-#: helper.cpp:69 helper.cpp:123 helper.cpp:150 helper.cpp:339
+#: helper.cpp:69 helper.cpp:123 helper.cpp:150 helper.cpp:337
 #, kde-format
 msgid "update-alternatives returned with error condition %1."
 msgstr ""
@@ -37,7 +37,7 @@ msgstr ""
 msgid "No theme specified in helper parameters."
 msgstr ""
 
-#: helper.cpp:100 helper.cpp:270 helper.cpp:316
+#: helper.cpp:100 helper.cpp:268 helper.cpp:314
 #, kde-format
 msgid "Theme corrupted: .plymouth file not found inside theme."
 msgstr ""
@@ -62,12 +62,12 @@ msgstr ""
 msgid "Initramfs returned with error condition %1."
 msgstr ""
 
-#: helper.cpp:300
+#: helper.cpp:298
 #, kde-format
 msgid "Theme folder %1 does not exist."
 msgstr ""
 
-#: helper.cpp:306
+#: helper.cpp:304
 #, kde-format
 msgid "Theme %1 does not exist."
 msgstr ""

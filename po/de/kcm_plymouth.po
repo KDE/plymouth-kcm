@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-10 02:05+0000\n"
+"POT-Creation-Date: 2023-10-22 02:06+0000\n"
 "PO-Revision-Date: 2023-04-26 21:19+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -18,17 +18,17 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.07.70\n"
 
-#: helper.cpp:57 helper.cpp:110 helper.cpp:138 helper.cpp:326
+#: helper.cpp:57 helper.cpp:110 helper.cpp:138 helper.cpp:324
 #, kde-format
 msgid "Cannot start update-alternatives."
 msgstr "„update-alternatives“  kann nicht gestartet werden."
 
-#: helper.cpp:62 helper.cpp:115 helper.cpp:143 helper.cpp:331
+#: helper.cpp:62 helper.cpp:115 helper.cpp:143 helper.cpp:329
 #, kde-format
 msgid "update-alternatives failed to run."
 msgstr "Die Ausführung von „update-alternatives“ ist fehlgeschlagen."
 
-#: helper.cpp:69 helper.cpp:123 helper.cpp:150 helper.cpp:339
+#: helper.cpp:69 helper.cpp:123 helper.cpp:150 helper.cpp:337
 #, kde-format
 msgid "update-alternatives returned with error condition %1."
 msgstr "„update-alternatives“ wurde mit dem Fehler %1 beendet."
@@ -39,7 +39,7 @@ msgid "No theme specified in helper parameters."
 msgstr ""
 "Es wurde kein Design in den Parametern für das Hilfsprogramm angegeben."
 
-#: helper.cpp:100 helper.cpp:270 helper.cpp:316
+#: helper.cpp:100 helper.cpp:268 helper.cpp:314
 #, kde-format
 msgid "Theme corrupted: .plymouth file not found inside theme."
 msgstr "Design defekt: Es wurde keine Datei „.plymouth“ im Design gefunden."
@@ -64,12 +64,12 @@ msgstr "Die Ausführung von „Initramfs ist fehlgeschlagen."
 msgid "Initramfs returned with error condition %1."
 msgstr "„Initramfs“ wurde mit dem Fehler %1 beendet."
 
-#: helper.cpp:300
+#: helper.cpp:298
 #, kde-format
 msgid "Theme folder %1 does not exist."
 msgstr "Der Designordner %1 existiert nicht"
 
-#: helper.cpp:306
+#: helper.cpp:304
 #, kde-format
 msgid "Theme %1 does not exist."
 msgstr "Das Design %1 existiert nicht."

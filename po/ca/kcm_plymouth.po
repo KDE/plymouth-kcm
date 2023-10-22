@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plymouth-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-10 02:05+0000\n"
+"POT-Creation-Date: 2023-10-22 02:06+0000\n"
 "PO-Revision-Date: 2023-03-24 12:16+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -21,17 +21,17 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Generator: Lokalize 20.12.0\n"
 
-#: helper.cpp:57 helper.cpp:110 helper.cpp:138 helper.cpp:326
+#: helper.cpp:57 helper.cpp:110 helper.cpp:138 helper.cpp:324
 #, kde-format
 msgid "Cannot start update-alternatives."
 msgstr "No s'ha pogut iniciar l'«update-alternatives»."
 
-#: helper.cpp:62 helper.cpp:115 helper.cpp:143 helper.cpp:331
+#: helper.cpp:62 helper.cpp:115 helper.cpp:143 helper.cpp:329
 #, kde-format
 msgid "update-alternatives failed to run."
 msgstr "L'«update-alternatives» ha fallat en executar-se."
 
-#: helper.cpp:69 helper.cpp:123 helper.cpp:150 helper.cpp:339
+#: helper.cpp:69 helper.cpp:123 helper.cpp:150 helper.cpp:337
 #, kde-format
 msgid "update-alternatives returned with error condition %1."
 msgstr "L'«update-alternatives» ha retornat amb la condició d'error %1."
@@ -41,7 +41,7 @@ msgstr "L'«update-alternatives» ha retornat amb la condició d'error %1."
 msgid "No theme specified in helper parameters."
 msgstr "No s'ha especificat cap tema als paràmetres de l'ajudant."
 
-#: helper.cpp:100 helper.cpp:270 helper.cpp:316
+#: helper.cpp:100 helper.cpp:268 helper.cpp:314
 #, kde-format
 msgid "Theme corrupted: .plymouth file not found inside theme."
 msgstr "Tema corrupte: El fitxer «.plymouth» no s'ha trobat dins del tema."
@@ -66,12 +66,12 @@ msgstr "L'«initramfs» ha fallat en executar-se."
 msgid "Initramfs returned with error condition %1."
 msgstr "L'«initramfs» ha retornat amb la condició d'error %1."
 
-#: helper.cpp:300
+#: helper.cpp:298
 #, kde-format
 msgid "Theme folder %1 does not exist."
 msgstr "La carpeta %1 del tema no existeix."
 
-#: helper.cpp:306
+#: helper.cpp:304
 #, kde-format
 msgid "Theme %1 does not exist."
 msgstr "El tema %1 no existeix."

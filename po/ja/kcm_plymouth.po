@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_plymouth\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-10 02:05+0000\n"
+"POT-Creation-Date: 2023-10-22 02:06+0000\n"
 "PO-Revision-Date: 2022-08-26 17:26+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -16,17 +16,17 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Generator: Lokalize 22.04.1\n"
 
-#: helper.cpp:57 helper.cpp:110 helper.cpp:138 helper.cpp:326
+#: helper.cpp:57 helper.cpp:110 helper.cpp:138 helper.cpp:324
 #, kde-format
 msgid "Cannot start update-alternatives."
 msgstr "update-alternatives を開始できません。"
 
-#: helper.cpp:62 helper.cpp:115 helper.cpp:143 helper.cpp:331
+#: helper.cpp:62 helper.cpp:115 helper.cpp:143 helper.cpp:329
 #, kde-format
 msgid "update-alternatives failed to run."
 msgstr "update-alternatives の実行に失敗しました。"
 
-#: helper.cpp:69 helper.cpp:123 helper.cpp:150 helper.cpp:339
+#: helper.cpp:69 helper.cpp:123 helper.cpp:150 helper.cpp:337
 #, kde-format
 msgid "update-alternatives returned with error condition %1."
 msgstr "update-alternatives がエラー %1 を出力しました。"
@@ -36,7 +36,7 @@ msgstr "update-alternatives がエラー %1 を出力しました。"
 msgid "No theme specified in helper parameters."
 msgstr "ヘルパーパラメータでテーマが指定されていません。"
 
-#: helper.cpp:100 helper.cpp:270 helper.cpp:316
+#: helper.cpp:100 helper.cpp:268 helper.cpp:314
 #, kde-format
 msgid "Theme corrupted: .plymouth file not found inside theme."
 msgstr ""
@@ -63,12 +63,12 @@ msgstr "Initramfs の実行に失敗しました。"
 msgid "Initramfs returned with error condition %1."
 msgstr "Initramfs がエラー %1 を出力しました。"
 
-#: helper.cpp:300
+#: helper.cpp:298
 #, kde-format
 msgid "Theme folder %1 does not exist."
 msgstr "テーマフォルダ %1 は存在しません。"
 
-#: helper.cpp:306
+#: helper.cpp:304
 #, kde-format
 msgid "Theme %1 does not exist."
 msgstr "テーマ %1 は存在しません。"

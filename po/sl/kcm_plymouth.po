@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-10 02:05+0000\n"
+"POT-Creation-Date: 2023-10-22 02:06+0000\n"
 "PO-Revision-Date: 2023-03-25 09:57+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -20,17 +20,17 @@ msgstr ""
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
 "X-Generator: Poedit 3.2.2\n"
 
-#: helper.cpp:57 helper.cpp:110 helper.cpp:138 helper.cpp:326
+#: helper.cpp:57 helper.cpp:110 helper.cpp:138 helper.cpp:324
 #, kde-format
 msgid "Cannot start update-alternatives."
 msgstr "Ni mogoče zagnati ukaza update-alternatives."
 
-#: helper.cpp:62 helper.cpp:115 helper.cpp:143 helper.cpp:331
+#: helper.cpp:62 helper.cpp:115 helper.cpp:143 helper.cpp:329
 #, kde-format
 msgid "update-alternatives failed to run."
 msgstr "Zagon ukaza update-alternatives ni uspel."
 
-#: helper.cpp:69 helper.cpp:123 helper.cpp:150 helper.cpp:339
+#: helper.cpp:69 helper.cpp:123 helper.cpp:150 helper.cpp:337
 #, kde-format
 msgid "update-alternatives returned with error condition %1."
 msgstr "Ukaz update-alternatives je vrnil napako %1."
@@ -40,7 +40,7 @@ msgstr "Ukaz update-alternatives je vrnil napako %1."
 msgid "No theme specified in helper parameters."
 msgstr "V parametrih pomočnika ni navedene teme."
 
-#: helper.cpp:100 helper.cpp:270 helper.cpp:316
+#: helper.cpp:100 helper.cpp:268 helper.cpp:314
 #, kde-format
 msgid "Theme corrupted: .plymouth file not found inside theme."
 msgstr "Tema je pokvarjena, saj ne vsebuje datoteke .plymouth."
@@ -65,12 +65,12 @@ msgstr "Zagon ukaza initramfs ni uspel."
 msgid "Initramfs returned with error condition %1."
 msgstr "Ukaz initramfs je vrnil napako %1."
 
-#: helper.cpp:300
+#: helper.cpp:298
 #, kde-format
 msgid "Theme folder %1 does not exist."
 msgstr "Mapa teme %1 ne obstaja."
 
-#: helper.cpp:306
+#: helper.cpp:304
 #, kde-format
 msgid "Theme %1 does not exist."
 msgstr "Tema %1 ne obstaja."
