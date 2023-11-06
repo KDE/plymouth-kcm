@@ -114,7 +114,7 @@ int main(int argc, char **argv)
         return -1;
     }
 
-    KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("kplymouththemeinstallerrc")), "DownloadedThemes");
+    KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("kplymouththemeinstallerrc")), QStringLiteral("DownloadedThemes"));
     if (parser.isSet(QStringLiteral("install"))) {
         cg.writeEntry(job->data().value(QStringLiteral("plugin")).toString(), themefile);
     } else {

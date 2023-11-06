@@ -84,7 +84,7 @@ ActionReply PlymouthHelper::save(const QVariantMap &args)
     }
 
     {
-        KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral(PLYMOUTH_CONFIG_PATH)), "Daemon");
+        KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral(PLYMOUTH_CONFIG_PATH)), QStringLiteral("Daemon"));
         cg.writeEntry("Theme", theme);
     }
     QFile configFile(QStringLiteral(PLYMOUTH_CONFIG_PATH));

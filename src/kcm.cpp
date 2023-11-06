@@ -57,7 +57,7 @@ void KCMPlymouth::reloadModel()
         return;
     }
 
-    KConfigGroup installedCg(KSharedConfig::openConfig(QStringLiteral("kplymouththemeinstallerrc")), "DownloadedThemes");
+    KConfigGroup installedCg(KSharedConfig::openConfig(QStringLiteral("kplymouththemeinstallerrc")), QStringLiteral("DownloadedThemes"));
 
     dir.setFilter(QDir::NoDotAndDotDot | QDir::Dirs);
 
@@ -67,7 +67,7 @@ void KCMPlymouth::reloadModel()
         QDir themeDir(fileInfo.filePath());
 
         KConfig file(themeDir.filePath(pluginName + QLatin1String(".plymouth")), KConfig::SimpleConfig);
-        KConfigGroup grp = file.group("Plymouth Theme");
+        KConfigGroup grp = file.group(QStringLiteral("Plymouth Theme"));
 
         QString displayName = grp.readEntry("Name", QString());
         if (displayName.isEmpty()) {
@@ -163,7 +163,7 @@ void KCMPlymouth::load()
 {
     reloadModel();
 
-    KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral(PLYMOUTH_CONFIG_PATH)), "Daemon");
+    KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral(PLYMOUTH_CONFIG_PATH)), QStringLiteral("Daemon"));
 
     setSelectedPlugin(cg.readEntry("Theme"));
 
@@ -210,7 +210,7 @@ void KCMPlymouth::uninstall(const QString &plugin)
     if (!rc) {
         Q_EMIT showErrorMessage(i18n("Unable to authenticate/execute the action: %1 (%2)", job->error(), job->errorString()));
     } else {
-        KConfigGroup installedCg(KSharedConfig::openConfig(QStringLiteral("kplymouththemeinstallerrc")), "DownloadedThemes");
+        KConfigGroup installedCg(KSharedConfig::openConfig(QStringLiteral("kplymouththemeinstallerrc")), QStringLiteral("DownloadedThemes"));
         installedCg.deleteEntry(plugin);
         Q_EMIT showSuccessMessage(i18n("Theme uninstalled successfully."));
         load();
