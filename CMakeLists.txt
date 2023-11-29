@@ -12,7 +12,7 @@ if("${CMAKE_SOURCE_DIR}" STREQUAL "${CMAKE_BINARY_DIR}")
    message(FATAL_ERROR "plymouthkcm requires an out of source build. Please create a separate build directory and run 'cmake path_to_plymouth_kcm [options]' there.")
 endif()
 
-set(PROJECT_VERSION "5.81.80")
+set(PROJECT_VERSION "5.90.0")
 set(PROJECT_VERSION_MAJOR 6)
 
 find_package(ECM ${KF6_MIN_VERSION} REQUIRED NO_MODULE)
