@@ -20,7 +20,7 @@
 #include <KAuth/Action>
 #include <KAuth/ExecuteJob>
 
-#include <kio/job.h>
+#include <KIO/FileCopyJob>
 
 using namespace std::chrono_literals;
 
