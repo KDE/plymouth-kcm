@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Alexander Potashev <aspotashev@gmail.com>, 2017, 2018.
-# Alexander Yavorsky <kekcuha@gmail.com>, 2019, 2020, 2023.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2019, 2020, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-22 02:06+0000\n"
-"PO-Revision-Date: 2023-02-17 10:58+0300\n"
+"PO-Revision-Date: 2024-01-04 21:27+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -50,10 +50,9 @@ msgid "Cannot start initramfs."
 msgstr "Не удалось запустить initramfs."
 
 #: helper.cpp:171
-#, fuzzy, kde-format
-#| msgid "Cannot start initramfs."
+#, kde-format
 msgid "Cannot start mkinitcpio."
-msgstr "Не удалось запустить initramfs."
+msgstr "Не удалось запустить mkinitcpio."
 
 #: helper.cpp:180
 #, kde-format
