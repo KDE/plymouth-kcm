@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plymouth-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-22 02:06+0000\n"
-"PO-Revision-Date: 2019-08-03 19:43+0300\n"
+"PO-Revision-Date: 2024-01-23 01:28+0200\n"
 "Last-Translator: Moo\n"
 "Language-Team: lt\n"
 "Language: lt\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: helper.cpp:57 helper.cpp:110 helper.cpp:138 helper.cpp:324
 #, kde-format
@@ -52,10 +52,9 @@ msgid "Cannot start initramfs."
 msgstr "Nepavyksta paleisti initramfs."
 
 #: helper.cpp:171
-#, fuzzy, kde-format
-#| msgid "Cannot start initramfs."
+#, kde-format
 msgid "Cannot start mkinitcpio."
-msgstr "Nepavyksta paleisti initramfs."
+msgstr "Nepavyksta paleisti mkinitcpio."
 
 #: helper.cpp:180
 #, kde-format
@@ -116,7 +115,7 @@ msgstr "Nepavyko nustatyti tapatybės/įvykdyti veiksmo: %1, %2"
 #, kde-format
 msgctxt "@action:button as in, get new Plymouth boot splash screens"
 msgid "Get New…"
-msgstr ""
+msgstr "Gauti naują…"
 
 #: ui/main.qml:47
 #, kde-format
