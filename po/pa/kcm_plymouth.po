@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plymouth-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-22 02:06+0000\n"
-"PO-Revision-Date: 2024-01-01 09:28-0600\n"
+"PO-Revision-Date: 2024-01-28 18:24-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
@@ -20,7 +20,7 @@ msgstr ""
 #: helper.cpp:57 helper.cpp:110 helper.cpp:138 helper.cpp:324
 #, kde-format
 msgid "Cannot start update-alternatives."
-msgstr "update-alternatives ਨੂੰ ਚਲਾਇਆ ਨਹੀਂ ਜਾ ਸਕਦਾ ਹੈ।"
+msgstr "update-alternatives ਨੂੰ ਸ਼ੁਰੂ ਨਹੀਂ ਜਾ ਸਕਦਾ ਹੈ।"
 
 #: helper.cpp:62 helper.cpp:115 helper.cpp:143 helper.cpp:329
 #, kde-format
@@ -60,7 +60,7 @@ msgstr "Initramfs ਚੱਲਣ ਲਈ ਅਸਫ਼ਲ ਹੈ।"
 #: helper.cpp:190
 #, kde-format
 msgid "Initramfs returned with error condition %1."
-msgstr ""
+msgstr "Initramfs ਨੇ ਗਲਤੀ ਸ਼ਰਤ %1 ਵਾਪਸ ਕੀਤੀ।"
 
 #: helper.cpp:298
 #, kde-format
@@ -105,7 +105,7 @@ msgstr "ਇੰਸਟਾਲ ਕਰਨ ਲਈ ਥੀਮ, ਮੌਜੂਦਾ ਅਕ
 #: kplymouththemeinstaller.cpp:113
 #, kde-format
 msgid "Unable to authenticate/execute the action: %1, %2"
-msgstr ""
+msgstr "ਕਾਰਵਾਈ ਨੂੰ ਪਰਮਾਣਿਤ ਕਰਨ/ਚਲਾਉਣ ਲਈ ਅਸਮਰੱਥ: %1, %2"
 
 #: ui/main.qml:19
 #, kde-format
