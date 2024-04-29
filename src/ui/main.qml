@@ -23,6 +23,13 @@ KCM.GridViewKCM {
         onEntryEvent: (entry, event) =>  kcm.onEntryEvent(entry);
     }
 
+    headerPaddingEnabled: false // Let the InlineMessage touch the edges
+    header: Kirigami.InlineMessage {
+        id: infoLabel
+        position: Kirigami.InlineMessage.Position.Header
+        showCloseButton: true
+    }
+
     view.model: kcm.themesModel
     view.currentIndex: kcm.selectedPluginIndex
     view.enabled: !kcm.busy
@@ -58,19 +65,10 @@ KCM.GridViewKCM {
         }
     }
 
-    footer: ColumnLayout {
-        Kirigami.InlineMessage {
-            id: infoLabel
-            Layout.fillWidth: true
-            showCloseButton: true
-        }
-
-        QtControls.ProgressBar {
-            id: progressBar
-            Layout.fillWidth: true
-            visible: kcm.busy
-            indeterminate: true
-        }
+    footer: QtControls.ProgressBar {
+        id: progressBar
+        visible: kcm.busy
+        indeterminate: true
     }
 
     Connections {
