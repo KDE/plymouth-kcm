@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-22 02:06+0000\n"
+"POT-Creation-Date: 2024-05-25 00:40+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -113,7 +113,7 @@ msgctxt "@action:button as in, get new Plymouth boot splash screens"
 msgid "Get New…"
 msgstr "获取新主题…"
 
-#: ui/main.qml:47
+#: ui/main.qml:54
 #, kde-format
 msgid "Uninstall"
 msgstr "卸载"
