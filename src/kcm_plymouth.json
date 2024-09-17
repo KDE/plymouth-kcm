@@ -93,6 +93,7 @@
         ]
     },
     "X-KDE-Keywords": "plymouth,splash,splash screen,boot splash,boot logo,boot theme,startup,start-up,start up,theme,visual,skin,boot up,boot-up,initialize,initialization",
+    "X-KDE-Keywords[ca@valencia]": "plymouth,presentació,pantalla de presentació,presentació d'arrancada,logotip d'arrancada,tema d'arrancada,inici,arrancada,tema,visual,aparença,arrancada,inici,inicialització",
     "X-KDE-Keywords[ca]": "plymouth,presentació,pantalla de presentació,presentació d'arrencada,logotip d'arrencada,tema d'arrencada,inici,arrencada,tema,visual,aparença,arrencada,inici,inicialització",
     "X-KDE-Keywords[el]": "plymouth,splash,splash screen,boot splash,λογότυπο εκκίνησης,θέμα εκκίνησης,startup,start-up,start up,θέμα,visual,skin,boot up,boot-up,initialize,initialization",
     "X-KDE-Keywords[en_GB]": "plymouth,splash,splash screen,boot splash,boot logo,boot theme,startup,start-up,start up,theme,visual,skin,boot up,boot-up,initialise,initialisation",
