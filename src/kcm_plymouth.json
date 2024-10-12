@@ -120,6 +120,7 @@
     "X-KDE-Keywords[sv]": "plymouth,start,startskärm,startlogotyp,starttema,tema,visuell,skal,starta,initiera,initiering",
     "X-KDE-Keywords[tr]": "plymouth,splash,açılış ekranı,önyükleme ekranı,önyükleme açılışı,önyükleme logosu,önyükleme teması,başlangıç,tema,görsel,deri,skin,ilklendir,başlat,ilklendirme,başlangıç",
     "X-KDE-Keywords[uk]": "plymouth,splash,splash screen,boot splash,boot logo,boot theme,startup,start-up,start up,theme,visual,skin,boot up,boot-up,initialize,initialization,плімут,вітання,вітальна сторінка,вітальне вікно,завантаження,вітальний екран,вітання при завантаженні,логотип завантаження,тема завантаження,запуск,тема,візуальний,шкірка,оболонка,завантаження,ініціалізація,започаткування",
+    "X-KDE-Keywords[zh_CN]": "plymouth,splash,splash screen,boot splash,boot logo,boot theme,startup,start-up,start up,theme,visual,skin,boot up,boot-up,initialize,initialization,huanyingpingmu,qidongpingmu,qidongtubiao,qidongbiaozhi,qidongzhuti,qidong,zhuti,shijuexiaoguo,shijue,pifu,chushihua,欢迎屏幕,启动屏幕,启动图标,启动标识,启动主题,启动,主题,视觉效果,视觉,皮肤,初始化",
     "X-KDE-Keywords[zh_TW]": "plymouth,啟動畫面,啟動,開機,開機畫面,開機圖示,開機主題,主題",
     "X-KDE-ParentApp": "kcontrol",
     "X-KDE-System-Settings-Parent-Category": "themes",
