@@ -110,7 +110,7 @@ msgstr "क्रियायाः प्रमाणीकरणं/निष�
 #, kde-format
 msgctxt "@action:button as in, get new Plymouth boot splash screens"
 msgid "Get New…"
-msgstr ""
+msgstr "Get New..."
 
 #: ui/main.qml:54
 #, kde-format
