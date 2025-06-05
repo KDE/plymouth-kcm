@@ -1,16 +1,15 @@
 # Spanish translations for kcm_plymouth.po package.
-# Copyright (C) 2017 This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
-#
+# Copyright (C) 2017-2025 This file is copyright:
+# This file is distributed under the same license as the plymouth-kcm package.
 # Automatically generated, 2017.
-# Eloy <ecuadra@eloihr.net>, 2017.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2017, 2019, 2023.
+#
+# SPDX-FileCopyrightText: 2017, 2019, 2023, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_plymouth\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-25 00:40+0000\n"
-"PO-Revision-Date: 2023-03-24 17:39+0100\n"
+"PO-Revision-Date: 2025-06-04 19:57+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -115,38 +114,9 @@ msgstr "No se ha podido autenticar/ejecutar la acción: %1, %2"
 #, kde-format
 msgctxt "@action:button as in, get new Plymouth boot splash screens"
 msgid "Get New…"
-msgstr "Obtener novedades..."
+msgstr "Obtener novedades…"
 
 #: ui/main.qml:54
 #, kde-format
 msgid "Uninstall"
 msgstr "Desinstalar"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Eloy Cuadra"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "ecuadra@eloihr.net"
-
-#~ msgid "Boot Splash Screen"
-#~ msgstr "Pantalla de arranque"
-
-#~ msgid "Marco Martin"
-#~ msgstr "Marco Martin"
-
-#~ msgid "This module lets you choose the Plymouth boot splash screen."
-#~ msgstr "Este módulo le permite escoger la pantalla de arranque de Plymouth."
-
-#~ msgid "Get New Boot Splash Screens..."
-#~ msgstr "Obtener nuevas pantallas de arranque..."
-
-#~ msgid "Download New Boot Splash Screens"
-#~ msgstr "Descargar nuevas pantallas de arranque"
-
-#~ msgid "Configure Plymouth Splash Screen"
-#~ msgstr "Configurar la pantalla de arranque de Plymouth"
-
-#~ msgid "Select a global splash screen for the system"
-#~ msgstr "Seleccionar una pantalla de arranque global para el sistema"
