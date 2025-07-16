@@ -1,139 +1,138 @@
-# Copyright (C) 2024 This file is copyright:
+# Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plymouth-kcm package.
-# SPDX-FileCopyrightText: 2021, 2023, 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 #
+# SPDX-FileCopyrightText: 2025 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plymouth-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-07 02:53+0000\n"
-"PO-Revision-Date: 2024-06-08 11:45+0400\n"
-"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
-"Language-Team: ar\n"
-"Language: ar\n"
+"PO-Revision-Date: 2025-07-14 16:18+0300\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
+"Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
-"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "زايد السعيدي"
+msgstr "צוות התרגום של KDE ישראל"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "zayed.alsaidi@gmail.com"
+msgstr "kde-l10n-he@kde.org"
 
 #: helper.cpp:57 helper.cpp:110 helper.cpp:138 helper.cpp:315
 #, kde-format
 msgid "Cannot start update-alternatives."
-msgstr "لا يمكن بدء update-alternatives."
+msgstr "לא ניתן להפעיל את update-alternatives."
 
 #: helper.cpp:62 helper.cpp:115 helper.cpp:143 helper.cpp:320
 #, kde-format
 msgid "update-alternatives failed to run."
-msgstr "فشل تشغل update-alternatives."
+msgstr "הריצה של update-alternatives נכשלה."
 
 #: helper.cpp:69 helper.cpp:123 helper.cpp:150 helper.cpp:328
 #, kde-format
 msgid "update-alternatives returned with error condition %1."
-msgstr "رجع update-alternatives بحالة خطأ %1."
+msgstr "update-alternatives החזיר מצב שגיאה %1."
 
 #: helper.cpp:82
 #, kde-format
 msgid "No theme specified in helper parameters."
-msgstr "لم تحدد سمة في معاملات المساعد."
+msgstr "לא צוינה ערכת עיצוב במשתני המסייע."
 
 #: helper.cpp:100 helper.cpp:259 helper.cpp:305
 #, kde-format
 msgid "Theme corrupted: .plymouth file not found inside theme."
-msgstr "السمة معطوبة: ملف .plymouth  غير موجود بداخل السمة."
+msgstr "ערכת העיצוב פגומה: לא נמצא קובץ ‎.plymouth בתוך ערכת העיצוב."
 
 #: helper.cpp:161
 #, kde-format
 msgid "Cannot start initramfs."
-msgstr "لا يمكن بدء initramfs."
+msgstr "לא ניתן להפעיל את initramfs."
 
 #: helper.cpp:169
 #, kde-format
 msgid "Initramfs failed to run."
-msgstr "فشل تنفيذ initramfs."
+msgstr "הרצת Initramfs נכשלה."
 
 #: helper.cpp:179
 #, kde-format
 msgid "Initramfs returned with error condition %1."
-msgstr "رجع initramfs بحالة خطأ %1."
+msgstr "Initramfs החזירה מצב שגיאה %1."
 
 #: helper.cpp:289
 #, kde-format
 msgid "Theme folder %1 does not exist."
-msgstr "مجلد السمة %1 غير موجود."
+msgstr "תיקיית ערכות העיצוב %1 לא קיימת."
 
 #: helper.cpp:295
 #, kde-format
 msgid "Theme %1 does not exist."
-msgstr "السمة %1 غير موجودة؟"
+msgstr "ערכת העיצוב %1 לא קיימת."
 
 #: kcm.cpp:41
 #, kde-format
 msgid "Boot Splash Screen"
-msgstr "شاشة بدء التشغيل"
+msgstr "מסך פתיח לטעינה"
 
 #: kcm.cpp:42
 #, kde-format
 msgid "Marco Martin"
-msgstr "Marco Martin"
+msgstr "מרקו מרטין"
 
 #: kcm.cpp:202 kcm.cpp:222
 #, kde-format
 msgid "Unable to authenticate/execute the action: %1 (%2)"
-msgstr "تعذّر استيثاق/تنفيذ هذا الإجراء: %1 (%2)"
+msgstr "לא ניתן לאמת/להפעיל את הפעולה: %1 (%2)"
 
 #: kcm.cpp:226
 #, kde-format
 msgid "Theme uninstalled successfully."
-msgstr "ألغي تثبيت السمة بنجاح."
+msgstr "ערכת העיצוב הוסרה בהצלחה."
 
 #: kplymouththemeinstaller.cpp:32
 #, kde-format
 msgid "Plymouth theme installer"
-msgstr "مثبت سمة Plymouth"
+msgstr "מתקין ערכות עיצוב של Plymouth"
 
 #: kplymouththemeinstaller.cpp:38
 #, kde-format
 msgid "Install a theme."
-msgstr "ثبّت سمة"
+msgstr "התקנת ערכת עיצוב."
 
 #: kplymouththemeinstaller.cpp:39
 #, kde-format
 msgid "Uninstall a theme."
-msgstr "أزل تثبيت سمة"
+msgstr "הסרת ערכת עיצוב."
 
 #: kplymouththemeinstaller.cpp:41
 #, kde-format
 msgid "The theme to install, must be an existing archive file."
-msgstr "يجب أن تكون سمة المراد تثبيتها ملف أرشيف."
+msgstr "ערכת העיצוב להתקנה, חייב להיות קובץ ארכיון קיים."
 
 #: kplymouththemeinstaller.cpp:113
 #, kde-format
 msgid "Unable to authenticate/execute the action: %1, %2"
-msgstr "تعذّر الاستيثاق/تنفيذ الإجراء %1، %2"
+msgstr "לא ניתן לאמת/להפעיל את הפעולה: %1, %2"
 
 #: package/contents/ui/main.qml:17
 #, kde-format
 msgid "This module lets you choose the Plymouth boot splash screen."
-msgstr "هذه الوحدة تمكنك من اختيار سمة شاشة بدء التشغيل Plymouth"
+msgstr "המודול הזה מאפשר לך לבחור את מסך הפתיח של הטעינה מסוג Plymouth."
 
 #: package/contents/ui/main.qml:21
 #, kde-format
 msgid "Get New Boot Splash Screens..."
-msgstr "احصل على شاشات بدء جديدة..."
+msgstr "הורדת מסכי פתיח חדשים לטעינה…"
 
 #: package/contents/ui/main.qml:49
 #, kde-format
 msgid "Uninstall"
-msgstr "أزل"
+msgstr "הסרה"
