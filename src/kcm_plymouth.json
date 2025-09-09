@@ -39,7 +39,6 @@
         "Description[sv]": "Välj Plymouth startskärm",
         "Description[tr]": "Plymouth önyükleme açılış ekranı seçin",
         "Description[uk]": "Вибір зображення для екрана вітання Plymouth",
-        "Description[x-test]": "xxChoose Plymouth boot splash screenxx",
         "Description[zh_CN]": "选择 Plymouth 启动屏幕",
         "Description[zh_TW]": "選擇 Plymouth 開機啟動畫面",
         "Icon": "preferences-desktop-display",
@@ -83,7 +82,6 @@
         "Name[sv]": "Startskärm",
         "Name[tr]": "Önyükleme Açılış Ekranı",
         "Name[uk]": "Екран вітання під час завантаження",
-        "Name[x-test]": "xxBoot Splash Screenxx",
         "Name[zh_CN]": "启动屏幕",
         "Name[zh_TW]": "開機啟動畫面",
         "ServiceTypes": [
@@ -114,7 +112,6 @@
     "X-KDE-Keywords[sl]": "plymouth,splash,splash screen,boot splash,boot logo,boot theme,zagon,zagon sistema,zagon računalnika,tema,visual,preobleka,boot up,boot-up,postavi začetne vrednosti,inicializacija",
     "X-KDE-Keywords[sv]": "plymouth,start,startskärm,startlogotyp,starttema,tema,visuell,skal,starta,initiera,initiering",
     "X-KDE-Keywords[uk]": "plymouth,splash,splash screen,boot splash,boot logo,boot theme,startup,start-up,start up,theme,visual,skin,boot up,boot-up,initialize,initialization,плімут,вітання,вітальна сторінка,вітальне вікно,завантаження,вітальний екран,вітання при завантаженні,логотип завантаження,тема завантаження,запуск,тема,візуальний,шкірка,оболонка,завантаження,ініціалізація,започаткування",
-    "X-KDE-Keywords[x-test]": "xxplymouthxx,xxsplashxx,xxsplash screenxx,xxboot splashxx,xxboot logoxx,xxboot themexx,xxstartupxx,xxstart-upxx,xxstart upxx,xxthemexx,xxvisualxx,xxskinxx,xxboot upxx,xxboot-upxx,xxinitializexx,xxinitializationxx",
     "X-KDE-ParentApp": "kcontrol",
     "X-KDE-System-Settings-Parent-Category": "appearance",
     "X-KDE-Weight": 200
