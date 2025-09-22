@@ -1,16 +1,15 @@
 # Spanish translations for kcm_plymouth.po package.
-# Copyright (C) 2017 This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
-#
+# Copyright (C) 2017-2025 This file is copyright:
+# This file is distributed under the same license as the plymouth-kcm package.
 # Automatically generated, 2017.
-# Eloy <ecuadra@eloihr.net>, 2017.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2017, 2019, 2023.
+#
+# SPDX-FileCopyrightText: 2017, 2019, 2023, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_plymouth\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-07 02:53+0000\n"
-"PO-Revision-Date: 2023-02-07 04:54+0100\n"
+"PO-Revision-Date: 2025-09-22 01:26+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -134,18 +133,9 @@ msgstr "Este módulo le permite escoger la pantalla de arranque de Plymouth."
 #: package/contents/ui/main.qml:21
 #, kde-format
 msgid "Get New Boot Splash Screens..."
-msgstr "Obtener nuevas pantallas de arranque..."
+msgstr "Obtener nuevas pantallas de arranque…"
 
 #: package/contents/ui/main.qml:49
 #, kde-format
 msgid "Uninstall"
 msgstr "Desinstalar"
-
-#~ msgid "Download New Boot Splash Screens"
-#~ msgstr "Descargar nuevas pantallas de arranque"
-
-#~ msgid "Configure Plymouth Splash Screen"
-#~ msgstr "Configurar la pantalla de arranque de Plymouth"
-
-#~ msgid "Select a global splash screen for the system"
-#~ msgstr "Seleccionar una pantalla de arranque global para el sistema"
