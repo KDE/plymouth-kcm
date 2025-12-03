@@ -29,7 +29,7 @@ msgstr "No s'ha pogut iniciar «update-alternatives»."
 #: helper.cpp:62 helper.cpp:115 helper.cpp:143 helper.cpp:329
 #, kde-format
 msgid "update-alternatives failed to run."
-msgstr "«update-alternatives» ha fallat en executar-se."
+msgstr "«update-alternatives» ha fallat mentre s'executava."
 
 #: helper.cpp:69 helper.cpp:123 helper.cpp:150 helper.cpp:337
 #, kde-format
@@ -59,7 +59,7 @@ msgstr "No s'ha pogut iniciar «mkinitcpio»."
 #: helper.cpp:180
 #, kde-format
 msgid "Initramfs failed to run."
-msgstr "«initramfs» ha fallat en executar-se."
+msgstr "«initramfs» ha fallat mentre s'executava."
 
 #: helper.cpp:190
 #, kde-format
