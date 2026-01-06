@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Freek de Kruijf <freekdekruijf@kde.nl>, 2016, 2017, 2019, 2023.
+# SPDX-FileCopyrightText: 2016, 2017, 2019, 2023, 2026 Freek de Kruijf <freekdekruijf@kde.nl>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 14:42+0000\n"
-"PO-Revision-Date: 2023-03-24 09:26+0100\n"
+"PO-Revision-Date: 2026-01-05 11:52+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #: helper.cpp:57 helper.cpp:110 helper.cpp:138 helper.cpp:324
 #, kde-format
@@ -95,7 +95,7 @@ msgstr "Een thema installeren."
 #: kplymouththemeinstaller.cpp:39
 #, kde-format
 msgid "Uninstall a theme."
-msgstr "Een thema deïnstalleren."
+msgstr "Een thema verwijderen."
 
 #: kplymouththemeinstaller.cpp:41
 #, kde-format
@@ -116,7 +116,7 @@ msgstr "Nieuwe ophalen…"
 #: ui/main.qml:54
 #, kde-format
 msgid "Uninstall"
-msgstr "Deïnstalleren"
+msgstr "Installatie ongedaan maken"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"
