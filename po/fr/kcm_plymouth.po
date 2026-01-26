@@ -1,21 +1,21 @@
+# SPDX-FileCopyrightText: 2023, 2026 Xavier Besnard <xavier.besnard@kde.org>
 # Yoann Laissus <yoann.laissus@gmail.com>, 2017.
 # Vincent Pinon <vpinon@kde.org>, 2017.
 # Simon Depiets <sdepiets@gmail.com>, 2019.
-# Xavier Besnard <xavier.besnard@kde.org>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_plymouth\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2023-01-05 15:50+0100\n"
-"Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
-"Language-Team: French <kde-francophone@kde.org>\n"
+"PO-Revision-Date: 2026-01-24 16:46+0100\n"
+"Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
+"Language-Team: \n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 25.12.1\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -91,7 +91,7 @@ msgstr "Le thème %1 n'existe pas."
 #: kcm.cpp:41
 #, kde-format
 msgid "Boot Splash Screen"
-msgstr "Écran de démarrage "
+msgstr "Écran de démarrage"
 
 #: kcm.cpp:42
 #, kde-format
@@ -141,7 +141,7 @@ msgstr "Ce module vous permet de choisir l'écran de démarrage de Plymouth."
 #: package/contents/ui/main.qml:21
 #, kde-format
 msgid "Get New Boot Splash Screens..."
-msgstr "Obtenir de nouveaux écrans de démarrage"
+msgstr "Obtenir de nouveaux écrans de démarrage..."
 
 #: package/contents/ui/main.qml:49
 #, kde-format
