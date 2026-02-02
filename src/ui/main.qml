@@ -51,8 +51,14 @@ KCM.GridViewKCM {
         actions: [
             Kirigami.Action {
                 icon.name: "edit-delete"
-                tooltip: i18n("Uninstall")
-                enabled: model.uninstallable
+                tooltip: if (enabled) {
+                    return i18nc("@info:tooltip", "Remove boot splash screen");
+                } else if (model.uninstallable) {
+                    return i18nc("@info:tooltip", "Cannot delete the active boot splash screen");
+                } else {
+                    return i18nc("@info:tooltip", "Cannot delete system-installed boot splash screens");
+                }
+                enabled: model.uninstallable && !delegate.GridView.isCurrentItem
                 onTriggered: kcm.uninstall(model.pluginName)
             }
         ]
