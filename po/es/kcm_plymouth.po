@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_plymouth\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-02-03 00:48+0000\n"
 "PO-Revision-Date: 2025-06-04 19:56+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -116,7 +116,23 @@ msgctxt "@action:button as in, get new Plymouth boot splash screens"
 msgid "Get New…"
 msgstr "Obtener novedades…"
 
-#: ui/main.qml:54
+#: ui/main.qml:55
 #, kde-format
-msgid "Uninstall"
-msgstr "Desinstalar"
+msgctxt "@info:tooltip"
+msgid "Remove boot splash screen"
+msgstr ""
+
+#: ui/main.qml:57
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active boot splash screen"
+msgstr ""
+
+#: ui/main.qml:59
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed boot splash screens"
+msgstr ""
+
+#~ msgid "Uninstall"
+#~ msgstr "Desinstalar"

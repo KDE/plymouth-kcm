@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-02-03 00:48+0000\n"
 "PO-Revision-Date: 2019-11-22 20:58+0100\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -114,10 +114,28 @@ msgctxt "@action:button as in, get new Plymouth boot splash screens"
 msgid "Get New…"
 msgstr ""
 
-#: ui/main.qml:54
+#: ui/main.qml:55
+#, fuzzy, kde-format
+#| msgid "Boot Splash Screen"
+msgctxt "@info:tooltip"
+msgid "Remove boot splash screen"
+msgstr "Opstartsbillede under boot"
+
+#: ui/main.qml:57
+#, fuzzy, kde-format
+#| msgid "This module lets you choose the Plymouth boot splash screen."
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active boot splash screen"
+msgstr "Dette modul lader dig vælge Plymouth boot-opstartsskærm."
+
+#: ui/main.qml:59
 #, kde-format
-msgid "Uninstall"
-msgstr "Afinstallér"
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed boot splash screens"
+msgstr ""
+
+#~ msgid "Uninstall"
+#~ msgstr "Afinstallér"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"
@@ -127,14 +145,8 @@ msgstr "Afinstallér"
 #~ msgid "Your emails"
 #~ msgstr "mschlander@opensuse.org"
 
-#~ msgid "Boot Splash Screen"
-#~ msgstr "Opstartsbillede under boot"
-
 #~ msgid "Marco Martin"
 #~ msgstr "Marco Martin"
-
-#~ msgid "This module lets you choose the Plymouth boot splash screen."
-#~ msgstr "Dette modul lader dig vælge Plymouth boot-opstartsskærm."
 
 #~ msgid "Get New Boot Splash Screens..."
 #~ msgstr "Hent nye opstartsskærmbilleder..."

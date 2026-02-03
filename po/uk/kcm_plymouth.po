@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_plymouth\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-02-03 00:48+0000\n"
 "PO-Revision-Date: 2023-03-24 08:49+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -116,10 +116,30 @@ msgctxt "@action:button as in, get new Plymouth boot splash screens"
 msgid "Get New…"
 msgstr "Отримати ще…"
 
-#: ui/main.qml:54
+#: ui/main.qml:55
+#, fuzzy, kde-format
+#| msgid "Boot Splash Screen"
+msgctxt "@info:tooltip"
+msgid "Remove boot splash screen"
+msgstr "Екран вітання під час завантаження"
+
+#: ui/main.qml:57
+#, fuzzy, kde-format
+#| msgid "This module lets you choose the Plymouth boot splash screen."
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active boot splash screen"
+msgstr ""
+"За допомогою цього модуля ви можете вибрати зображення для екрана вітання "
+"Plymouth під час завантаження."
+
+#: ui/main.qml:59
 #, kde-format
-msgid "Uninstall"
-msgstr "Вилучити"
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed boot splash screens"
+msgstr ""
+
+#~ msgid "Uninstall"
+#~ msgstr "Вилучити"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"
@@ -129,16 +149,8 @@ msgstr "Вилучити"
 #~ msgid "Your emails"
 #~ msgstr "yurchor@ukr.net"
 
-#~ msgid "Boot Splash Screen"
-#~ msgstr "Екран вітання під час завантаження"
-
 #~ msgid "Marco Martin"
 #~ msgstr "Marco Martin"
-
-#~ msgid "This module lets you choose the Plymouth boot splash screen."
-#~ msgstr ""
-#~ "За допомогою цього модуля ви можете вибрати зображення для екрана вітання "
-#~ "Plymouth під час завантаження."
 
 #~ msgid "Get New Boot Splash Screens..."
 #~ msgstr "Отримати нові сторінки вітання…"

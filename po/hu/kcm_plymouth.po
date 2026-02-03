@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plymouth-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-02-03 00:48+0000\n"
 "PO-Revision-Date: 2023-12-25 21:31+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -114,10 +114,29 @@ msgctxt "@action:button as in, get new Plymouth boot splash screens"
 msgid "Get New…"
 msgstr "Új letöltése…"
 
-#: ui/main.qml:54
+#: ui/main.qml:55
+#, fuzzy, kde-format
+#| msgid "Boot Splash Screen"
+msgctxt "@info:tooltip"
+msgid "Remove boot splash screen"
+msgstr "Rendszerindító nyitóképernyő"
+
+#: ui/main.qml:57
+#, fuzzy, kde-format
+#| msgid "This module lets you choose the Plymouth boot splash screen."
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active boot splash screen"
+msgstr ""
+"Ebben a modulban választhatja ki a Plymouth rendszerindító nyitóképernyőt."
+
+#: ui/main.qml:59
 #, kde-format
-msgid "Uninstall"
-msgstr "Eltávolítás"
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed boot splash screens"
+msgstr ""
+
+#~ msgid "Uninstall"
+#~ msgstr "Eltávolítás"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"
@@ -127,15 +146,8 @@ msgstr "Eltávolítás"
 #~ msgid "Your emails"
 #~ msgstr "ulysses@kubuntu.org"
 
-#~ msgid "Boot Splash Screen"
-#~ msgstr "Rendszerindító nyitóképernyő"
-
 #~ msgid "Marco Martin"
 #~ msgstr "Marco Martin"
-
-#~ msgid "This module lets you choose the Plymouth boot splash screen."
-#~ msgstr ""
-#~ "Ebben a modulban választhatja ki a Plymouth rendszerindító nyitóképernyőt."
 
 #~ msgid "Get New Boot Splash Screens..."
 #~ msgstr "Új rendszerindító nyitóképernyők letöltése…"

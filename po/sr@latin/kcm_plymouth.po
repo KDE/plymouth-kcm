@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_plymouth\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-02-03 00:48+0000\n"
 "PO-Revision-Date: 2017-05-07 21:01+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -118,10 +118,32 @@ msgctxt "@action:button as in, get new Plymouth boot splash screens"
 msgid "Get New…"
 msgstr ""
 
-#: ui/main.qml:54
+#: ui/main.qml:55
+#, fuzzy, kde-format
+#| msgid "Get New Boot Splash Screens..."
+msgctxt "@info:tooltip"
+msgid "Remove boot splash screen"
+msgstr "Dobavi nove uvodne ekrane podizanja..."
+
+#: ui/main.qml:57
+#, fuzzy, kde-format
+#| msgid ""
+#| "This module lets you configure the look of the whole workspace with some "
+#| "ready to go presets."
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active boot splash screen"
+msgstr ""
+"U ovom modulu možete da podesite izgled celog radnog prostora, uz nekoliko "
+"spremnih predefinisanih."
+
+#: ui/main.qml:59
 #, kde-format
-msgid "Uninstall"
-msgstr "Deinstaliraj"
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed boot splash screens"
+msgstr ""
+
+#~ msgid "Uninstall"
+#~ msgstr "Deinstaliraj"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"
@@ -131,22 +153,8 @@ msgstr "Deinstaliraj"
 #~ msgid "Your emails"
 #~ msgstr "caslav.ilic@gmx.net"
 
-#, fuzzy
-#~| msgid "Get New Boot Splash Screens..."
-#~ msgid "Boot Splash Screen"
-#~ msgstr "Dobavi nove uvodne ekrane podizanja..."
-
 #~ msgid "Marco Martin"
 #~ msgstr "Marko Martin"
-
-#, fuzzy
-#~| msgid ""
-#~| "This module lets you configure the look of the whole workspace with some "
-#~| "ready to go presets."
-#~ msgid "This module lets you choose the Plymouth boot splash screen."
-#~ msgstr ""
-#~ "U ovom modulu možete da podesite izgled celog radnog prostora, uz "
-#~ "nekoliko spremnih predefinisanih."
 
 # >> @title:window
 #, fuzzy

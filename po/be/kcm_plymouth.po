@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-02-03 00:48+0000\n"
 "PO-Revision-Date: 2024-05-25 23:56\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -118,10 +118,28 @@ msgctxt "@action:button as in, get new Plymouth boot splash screens"
 msgid "Get New…"
 msgstr "Атрымаць новыя…"
 
-#: ui/main.qml:54
+#: ui/main.qml:55
+#, fuzzy, kde-format
+#| msgid "Boot Splash Screen"
+msgctxt "@info:tooltip"
+msgid "Remove boot splash screen"
+msgstr "Застаўка экрана загрузкі"
+
+#: ui/main.qml:57
+#, fuzzy, kde-format
+#| msgid "This module lets you choose the Plymouth boot splash screen."
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active boot splash screen"
+msgstr "Гэты модуль дазваляе абраць застаўку экрана Plymouth."
+
+#: ui/main.qml:59
 #, kde-format
-msgid "Uninstall"
-msgstr "Выдаліць"
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed boot splash screens"
+msgstr ""
+
+#~ msgid "Uninstall"
+#~ msgstr "Выдаліць"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"
@@ -131,14 +149,8 @@ msgstr "Выдаліць"
 #~ msgid "Your emails"
 #~ msgstr "nashtlumach@gmail.com"
 
-#~ msgid "Boot Splash Screen"
-#~ msgstr "Застаўка экрана загрузкі"
-
 #~ msgid "Marco Martin"
 #~ msgstr "Marco Martin"
-
-#~ msgid "This module lets you choose the Plymouth boot splash screen."
-#~ msgstr "Гэты модуль дазваляе абраць застаўку экрана Plymouth."
 
 #~ msgid "Get New Boot Splash Screens..."
 #~ msgstr "Атрымаць новыя застаўкі экрана загрузкі..."

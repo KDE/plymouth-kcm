@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-02-03 00:48+0000\n"
 "PO-Revision-Date: 2023-08-08 01:01+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -115,10 +115,28 @@ msgctxt "@action:button as in, get new Plymouth boot splash screens"
 msgid "Get New…"
 msgstr "取得新的…"
 
-#: ui/main.qml:54
+#: ui/main.qml:55
+#, fuzzy, kde-format
+#| msgid "Boot Splash Screen"
+msgctxt "@info:tooltip"
+msgid "Remove boot splash screen"
+msgstr "開機啟動畫面"
+
+#: ui/main.qml:57
+#, fuzzy, kde-format
+#| msgid "This module lets you choose the Plymouth boot splash screen."
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active boot splash screen"
+msgstr "這個模組讓您能夠選擇 Plymouth 開機啟動畫面。"
+
+#: ui/main.qml:59
 #, kde-format
-msgid "Uninstall"
-msgstr "解除安裝"
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed boot splash screens"
+msgstr ""
+
+#~ msgid "Uninstall"
+#~ msgstr "解除安裝"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"
@@ -128,14 +146,8 @@ msgstr "解除安裝"
 #~ msgid "Your emails"
 #~ msgstr "s8321414@gmail.com"
 
-#~ msgid "Boot Splash Screen"
-#~ msgstr "開機啟動畫面"
-
 #~ msgid "Marco Martin"
 #~ msgstr "Marco Martin"
-
-#~ msgid "This module lets you choose the Plymouth boot splash screen."
-#~ msgstr "這個模組讓您能夠選擇 Plymouth 開機啟動畫面。"
 
 #~ msgid "Get New Boot Splash Screens..."
 #~ msgstr "取得新啟動畫面..."

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plymouth-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-02-03 00:48+0000\n"
 "PO-Revision-Date: 2023-03-30 08:49+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -114,10 +114,28 @@ msgctxt "@action:button as in, get new Plymouth boot splash screens"
 msgid "Get New…"
 msgstr "احصل على جديدة…"
 
-#: ui/main.qml:54
+#: ui/main.qml:55
+#, fuzzy, kde-format
+#| msgid "Boot Splash Screen"
+msgctxt "@info:tooltip"
+msgid "Remove boot splash screen"
+msgstr "شاشة بدء التشغيل"
+
+#: ui/main.qml:57
+#, fuzzy, kde-format
+#| msgid "This module lets you choose the Plymouth boot splash screen."
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active boot splash screen"
+msgstr "هذه الوحدة تمكنك من اختيار سمة شاشة بدء التشغيل Plymouth"
+
+#: ui/main.qml:59
 #, kde-format
-msgid "Uninstall"
-msgstr "أزل"
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed boot splash screens"
+msgstr ""
+
+#~ msgid "Uninstall"
+#~ msgstr "أزل"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"
@@ -127,14 +145,8 @@ msgstr "أزل"
 #~ msgid "Your emails"
 #~ msgstr "zayed.alsaidi@gmail.com"
 
-#~ msgid "Boot Splash Screen"
-#~ msgstr "شاشة بدء التشغيل"
-
 #~ msgid "Marco Martin"
 #~ msgstr "Marco Martin"
-
-#~ msgid "This module lets you choose the Plymouth boot splash screen."
-#~ msgstr "هذه الوحدة تمكنك من اختيار سمة شاشة بدء التشغيل Plymouth"
 
 #~ msgid "Get New Boot Splash Screens..."
 #~ msgstr "احصل على شاشات بدء جديدة..."

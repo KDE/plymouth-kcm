@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plymouth-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-02-03 00:48+0000\n"
 "PO-Revision-Date: 2023-04-22 18:55+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -117,10 +117,29 @@ msgctxt "@action:button as in, get new Plymouth boot splash screens"
 msgid "Get New…"
 msgstr "Lortu ... berria"
 
-#: ui/main.qml:54
+#: ui/main.qml:55
+#, fuzzy, kde-format
+#| msgid "Boot Splash Screen"
+msgctxt "@info:tooltip"
+msgid "Remove boot splash screen"
+msgstr "Abioko plasta pantaila"
+
+#: ui/main.qml:57
+#, fuzzy, kde-format
+#| msgid "This module lets you choose the Plymouth boot splash screen."
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active boot splash screen"
+msgstr ""
+"Modulu honek Plymouth-eko abioko plasta pantaila aukeratzen uzten dizu."
+
+#: ui/main.qml:59
 #, kde-format
-msgid "Uninstall"
-msgstr "Desinstalatu"
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed boot splash screens"
+msgstr ""
+
+#~ msgid "Uninstall"
+#~ msgstr "Desinstalatu"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"
@@ -130,15 +149,8 @@ msgstr "Desinstalatu"
 #~ msgid "Your emails"
 #~ msgstr "xalba@ni.eus"
 
-#~ msgid "Boot Splash Screen"
-#~ msgstr "Abioko plasta pantaila"
-
 #~ msgid "Marco Martin"
 #~ msgstr "Marco Martin"
-
-#~ msgid "This module lets you choose the Plymouth boot splash screen."
-#~ msgstr ""
-#~ "Modulu honek Plymouth-eko abioko plasta pantaila aukeratzen uzten dizu."
 
 #~ msgid "Get New Boot Splash Screens..."
 #~ msgstr "Lortu abioko plast-pantaila berriak..."

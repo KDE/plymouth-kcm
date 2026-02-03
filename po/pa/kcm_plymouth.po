@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plymouth-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-02-03 00:48+0000\n"
 "PO-Revision-Date: 2024-01-28 18:24-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -113,10 +113,27 @@ msgctxt "@action:button as in, get new Plymouth boot splash screens"
 msgid "Get New…"
 msgstr "…ਨਵੀਂ ਚੀਜ਼ਾਂ ਲਵੋ"
 
-#: ui/main.qml:54
+#: ui/main.qml:55
+#, fuzzy, kde-format
+#| msgid "Boot Splash Screen"
+msgctxt "@info:tooltip"
+msgid "Remove boot splash screen"
+msgstr "ਬੂਟ ਸਪਲੈਸ਼ ਸਕਰੀਨ"
+
+#: ui/main.qml:57
 #, kde-format
-msgid "Uninstall"
-msgstr "ਅਣ-ਇੰਸਟਾਲ"
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active boot splash screen"
+msgstr ""
+
+#: ui/main.qml:59
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed boot splash screens"
+msgstr ""
+
+#~ msgid "Uninstall"
+#~ msgstr "ਅਣ-ਇੰਸਟਾਲ"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"
@@ -125,9 +142,6 @@ msgstr "ਅਣ-ਇੰਸਟਾਲ"
 #~ msgctxt "EMAIL OF TRANSLATORS"
 #~ msgid "Your emails"
 #~ msgstr "alam.yellow@gmail.com"
-
-#~ msgid "Boot Splash Screen"
-#~ msgstr "ਬੂਟ ਸਪਲੈਸ਼ ਸਕਰੀਨ"
 
 #~ msgid "Marco Martin"
 #~ msgstr "ਮਾਰਕੋ ਮਾਰਟਿਨ"
