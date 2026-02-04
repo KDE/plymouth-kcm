@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Shinjo Park <kde@peremen.name>, 2017, 2019, 2020, 2023.
+# SPDX-FileCopyrightText: 2017, 2019, 2020, 2023, 2026 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-03 00:48+0000\n"
-"PO-Revision-Date: 2023-04-22 00:11+0200\n"
+"PO-Revision-Date: 2026-02-03 22:41+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: helper.cpp:57 helper.cpp:110 helper.cpp:138 helper.cpp:324
 #, kde-format
@@ -114,24 +114,22 @@ msgid "Get New…"
 msgstr "새 항목 가져오기…"
 
 #: ui/main.qml:55
-#, fuzzy, kde-format
-#| msgid "Boot Splash Screen"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove boot splash screen"
-msgstr "부트 화면"
+msgstr "부트 화면 삭제"
 
 #: ui/main.qml:57
-#, fuzzy, kde-format
-#| msgid "This module lets you choose the Plymouth boot splash screen."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active boot splash screen"
-msgstr "이 모듈에서 Plymouth 부트 화면을 선택할 수 있습니다."
+msgstr "활성화된 부트 화면을 삭제할 수 없음"
 
 #: ui/main.qml:59
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed boot splash screens"
-msgstr ""
+msgstr "시스템에서 설치한 부트 화면을 삭제할 수 없음"
 
 #~ msgid "Uninstall"
 #~ msgstr "삭제"

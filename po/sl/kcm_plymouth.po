@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-03 00:48+0000\n"
-"PO-Revision-Date: 2023-03-25 09:57+0100\n"
+"PO-Revision-Date: 2026-02-03 07:27+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.8\n"
 
 #: helper.cpp:57 helper.cpp:110 helper.cpp:138 helper.cpp:324
 #, kde-format
@@ -28,12 +28,12 @@ msgstr "Ni mogoče zagnati ukaza update-alternatives."
 #: helper.cpp:62 helper.cpp:115 helper.cpp:143 helper.cpp:329
 #, kde-format
 msgid "update-alternatives failed to run."
-msgstr "Zagon ukaza update-alternatives ni uspel."
+msgstr "update-alternatives ni uspel."
 
 #: helper.cpp:69 helper.cpp:123 helper.cpp:150 helper.cpp:337
 #, kde-format
 msgid "update-alternatives returned with error condition %1."
-msgstr "Ukaz update-alternatives je vrnil napako %1."
+msgstr "update-alternatives je vrnil napako %1."
 
 #: helper.cpp:82
 #, kde-format
@@ -117,24 +117,22 @@ msgid "Get New…"
 msgstr "Dobi novo…"
 
 #: ui/main.qml:55
-#, fuzzy, kde-format
-#| msgid "Boot Splash Screen"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove boot splash screen"
-msgstr "Pozdravno okno ob zagonu"
+msgstr "Odstrani zagonski zaslon"
 
 #: ui/main.qml:57
-#, fuzzy, kde-format
-#| msgid "This module lets you choose the Plymouth boot splash screen."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active boot splash screen"
-msgstr "Ta modul vam omogoči nastaviti pozdravno okno Plymouth."
+msgstr "Ni mogoče izbrisati aktivnega zagonskega zaslona"
 
 #: ui/main.qml:59
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed boot splash screens"
-msgstr ""
+msgstr "Ni mogoče izbrisati začetnih zaslonov nameščenih v sistemu"
 
 #~ msgid "Uninstall"
 #~ msgstr "Odstrani"

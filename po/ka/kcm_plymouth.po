@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plymouth-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-03 00:48+0000\n"
-"PO-Revision-Date: 2023-05-11 05:35+0200\n"
+"PO-Revision-Date: 2026-02-03 05:25+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.3\n"
+"X-Generator: Poedit 3.8\n"
 
 #: helper.cpp:57 helper.cpp:110 helper.cpp:138 helper.cpp:324
 #, kde-format
@@ -115,25 +115,24 @@ msgid "Get New…"
 msgstr "ახლის მიღება…"
 
 #: ui/main.qml:55
-#, fuzzy, kde-format
-#| msgid "Boot Splash Screen"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove boot splash screen"
-msgstr "ჩატვირთვის სურათი"
+msgstr "ჩატვირთვის მისალმების სურათის წაშლა"
 
 #: ui/main.qml:57
-#, fuzzy, kde-format
-#| msgid "This module lets you choose the Plymouth boot splash screen."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active boot splash screen"
-msgstr ""
-"მოდული საშუალებას გაძლევთ აირჩიოთ Plymouth-ის ჩატვირთვის ეკრანის სურათი."
+msgstr "აქტიური ჩატვირთვის მისალმების ფანჯრის წაშლა შეუძლებელია"
 
 #: ui/main.qml:59
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed boot splash screens"
 msgstr ""
+"სისტემასთან ერთად დაყენებული ჩატვირთვის მისალმების ფანჯრების წაშლა "
+"შეუძლებელია"
 
 #~ msgid "Uninstall"
 #~ msgstr "წაშლა"

@@ -1,15 +1,15 @@
 # Spanish translations for kcm_plymouth.po package.
-# Copyright (C) 2017-2025 This file is copyright:
+# Copyright (C) 2017-2026 This file is copyright:
 # This file is distributed under the same license as the plymouth-kcm package.
 # Automatically generated, 2017.
 #
-# SPDX-FileCopyrightText: 2017, 2019, 2023, 2025 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2017, 2019, 2023, 2025, 2026 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_plymouth\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-03 00:48+0000\n"
-"PO-Revision-Date: 2025-06-04 19:56+0100\n"
+"PO-Revision-Date: 2026-02-03 22:59+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.03.80\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: helper.cpp:57 helper.cpp:110 helper.cpp:138 helper.cpp:324
 #, kde-format
@@ -120,19 +120,16 @@ msgstr "Obtener novedades…"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove boot splash screen"
-msgstr ""
+msgstr "Eliminar pantalla de arranque"
 
 #: ui/main.qml:57
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active boot splash screen"
-msgstr ""
+msgstr "No se puede borrar la pantalla de arranque activa"
 
 #: ui/main.qml:59
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed boot splash screens"
-msgstr ""
-
-#~ msgid "Uninstall"
-#~ msgstr "Desinstalar"
+msgstr "No puede borrar pantallas de arranque instaladas en el sistema"

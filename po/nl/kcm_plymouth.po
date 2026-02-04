@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-03 00:48+0000\n"
-"PO-Revision-Date: 2026-01-05 11:54+0100\n"
+"PO-Revision-Date: 2026-02-03 10:46+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.12.0\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: helper.cpp:57 helper.cpp:110 helper.cpp:138 helper.cpp:324
 #, kde-format
@@ -114,24 +114,24 @@ msgid "Get New…"
 msgstr "Nieuwe ophalen…"
 
 #: ui/main.qml:55
-#, fuzzy, kde-format
-#| msgid "Boot Splash Screen"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove boot splash screen"
-msgstr "Opstartscherm"
+msgstr "Opstartscherm bij opstarten verwijderen"
 
 #: ui/main.qml:57
-#, fuzzy, kde-format
-#| msgid "This module lets you choose the Plymouth boot splash screen."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active boot splash screen"
-msgstr "Deze module laat u het opstartscherm van Plymouth kiezen."
+msgstr "Kan het actieve opstartscherm bij opstarten niet verwijderen"
 
 #: ui/main.qml:59
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed boot splash screens"
 msgstr ""
+"Kan de door het systeem geïnstalleerde opstartschermen bij opstarten niet "
+"verwijderen"
 
 #~ msgid "Uninstall"
 #~ msgstr "Deïnstalleren"
