@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kcm_plymouth\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2026-01-24 16:46+0100\n"
+"PO-Revision-Date: 2026-02-04 12:36+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -15,9 +15,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.12.1\n"
-"X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
+"X-Environment: kde\n"
+"X-Generator: Lokalize 25.12.1\n"
 "X-Text-Markup: kde4\n"
 
 #, kde-format
@@ -91,7 +91,7 @@ msgstr "Le thème %1 n'existe pas."
 #: kcm.cpp:41
 #, kde-format
 msgid "Boot Splash Screen"
-msgstr "Écran de démarrage"
+msgstr "Animation de démarrage"
 
 #: kcm.cpp:42
 #, kde-format
@@ -136,12 +136,12 @@ msgstr "Impossible d'authentifier / d'exécuter l'action : %1, %2"
 #: package/contents/ui/main.qml:17
 #, kde-format
 msgid "This module lets you choose the Plymouth boot splash screen."
-msgstr "Ce module vous permet de choisir l'écran de démarrage de Plymouth."
+msgstr "Ce module vous permet de choisir l'animation de démarrage de Plymouth."
 
 #: package/contents/ui/main.qml:21
 #, kde-format
 msgid "Get New Boot Splash Screens..."
-msgstr "Obtenir de nouveaux écrans de démarrage..."
+msgstr "Obtenir de nouvelles animations de démarrage..."
 
 #: package/contents/ui/main.qml:49
 #, kde-format
