@@ -7,17 +7,17 @@ msgstr ""
 "Project-Id-Version: kcm_plymouth\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-03 00:48+0000\n"
-"PO-Revision-Date: 2023-03-25 09:16+0100\n"
-"Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
+"PO-Revision-Date: 2026-02-04 12:36+0100\n"
+"Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: \n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.12.1\n"
-"X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
+"X-Environment: kde\n"
+"X-Generator: Lokalize 25.12.1\n"
 "X-Text-Markup: kde4\n"
 
 #: helper.cpp:57 helper.cpp:110 helper.cpp:138 helper.cpp:324
@@ -124,24 +124,23 @@ msgid "Get New…"
 msgstr "Obtenir des nouveautés…"
 
 #: ui/main.qml:55
-#, fuzzy, kde-format
-#| msgid "Boot Splash Screen"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove boot splash screen"
-msgstr "Écran de démarrage "
+msgstr "Supprimer l'animation de démarrage"
 
 #: ui/main.qml:57
-#, fuzzy, kde-format
-#| msgid "This module lets you choose the Plymouth boot splash screen."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active boot splash screen"
-msgstr "Ce module vous permet de choisir l'écran de démarrage de Plymouth."
+msgstr "Impossible de supprimer l'animation de démarrage actuellement active"
 
 #: ui/main.qml:59
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed boot splash screens"
 msgstr ""
+"Impossible de supprimer les animations de démarrage installées par le système"
 
 #~ msgid "Uninstall"
 #~ msgstr "Désinstaller"

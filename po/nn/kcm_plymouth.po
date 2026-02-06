@@ -132,6 +132,3 @@ msgstr ""
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed boot splash screens"
 msgstr ""
-
-#~ msgid "Uninstall"
-#~ msgstr "Avinstaller"
