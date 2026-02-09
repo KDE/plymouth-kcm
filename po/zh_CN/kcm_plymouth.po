@@ -111,22 +111,22 @@ msgstr "无法验证/执行操作：%1, %2"
 #, kde-format
 msgctxt "@action:button as in, get new Plymouth boot splash screens"
 msgid "Get New…"
-msgstr "获取新主题…"
+msgstr "获取新开机屏幕…"
 
 #: ui/main.qml:55
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove boot splash screen"
-msgstr ""
+msgstr "移除开机欢迎屏幕"
 
 #: ui/main.qml:57
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active boot splash screen"
-msgstr ""
+msgstr "无法删除已激活的开机屏幕"
 
 #: ui/main.qml:59
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed boot splash screens"
-msgstr ""
+msgstr "无法删除系统安装的开机屏幕"
