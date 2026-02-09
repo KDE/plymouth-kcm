@@ -111,7 +111,7 @@ msgstr "无法验证/执行操作：%1, %2"
 #, kde-format
 msgctxt "@action:button as in, get new Plymouth boot splash screens"
 msgid "Get New…"
-msgstr "获取新主题…"
+msgstr "获取新开机屏幕…"
 
 #: ui/main.qml:54
 #, kde-format
