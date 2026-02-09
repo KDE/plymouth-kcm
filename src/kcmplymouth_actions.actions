@@ -136,7 +136,7 @@ Description[sl]=Avtenticirajte se, da spremenili zagonski zaslon dobrodošlice.
 Description[sv]=Ange behörighet för att ändra startskärmen.
 Description[tr]=Önyükleme açılış ekranını değiştirmek için kimliğinizi doğrulayın.
 Description[uk]=Пройдіть розпізнавання для внесення змін до вікна вітання під час завантаження.
-Description[zh_CN]=请进行身份验证以更改启动画面。
+Description[zh_CN]=请进行身份验证以更改开机屏幕。
 Description[zh_TW]=認證以變更開機啟動畫面。
 Policy=auth_admin
 
