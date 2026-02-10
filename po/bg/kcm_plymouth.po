@@ -1,17 +1,18 @@
 # Mincho Kondarev <mkondarev@yahoo.de>, 2022, 2023.
+# SPDX-FileCopyrightText: 2026 Yasen Pramatarov <yasen@lindeas.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-03 00:48+0000\n"
-"PO-Revision-Date: 2023-03-26 17:21+0200\n"
-"Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
-"Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-02-09 12:12+0200\n"
+"Last-Translator: Yasen Pramatarov <yasen@lindeas.com>\n"
+"Language-Team: bg\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 25.04.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: helper.cpp:57 helper.cpp:110 helper.cpp:138 helper.cpp:324
@@ -114,19 +115,19 @@ msgstr "Изтегляне на нови…"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove boot splash screen"
-msgstr ""
+msgstr "Премахване на екрана при зареждане"
 
 #: ui/main.qml:57
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active boot splash screen"
-msgstr ""
+msgstr "Не може да се изтрие активният екран при зареждане"
 
 #: ui/main.qml:59
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed boot splash screens"
-msgstr ""
+msgstr "Не може да се изтрият системните екрани при зареждане"
 
 #~ msgid "Uninstall"
 #~ msgstr "Деинсталиране"
