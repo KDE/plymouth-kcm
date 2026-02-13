@@ -3,13 +3,13 @@
 #
 # Jeff Huang <s8321414@gmail.com>, 2016, 2017.
 # pan93412 <pan93412@gmail.com>, 2019.
-# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2023.
+# SPDX-FileCopyrightText: 2023, 2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-03 00:48+0000\n"
-"PO-Revision-Date: 2023-08-08 01:01+0900\n"
+"PO-Revision-Date: 2026-02-12 15:55+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 26.03.70\n"
 
 #: helper.cpp:57 helper.cpp:110 helper.cpp:138 helper.cpp:324
 #, kde-format
@@ -37,7 +37,7 @@ msgstr "update-alternatives 傳回錯誤代碼 %1。"
 #: helper.cpp:82
 #, kde-format
 msgid "No theme specified in helper parameters."
-msgstr "在助手程式中未指定主題。"
+msgstr "在助手程式參數中未指定主題。"
 
 #: helper.cpp:100 helper.cpp:268 helper.cpp:314
 #, kde-format
@@ -82,7 +82,7 @@ msgstr "無法認證/執行此動作：%1 (%2)"
 #: kcm.cpp:215
 #, kde-format
 msgid "Theme uninstalled successfully."
-msgstr "佈景已成功解除安裝。"
+msgstr "主題已成功解除安裝。"
 
 #: kplymouththemeinstaller.cpp:32
 #, kde-format
@@ -116,24 +116,22 @@ msgid "Get New…"
 msgstr "取得新的…"
 
 #: ui/main.qml:55
-#, fuzzy, kde-format
-#| msgid "Boot Splash Screen"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove boot splash screen"
-msgstr "開機啟動畫面"
+msgstr "移除開機啟動畫面"
 
 #: ui/main.qml:57
-#, fuzzy, kde-format
-#| msgid "This module lets you choose the Plymouth boot splash screen."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active boot splash screen"
-msgstr "這個模組讓您能夠選擇 Plymouth 開機啟動畫面。"
+msgstr "無法刪除作用中的開機啟動畫面"
 
 #: ui/main.qml:59
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed boot splash screens"
-msgstr ""
+msgstr "無法刪除系統安裝的開機啟動畫面"
 
 #~ msgid "Uninstall"
 #~ msgstr "解除安裝"
