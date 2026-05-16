@@ -14,8 +14,8 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/plymouth-kcm/kcm_plymouth.pot\n"
-"X-Crowdin-File-ID: 42729\n"
+"X-Crowdin-File: /kf6-stable/messages/plymouth-kcm/kcm_plymouth.pot\n"
+"X-Crowdin-File-ID: 50522\n"
 
 #: helper.cpp:57 helper.cpp:110 helper.cpp:138 helper.cpp:324
 #, kde-format
