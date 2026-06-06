@@ -22,6 +22,8 @@
 
 #include <KIO/FileCopyJob>
 
+#include <qqml.h>
+
 using namespace std::chrono_literals;
 
 K_PLUGIN_CLASS_WITH_JSON(KCMPlymouth, "kcm_plymouth.json")
