@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plymouth-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-03 00:48+0000\n"
+"POT-Creation-Date: 2026-06-07 02:49+0000\n"
 "PO-Revision-Date: 2026-02-04 13:08+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -75,12 +75,12 @@ msgstr "Dosarul cu tematici %1 nu există."
 msgid "Theme %1 does not exist."
 msgstr "Tematica %1 nu există."
 
-#: kcm.cpp:191 kcm.cpp:211
+#: kcm.cpp:193 kcm.cpp:213
 #, kde-format
 msgid "Unable to authenticate/execute the action: %1 (%2)"
 msgstr "Imposibil de autentificat/executat acțiunea: %1 (%2)"
 
-#: kcm.cpp:215
+#: kcm.cpp:217
 #, kde-format
 msgid "Theme uninstalled successfully."
 msgstr "Tematică dezinstalată cu succes."

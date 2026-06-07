@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plymouth-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-03 00:48+0000\n"
+"POT-Creation-Date: 2026-06-07 02:49+0000\n"
 "PO-Revision-Date: 2026-02-05 11:26+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -73,12 +73,12 @@ msgstr "مجلد السمة %1 غير موجود."
 msgid "Theme %1 does not exist."
 msgstr "السمة %1 غير موجودة؟"
 
-#: kcm.cpp:191 kcm.cpp:211
+#: kcm.cpp:193 kcm.cpp:213
 #, kde-format
 msgid "Unable to authenticate/execute the action: %1 (%2)"
 msgstr "تعذّر استيثاق/تنفيذ هذا الإجراء: %1 (%2)"
 
-#: kcm.cpp:215
+#: kcm.cpp:217
 #, kde-format
 msgid "Theme uninstalled successfully."
 msgstr "ألغي تثبيت السمة بنجاح."

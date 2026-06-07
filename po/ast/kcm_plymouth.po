@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plymouth-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-03 00:48+0000\n"
+"POT-Creation-Date: 2026-06-07 02:49+0000\n"
 "PO-Revision-Date: 2023-05-05 22:29+0200\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
@@ -72,12 +72,12 @@ msgstr ""
 msgid "Theme %1 does not exist."
 msgstr ""
 
-#: kcm.cpp:191 kcm.cpp:211
+#: kcm.cpp:193 kcm.cpp:213
 #, kde-format
 msgid "Unable to authenticate/execute the action: %1 (%2)"
 msgstr ""
 
-#: kcm.cpp:215
+#: kcm.cpp:217
 #, kde-format
 msgid "Theme uninstalled successfully."
 msgstr ""

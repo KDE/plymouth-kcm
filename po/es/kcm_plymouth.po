@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_plymouth\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-03 00:48+0000\n"
+"POT-Creation-Date: 2026-06-07 02:49+0000\n"
 "PO-Revision-Date: 2026-02-03 22:59+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -75,12 +75,12 @@ msgstr "La carpeta del tema %1 no existe."
 msgid "Theme %1 does not exist."
 msgstr "El tema %1 no existe."
 
-#: kcm.cpp:191 kcm.cpp:211
+#: kcm.cpp:193 kcm.cpp:213
 #, kde-format
 msgid "Unable to authenticate/execute the action: %1 (%2)"
 msgstr "No se ha podido autenticar/ejecutar la acción: %1 (%2)"
 
-#: kcm.cpp:215
+#: kcm.cpp:217
 #, kde-format
 msgid "Theme uninstalled successfully."
 msgstr "Tema desinstalado con éxito."

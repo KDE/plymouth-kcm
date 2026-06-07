@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-03 00:48+0000\n"
+"POT-Creation-Date: 2026-06-07 02:49+0000\n"
 "PO-Revision-Date: 2026-04-04 19:40+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -74,12 +74,12 @@ msgstr "Katalog wyglądu %1 nie istnieje."
 msgid "Theme %1 does not exist."
 msgstr "Wygląd %1 nie istnieje."
 
-#: kcm.cpp:191 kcm.cpp:211
+#: kcm.cpp:193 kcm.cpp:213
 #, kde-format
 msgid "Unable to authenticate/execute the action: %1 (%2)"
 msgstr "Nie można uwierzytelnić/wykonać działania: %1 (%2)"
 
-#: kcm.cpp:215
+#: kcm.cpp:217
 #, kde-format
 msgid "Theme uninstalled successfully."
 msgstr "Pomyślnie usunięto wygląd."

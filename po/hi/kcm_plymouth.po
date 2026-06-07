@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plymouth-kcm\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-03 00:48+0000\n"
+"POT-Creation-Date: 2026-06-07 02:49+0000\n"
 "PO-Revision-Date: 2024-12-15 17:37+0530\n"
 "Last-Translator: Kali <EMAIL@ADDRESS>\n"
 "Language-Team: Hindi <fedora-trans-hi@redhat.com>\n"
@@ -72,12 +72,12 @@ msgstr "थीम फ़ोल्डर %1 मौजूद नहीं है."
 msgid "Theme %1 does not exist."
 msgstr "थीम %1 मौजूद नहीं है."
 
-#: kcm.cpp:191 kcm.cpp:211
+#: kcm.cpp:193 kcm.cpp:213
 #, kde-format
 msgid "Unable to authenticate/execute the action: %1 (%2)"
 msgstr "कार्रवाई प्रमाणित/निष्पादित करने में असमर्थ: %1 (%2)"
 
-#: kcm.cpp:215
+#: kcm.cpp:217
 #, kde-format
 msgid "Theme uninstalled successfully."
 msgstr "थीम सफलतापूर्वक अनइंस्टॉल हो गई."
