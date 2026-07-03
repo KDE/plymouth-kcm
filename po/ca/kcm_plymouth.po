@@ -136,17 +136,3 @@ msgid "Cannot delete system-installed boot splash screens"
 msgstr ""
 "No s'han pogut suprimir les pantalles de presentació d'arrencada "
 "instal·lades al sistema"
-
-#~ msgid "Uninstall"
-#~ msgstr "Desinstal·la"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Josep M. Ferrer"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "txemaq@gmail.com"
-
-#~ msgid "Marco Martin"
-#~ msgstr "Marco Martin"
