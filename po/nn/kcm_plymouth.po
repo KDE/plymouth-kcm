@@ -1,5 +1,6 @@
 # Translation of kcm_plymouth to Norwegian Nynorsk
 #
+# Karl Ove Hufthammer <karl@huftis.org>, 2018, 2019, 2023, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
