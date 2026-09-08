@@ -29,7 +29,7 @@ include(KDEClangFormat)
 include(KDEGitCommitHooks)
 include(ECMDeprecationSettings)
 
-find_package(Qt6 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick Test Gui)
+find_package(Qt6 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Core Qml Quick Test Gui)
 
 find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
     Auth Archive NewStuff NewStuffCore KIO I18n Config KCMUtils)
