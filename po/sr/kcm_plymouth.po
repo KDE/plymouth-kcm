@@ -1,12 +1,13 @@
 # Translation of kcm_plymouth.po into Serbian.
 # Chusslove Illich <caslav.ilic@gmx.net>, 2017.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_plymouth\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-07 00:47+0000\n"
-"PO-Revision-Date: 2017-05-07 21:01+0200\n"
-"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"PO-Revision-Date: 2026-10-03 22:09+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
@@ -51,10 +52,9 @@ msgid "Cannot start initramfs."
 msgstr "Не могу да покренем initramfs."
 
 #: helper.cpp:171
-#, fuzzy, kde-format
-#| msgid "Cannot start initramfs."
+#, kde-format
 msgid "Cannot start mkinitcpio."
-msgstr "Не могу да покренем initramfs."
+msgstr "Не могу да покренем mkinitcpio."
 
 #: helper.cpp:180
 #, kde-format
@@ -77,15 +77,14 @@ msgid "Theme %1 does not exist."
 msgstr "Тема %1 не постоји."
 
 #: kcm.cpp:193 kcm.cpp:213
-#, fuzzy, kde-format
-#| msgid "Unable to authenticate/execute the action: %1, %2"
+#, kde-format
 msgid "Unable to authenticate/execute the action: %1 (%2)"
-msgstr "Не могу да аутентификујем/извршим радњу: %1, %2"
+msgstr "Не могу да аутентификујем/извршим радњу: %1 (%2)"
 
 #: kcm.cpp:217
 #, kde-format
 msgid "Theme uninstalled successfully."
-msgstr ""
+msgstr "Тема је успешно деинсталирана."
 
 #: kplymouththemeinstaller.cpp:32
 #, kde-format
@@ -116,51 +115,22 @@ msgstr "Не могу да аутентификујем/извршим радњ�
 #, kde-format
 msgctxt "@action:button as in, get new Plymouth boot splash screens"
 msgid "Get New…"
-msgstr ""
+msgstr "Добави нове…"
 
 #: ui/main.qml:55
-#, fuzzy, kde-format
-#| msgid "Get New Boot Splash Screens..."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove boot splash screen"
-msgstr "Добави нове уводне екране подизања..."
+msgstr "Уклони уводни екран подизања"
 
 #: ui/main.qml:57
-#, fuzzy, kde-format
-#| msgid ""
-#| "This module lets you configure the look of the whole workspace with some "
-#| "ready to go presets."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active boot splash screen"
-msgstr ""
-"У овом модулу можете да подесите изглед целог радног простора, уз неколико "
-"спремних предефинисаних."
+msgstr "Не могу да обришем активни уводни екран подизања"
 
 #: ui/main.qml:59
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed boot splash screens"
-msgstr ""
-
-#~ msgid "Uninstall"
-#~ msgstr "Деинсталирај"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Часлав Илић"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "caslav.ilic@gmx.net"
-
-#~ msgid "Marco Martin"
-#~ msgstr "Марко Мартин"
-
-# >> @title:window
-#, fuzzy
-#~| msgid "Download New Splash Screens"
-#~ msgid "Download New Boot Splash Screens"
-#~ msgstr "Преузимање нових уводних екрана"
-
-#~ msgid "Get New Boot Splash Screens..."
-#~ msgstr "Добави нове уводне екране подизања..."
+msgstr "Не могу да обришем системски инсталиране уводне екране подизања"
