@@ -111,10 +111,10 @@ msgid "Unable to authenticate/execute the action: %1, %2"
 msgstr "Αδυναμία ταυτοποίησης/εκτέλεσης της ενέργειας: %1, %2"
 
 #: ui/main.qml:19
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@action:button as in, get new Plymouth boot splash screens"
 msgid "Get New…"
-msgstr ""
+msgstr "Λήψη νέων…"
 
 #: ui/main.qml:55
 #, fuzzy, kde-format
@@ -131,10 +131,12 @@ msgid "Cannot delete the active boot splash screen"
 msgstr "Με αυτό το άρθρωμα επιλέγετε την αρχική οθόνη εκκίνησης του Plymouth."
 
 #: ui/main.qml:59
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed boot splash screens"
 msgstr ""
+"Δεν είναι δυνατή η διαγραφή οθονών εκκίνησης συστήματος εγκατεστημένων στο "
+"σύστημα"
 
 #~ msgid "Uninstall"
 #~ msgstr "Απεγκατάσταση"
